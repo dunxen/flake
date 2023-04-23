@@ -152,7 +152,7 @@
     obs-studio-plugins.obs-pipewire-audio-capture
     obs-studio-plugins.obs-multi-rtmp
     obs-studio-plugins.obs-move-transition
-  ] else if stdenv.isAarch64 then [  ] else [  ]);;
+  ] else if stdenv.isAarch64 then [  ] else [  ]);
 
   programs.home-manager.enable = true;
 
