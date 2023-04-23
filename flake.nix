@@ -11,7 +11,7 @@
 
   outputs = { self, nixpkgs, home-manager }:
     let
-      supportedSystems = ["x86_64-linux"];
+      supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
     in
     {
@@ -25,7 +25,7 @@
           let
             pkgs = import nixpkgs {
               inherit system;
-              overlays = [self.overlays.default];
+              overlays = [ self.overlays.default ];
               config.allowUnfree = true;
             };
           in
