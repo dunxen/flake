@@ -15,6 +15,10 @@
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
     in
     {
+      overlays.default = final: prev: {
+        # Add overlays
+        # myFancyOverlay = final.callPackage ./packages/myFancyOverlay { };
+      };
 
       packages = forAllSystems
         (system: 
@@ -27,6 +31,9 @@
           in
           {
             inherit (pkgs);
+
+            # Excluded from overlay deliberately to avoid people accidently importing it.
+            unsafe-bootstrap = pkgs.callPackage ./packages/unsafe-bootstrap { };
           });
 
       devShells = forAllSystems

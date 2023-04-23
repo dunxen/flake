@@ -1,7 +1,7 @@
 { config, pkgs, lib, modulesPath, ... }:
 
 let
-  encryptedDeviceLabel = "root";
+  encryptedDeviceLabel = "encrypt";
   encryptedDevice = "/dev/nvme0n1p2";
   efiDevice = "/dev/nvme0n1p1";
   makeMounts = import ./../functions/make_mounts.nix;
