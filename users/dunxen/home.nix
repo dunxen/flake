@@ -128,7 +128,6 @@
     helix
     htop
     inkscape
-    neovim
     nixos-generators
     obsidian
     protonmail-bridge
