@@ -28,6 +28,8 @@
     };
   };
 
+  programs.gpg.enable = true;
+
   services.gpg-agent = {
     enable = true;
     defaultCacheTtl = 1800;
@@ -73,7 +75,7 @@
         "dash-to-panel@jderose9.github.com"
         "space-bar@luchrioh"
       ];
-      favorite-apps = [ "firefox.desktop" "kitty.desktop" "virt-manager.desktop" "org.gnome.Nautilus.desktop" ];
+      favorite-apps = [ "firefox.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" ];
     };
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -109,6 +111,7 @@
 
   # Packages to have installed for this profile.
   home.packages = with pkgs; [
+    _1password-gui
     age
     bat
     cloudflared
@@ -120,6 +123,7 @@
     gh
     gimp
     git-crypt
+    glow
     gnomeExtensions.user-themes
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.vitals
@@ -160,9 +164,11 @@
     # envFile = builtins.readFile ./config/env.nu;
     # configFile = builtins.readFile ./config/config.nu;
   };
+
   programs.kitty = {
     enable = true;
     # extraConfig = builtins.readFile ./config/kitty.conf;
   };
+
   home.stateVersion = "22.11";
 }
