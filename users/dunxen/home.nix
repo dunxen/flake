@@ -129,7 +129,6 @@
     gnomeExtensions.vitals
     gnomeExtensions.dash-to-panel
     gnomeExtensions.space-bar
-    helix
     htop
     inkscape
     nixos-generators
@@ -145,6 +144,7 @@
     thunderbird
     telegram-desktop
     wireshark
+    zellij
     zotero
   ]  ++ (if stdenv.isx86_64 then [
     kicad
@@ -161,13 +161,88 @@
 
   programs.nushell = {
     enable = true;
-    # envFile = builtins.readFile ./config/env.nu;
-    # configFile = builtins.readFile ./config/config.nu;
+    envFile.source = ./config/env.nu;
+    configFile.source = ./config/config.nu;
+  };
+
+  programs.starship = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
+
+  programs.helix = {
+    enable = true;
+    languages = [
+      {
+        name = "rust";
+        indent = {
+          tab-width = 4;
+          unit = "\t";
+        };
+      }
+      {
+        name = "typst";
+        scope = "source.typst";
+        injection-regex = "^typ(st)?$";
+        file-types = ["typ"];
+        roots = [];
+        comment-token = "//";
+        language-server = {
+          command = "typst-lsp";
+        };
+        config = {
+          exportPdf = "onType";
+        };
+      }
+    ];
+    settings = {
+      theme = "onedark";
+      editor = {
+        line-number = "relative";
+        color-modes = true;
+        cursor-shape = {
+          insert = "bar";
+          normal = "block";
+          select = "underline";
+        };
+        indent-guides = {
+          render = true;
+          character = "¦";
+          skip-levels = 1;
+        };
+        whitespace = {
+          render = {
+            space = "all";
+            tab = "all";
+            newline = "none";
+          };
+          characters = {
+            space = "·";
+            nbsp = "⍽";
+            tab = "→";
+            newline = "⏎";
+            tabpad = "·";
+          };
+        };
+        file-picker.hidden = false;
+      };
+    };
   };
 
   programs.kitty = {
     enable = true;
-    # extraConfig = builtins.readFile ./config/kitty.conf;
+    theme = "GitHub Dark";
+    font.name = "JetBrains Mono Nerd Font";
+    font.size = 14.0;
+    settings = {
+      background_opacity = "0.95";
+      window_padding_width = 6;
+    };
   };
 
   home.stateVersion = "22.11";

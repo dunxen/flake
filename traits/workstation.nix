@@ -27,6 +27,7 @@
       jetbrains-mono
       fira-code
       fira-code-symbols
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
     # These should only be GUI applications that are desired systemwide
