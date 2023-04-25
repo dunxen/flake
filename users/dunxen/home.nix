@@ -117,6 +117,7 @@
     _1password-gui
     age
     bat
+    bundix
     cloudflared
     cloudflare-warp
     discord
