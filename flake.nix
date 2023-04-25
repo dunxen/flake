@@ -131,6 +131,7 @@
       nixosModules = {
         platforms.container = ./platforms/container.nix;
         platforms.neon = ./platforms/neon.nix;
+        platforms.brute = ./platforms/brute.nix;
         platforms.iso-minimal = "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix";
         platforms.iso = "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix";
         traits.overlay = { nixpkgs.overlays = [ self.overlays.default ]; };
