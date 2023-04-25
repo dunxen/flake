@@ -27,7 +27,7 @@ The machines share a common partitioning strategy, once setting the required env
 > Be careful! Please!
 
 ```shell
-sudo nix run github:dunxen/flake#unsafe-bootstrap
+sudo nix run git+ssh://git.dunxen.dev/flake#unsafe-bootstrap
 ```
 
 ## Post-install
@@ -76,7 +76,7 @@ Requires:
 Build a recovery image:
 
 ```shell
-nix build github:dunxen/flake#nixosConfigurations.x86_64IsoImage.config.system.build.isoImage --out-link isoImage
+nix build git+ssh://git.dunxen.dev/flake#nixosConfigurations.x86_64IsoImage.config.system.build.isoImage --out-link isoImage
 ```
 
 Flash it to a USB:
@@ -103,7 +103,7 @@ After, install the system:
 
 ```shell
 sudo bootctl install --esp-path=/mnt/efi
-sudo nixos-install --flake github:dunxen/flake#brute --impure
+sudo nixos-install --flake git+ssh://git.dunxen.dev/flake#brute --impure
 ```
 
 ## Neon
@@ -124,7 +124,7 @@ Requires:
 Build a recovery image:
 
 ```shell
-nix build github:dunxen/flake#nixosConfigurations.x86_64IsoImage.config.system.build.isoImage --out-link isoImage
+nix build git+ssh://git.dunxen.dev/flake#nixosConfigurations.x86_64IsoImage.config.system.build.isoImage --out-link isoImage
 ```
 
 Flash it to a USB:
@@ -152,7 +152,7 @@ After, install the system:
 
 ```shell
 sudo bootctl install --esp-path=/mnt/efi
-sudo nixos-install --flake github:dunxen/flake#neon --impure
+sudo nixos-install --flake git+ssh://git.dunxen.dev/flake#neon --impure
 ```
 
 [chips-amd5950x]: https://en.wikichip.org/wiki/amd/ryzen_9/5950x
