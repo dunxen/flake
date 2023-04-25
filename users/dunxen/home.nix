@@ -107,6 +107,9 @@
       primary-color = "#3465a4";
       secondary-color = "#000000";
     };
+    "org/gnome/desktop/peripherals/mouse" = {
+      natural-scroll = true;
+    };
   };
 
   # Packages to have installed for this profile.
@@ -137,10 +140,12 @@
     riff
     ripgrep
     rustup
+    rust-analyzer
     signal-desktop
     starship
     steam
     tailscale
+    termius
     thunderbird
     telegram-desktop
     wireshark
@@ -148,7 +153,6 @@
     zotero
   ]  ++ (if stdenv.isx86_64 then [
     kicad
-    chromium
     obs-studio
     obs-studio-plugins.obs-gstreamer
     obs-studio-plugins.obs-vkcapture
