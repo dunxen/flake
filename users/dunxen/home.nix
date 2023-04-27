@@ -135,6 +135,7 @@
     gnomeExtensions.space-bar
     htop
     inkscape
+    neofetch
     nixos-generators
     obsidian
     protonmail-bridge
