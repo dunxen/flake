@@ -124,6 +124,7 @@
     docker
     fd
     firefox
+    flyctl
     gh
     gimp
     git-crypt
