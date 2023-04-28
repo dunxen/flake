@@ -20,7 +20,7 @@ in
     services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware.cpu.amd.updateMicrocode = true;
-    hardware.nvidia.modesetting.enable = true;
+    # hardware.nvidia.modesetting.enable = true;
 
     fileSystems = makeMounts {
       inherit encryptedDevice encryptedDeviceLabel efiDevice;
