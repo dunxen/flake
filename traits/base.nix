@@ -73,6 +73,8 @@
       source "${pkgs.fzf}/share/fzf/completion.bash"
     '';
 
+    programs.mosh.enable = true;
+
     security.sudo.wheelNeedsPassword = false;
     security.sudo.extraConfig = ''
       Defaults lecture = never

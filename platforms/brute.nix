@@ -22,8 +22,43 @@ in
     hardware.cpu.amd.updateMicrocode = true;
     # hardware.nvidia.modesetting.enable = true;
 
-    fileSystems = makeMounts {
+    fileSystems = lib.mergeAttrs (makeMounts {
       inherit encryptedDevice encryptedDeviceLabel efiDevice;
+    }) {
+      "/mnt/HDD1" = {
+        device = "/dev/disk/by-uuid/33d3d934-87c5-4598-8cdf-3fdcce19e6c7";
+        fsType = "btrfs";
+      };
+
+      "/mnt/SSD1" = {
+        device = "/dev/disk/by-uuid/37306caf-1bb1-4103-983a-2a47cbe8e7f8";
+        fsType = "btrfs";
+      };
+
+      "/mnt/SSD2" = {
+        device = "/dev/disk/by-uuid/eaec9e9d-c7a4-4fbf-a16d-6a4182b2fb77";
+        fsType = "btrfs";
+      };
+    };
+
+    boot.initrd.luks.devices = {
+      "luks-1238aac3-0daa-42cc-be43-2ae27bf4a824" = {
+        device = "/dev/disk/by-uuid/1238aac3-0daa-42cc-be43-2ae27bf4a824";
+        preLVM = true;
+        allowDiscards = true;
+      };
+
+      "luks-dbce0bd4-1023-4d80-ab04-de307b30bc34" = {
+        device = "/dev/disk/by-uuid/dbce0bd4-1023-4d80-ab04-de307b30bc34";
+        preLVM = true;
+        allowDiscards = true;
+      };
+
+      "luks-94ac69ed-8b63-482e-afd2-ced79beb64b2" = {
+        device = "/dev/disk/by-uuid/94ac69ed-8b63-482e-afd2-ced79beb64b2";
+        preLVM = true;
+        allowDiscards = true;
+      };
     };
 
     # This doesn't seem to work...
