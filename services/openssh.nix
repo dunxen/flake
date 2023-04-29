@@ -2,13 +2,13 @@
 
 {
   config = {
-    services.openssh.enable = true;
+    services.openssh.enable = lib.mkDefault true;
     services.openssh.settings.passwordAuthentication = false;
     services.openssh.settings.permitRootLogin = lib.mkForce "no";
 
     # We're only going to allow ssh over tailscale
-    # networking.firewall.allowedTCPPorts = [ 22 ];
-    # networking.firewall.allowedUDPPorts = [ 22 ];
+    networking.firewall.allowedTCPPorts = [ 22 ];
+    networking.firewall.allowedUDPPorts = [ 22 ];
 
     services.openssh.hostKeys = [
       {

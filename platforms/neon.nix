@@ -17,6 +17,7 @@ in
       inherit encryptedDevice encryptedDeviceLabel efiDevice;
     };
 
+    service.openssh.enable = false;
     networking.hostName = "neon";
     networking.domain = "taproot.home";
   };

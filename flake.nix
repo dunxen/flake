@@ -82,7 +82,6 @@
               home-manager.nixosModules.home-manager
               traits.overlay
               traits.base
-              services.openssh
             ];
           };
           x86_64Base = {
