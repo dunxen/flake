@@ -132,6 +132,7 @@
     cloudflare-warp
     discord
     docker
+    exercism
     fd
     firefox
     flyctl
