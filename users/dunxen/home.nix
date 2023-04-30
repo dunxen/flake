@@ -145,8 +145,10 @@
     gnomeExtensions.vitals
     gnomeExtensions.dash-to-panel
     gnomeExtensions.space-bar
+    go
     htop
     inkscape
+    julia
     neofetch
     nixos-generators
     obsidian
@@ -162,6 +164,7 @@
     termius
     thunderbird
     telegram-desktop
+    wasmtime
     wireshark
     zellij
     zotero
