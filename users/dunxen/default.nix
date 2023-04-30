@@ -12,5 +12,10 @@
       extraGroups = [ "wheel" "disk" "networkmanager" "libvirtd" "qemu-libvirtd" "kvm" "i2c" "plugdev" ];
       openssh.authorizedKeys.keys = [];
     };
+    programs._1password.enable = true;
+    programs._1password-gui = {
+      enable = true;
+      polkitPolicyOwners = [ "dunxen" ];
+    };
   };
 }

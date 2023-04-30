@@ -7,9 +7,10 @@
   programs.git = {
     enable = true;
     userName = "Duncan Dean";
-    userEmail = "duncangleeddean@gmail.com";
+    userEmail = "git@dunxen.dev";
     signing = {
-      key = "C37B1C1D44C786EE";
+      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs8y3pGOgEefYi6juRp+RECFq/uzYu7o3Qc6Wo0RD90 git@dunxen.dev";
+      # key = "C37B1C1D44C786EE";
       signByDefault = true;
     };
     aliases = {
@@ -25,6 +26,8 @@
       init.defaultBranch = "main";
       diff.colormoved = "zebra";
       core.editor = "hx";
+      gpg.format = "ssh";
+      gpg.ssh.program = ''${pkgs._1password-gui}/share/1password/op-ssh-sign'';
     };
   };
 
@@ -34,6 +37,14 @@
     enable = true;
     defaultCacheTtl = 1800;
     enableSshSupport = true;
+  };
+
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      Host *
+        IdentityAgent ~/.1password/agent.sock
+    '';
   };
 
   gtk = {
@@ -114,7 +125,6 @@
 
   # Packages to have installed for this profile.
   home.packages = with pkgs; [
-    _1password-gui
     age
     bat
     bundix
