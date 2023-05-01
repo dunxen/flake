@@ -167,6 +167,7 @@
     wasmtime
     wireshark
     zellij
+    zola
     zotero
   ]  ++ (if stdenv.isx86_64 then [
     kicad
