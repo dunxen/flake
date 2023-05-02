@@ -130,6 +130,7 @@
     bundix
     cloudflared
     cloudflare-warp
+    cosign
     discord
     docker
     exercism
