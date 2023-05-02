@@ -152,6 +152,7 @@
     neofetch
     nixos-generators
     obsidian
+    pkg-config
     protonmail-bridge
     riff
     ripgrep
@@ -164,6 +165,8 @@
     termius
     thunderbird
     telegram-desktop
+    typst
+    typst-lsp
     wasmtime
     wireshark
     zellij
