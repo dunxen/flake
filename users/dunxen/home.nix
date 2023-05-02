@@ -152,7 +152,6 @@
     neofetch
     nixos-generators
     obsidian
-    pkg-config
     protonmail-bridge
     riff
     ripgrep
