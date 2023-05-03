@@ -296,6 +296,10 @@ let light_theme = {
 #     carapace $spans.0 nushell $spans | from json
 # }
 
+# OP Shell Plugins
+
+let-env OP_PLUGIN_ALIASES_SOURCED = 1
+alias gh = op plugin run -- gh
 
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
