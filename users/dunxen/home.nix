@@ -10,7 +10,6 @@
     userEmail = "git@dunxen.dev";
     signing = {
       key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs8y3pGOgEefYi6juRp+RECFq/uzYu7o3Qc6Wo0RD90 git@dunxen.dev";
-      # key = "C37B1C1D44C786EE";
       signByDefault = true;
     };
     aliases = {
@@ -38,6 +37,9 @@
     defaultCacheTtl = 1800;
     enableSshSupport = true;
   };
+
+  services.keybase.enable = true;
+  services.kbfs.enable = true;
 
   programs.ssh = {
     enable = true;
@@ -126,6 +128,8 @@
   # Packages to have installed for this profile.
   home.packages = with pkgs; [
     age
+    awscli2
+    azure-cli
     bat
     bundix
     cloudflared
@@ -147,9 +151,11 @@
     gnomeExtensions.dash-to-panel
     gnomeExtensions.space-bar
     go
+    google-cloud-sdk
     htop
     inkscape
     julia
+    keybase-gui
     neofetch
     nixos-generators
     obsidian
@@ -159,11 +165,11 @@
     rustup
     rust-analyzer
     signal-desktop
+    stack
     starship
     steam
     tailscale
     termius
-    thunderbird
     telegram-desktop
     typst
     typst-lsp
@@ -268,6 +274,10 @@
       background_opacity = "0.95";
       window_padding_width = 6;
     };
+  };
+
+  programs.himalaya = {
+    enable = true;
   };
 
   home.stateVersion = "22.11";
