@@ -141,6 +141,7 @@
     fd
     firefox
     flyctl
+    gcc12
     gh
     gimp
     git-crypt
