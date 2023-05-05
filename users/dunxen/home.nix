@@ -137,6 +137,7 @@
     cosign
     discord
     docker
+    epiphany
     exercism
     fd
     firefox
@@ -174,6 +175,7 @@
     telegram-desktop
     typst
     typst-lsp
+    ungoogled-chromium
     wasmtime
     wireshark
     zellij
