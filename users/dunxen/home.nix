@@ -162,6 +162,8 @@
     nixos-generators
     obsidian
     protonmail-bridge
+    protonvpn-cli
+    protonvpn-gui
     riff
     ripgrep
     rustup

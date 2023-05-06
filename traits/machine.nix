@@ -64,6 +64,7 @@
     };
     
     services.tailscale.enable = true;
+    services.tor.enable = true;
 
     security.rtkit.enable = true;
     security.polkit.enable = true;

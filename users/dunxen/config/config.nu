@@ -184,6 +184,13 @@ let light_theme = {
 let-env OP_PLUGIN_ALIASES_SOURCED = 1
 alias gh = op plugin run -- gh
 
+# Bitcoin dev
+alias bitcoind = /home/dunxen/repos/bitcoin/src/bitcoind
+alias bitcoin-cli = /home/dunxen/repos/bitcoin/src/bitcoin-cli
+alias bitcoin-tx = /home/dunxen/repos/bitcoin/src/bitcoin-tx
+alias bitcoin-wallet = /home/dunxen/repos/bitcoin/src/bitcoind-wallet
+alias bitcoin-util = /home/dunxen/repos/bitcoin/src/bitcoin-util
+
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
   # true or false to enable or disable the welcome banner at startup
