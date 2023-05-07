@@ -120,8 +120,20 @@
       primary-color = "#3465a4";
       secondary-color = "#000000";
     };
+    "org/gnome/desktop/session" = {
+      idle-delay = lib.hm.gvariant.mkUint32 600;
+    };
+    "org/gnome/desktop/notifications" = {
+      show-in-lock-scree = false;
+    };
     "org/gnome/desktop/peripherals/mouse" = {
       natural-scroll = true;
+    };
+    "org/gnome/settings-daemon/plugins/power" = {
+      sleep-inactive-ac-timeout = 7200;
+    };
+    "org/gnome/mutter" = {
+      dynamic-workspaces = true;
     };
   };
 
