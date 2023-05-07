@@ -209,6 +209,10 @@
   programs.atuin = {
     enable = true;
     enableNushellIntegration = true;
+    flags = [
+      "--disable-up-arrow"
+      "--disable-ctrl-r"
+    ];
   };
 
   programs.direnv = {
