@@ -134,20 +134,25 @@
     };
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
+      edge-tiling = true;
     };
   };
 
   # Packages to have installed for this profile.
   home.packages = with pkgs; [
     age
+    asn
+    asnmap
     awscli2
     azure-cli
     bat
+    bgpdump
     bundix
     cloudflared
     cloudflare-warp
     cosign
     discord
+    dnsx
     docker
     epiphany
     exercism
@@ -184,6 +189,7 @@
     stack
     starship
     steam
+    subfinder
     tailscale
     termius
     telegram-desktop
@@ -220,11 +226,8 @@
 
   programs.atuin = {
     enable = true;
+    flags = ["--disable-up-arrow"];
     enableNushellIntegration = true;
-    flags = [
-      "--disable-up-arrow"
-      "--disable-ctrl-r"
-    ];
   };
 
   programs.direnv = {
