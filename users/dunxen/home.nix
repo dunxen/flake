@@ -197,7 +197,6 @@
     typst-lsp
     ungoogled-chromium
     wasmtime
-    wireshark
     zellij
     zola
     zotero

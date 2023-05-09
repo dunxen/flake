@@ -17,5 +17,6 @@
       enable = true;
       polkitPolicyOwners = [ "dunxen" ];
     };
+    programs.wireshark.enable = true;
   };
 }
