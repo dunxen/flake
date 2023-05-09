@@ -19,7 +19,7 @@
     };
     programs.wireshark = {
       enable = true;
-      package = "pkgs.wireshark";
+      package = pkgs.wireshark;
     };
   };
 }
