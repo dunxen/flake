@@ -9,7 +9,7 @@
       createHome = true;
       passwordFile = "/persist/encrypted-passwords/dunxen";
       shell = pkgs.nushell;
-      extraGroups = [ "wheel" "disk" "networkmanager" "libvirtd" "qemu-libvirtd" "kvm" "i2c" "plugdev" ];
+      extraGroups = [ "wheel" "disk" "networkmanager" "libvirtd" "qemu-libvirtd" "kvm" "i2c" "plugdev" "wireshark" ];
       openssh.authorizedKeys.keys = [];
     };
     programs._1password.enable = true;
@@ -17,6 +17,9 @@
       enable = true;
       polkitPolicyOwners = [ "dunxen" ];
     };
-    programs.wireshark.enable = true;
+    programs.wireshark = {
+      enable = true;
+      package = "pkgs.wireshark";
+    };
   };
 }
