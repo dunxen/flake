@@ -186,7 +186,6 @@
     riff
     ripgrep
     rustup
-    rust-analyzer
     signal-desktop
     stack
     starship
