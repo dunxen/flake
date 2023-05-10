@@ -146,6 +146,7 @@
     awscli2
     azure-cli
     bat
+    bind
     bgpdump
     bundix
     cloudflared
@@ -154,6 +155,7 @@
     discord
     dnsx
     docker
+    dogdns
     epiphany
     exercism
     fd
