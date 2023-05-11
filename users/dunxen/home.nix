@@ -59,10 +59,6 @@
       name = "palenight";
       package = pkgs.palenight-theme;
     };
-    cursorTheme = {
-      name = "Numix-Cursor";
-      package = pkgs.numix-cursor-theme;
-    };
     gtk3.extraConfig = {
       Settings = ''
         gtk-application-prefer-dark-theme=1
@@ -83,12 +79,11 @@
       # `gnome-extensions list` for a list
       enabled-extensions = [
         "user-theme@gnome-shell-extensions.gcampax.github.com"
-        "trayIconsReloaded@selfmade.pl"
         "Vitals@CoreCoding.com"
-        "dash-to-panel@jderose9.github.com"
-        "space-bar@luchrioh"
+        "pop-shell@system76.com"
+        "dash-to-dock@micxgx.gmail.com"
       ];
-      favorite-apps = [ "firefox.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" ];
+      favorite-apps = [ "firefox.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" ];
     };
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -159,7 +154,7 @@
     epiphany
     exercism
     fd
-    firefox
+    firefox-wayland
     flyctl
     gcc12
     gh
@@ -167,10 +162,9 @@
     git-crypt
     glow
     gnomeExtensions.user-themes
-    gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.vitals
-    gnomeExtensions.dash-to-panel
-    gnomeExtensions.space-bar
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.pop-shell
     go
     google-cloud-sdk
     htop
@@ -265,11 +259,6 @@
       editor = {
         line-number = "relative";
         color-modes = true;
-        cursor-shape = {
-          insert = "bar";
-          normal = "block";
-          select = "underline";
-        };
         indent-guides = {
           render = true;
           character = "¦";
