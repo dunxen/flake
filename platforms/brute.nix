@@ -17,11 +17,9 @@ in
     boot.initrd.kernelModules = [ "amdgpu" ];
     boot.kernelModules = [ "tap" "kvm-amd" "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio" ];
 
-    services.xserver.videoDrivers = [ "nvidia" ];
     services.openssh.enable = false;
 
     hardware.cpu.amd.updateMicrocode = true;
-    # hardware.nvidia.modesetting.enable = true;
 
     fileSystems = lib.mergeAttrs (makeMounts {
       inherit encryptedDevice encryptedDeviceLabel efiDevice;
