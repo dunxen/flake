@@ -4,9 +4,6 @@
   home.homeDirectory = "/home/dunxen";
   # home.sessionVariables.GTK_THEME = "palenight";
 
-  services.dunst.enable = true;
-  programs.waybar.enable = true;
-
   programs.git = {
     enable = true;
     userName = "Duncan Dean";
