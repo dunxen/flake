@@ -2,7 +2,10 @@
 
   home.username = "dunxen";
   home.homeDirectory = "/home/dunxen";
-  home.sessionVariables.GTK_THEME = "palenight";
+  # home.sessionVariables.GTK_THEME = "palenight";
+
+  services.dunst.enable = true;
+  programs.waybar.enable = true;
 
   programs.git = {
     enable = true;
@@ -55,10 +58,10 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-    theme = {
-      name = "palenight";
-      package = pkgs.palenight-theme;
-    };
+    # theme = {
+    #   name = "palenight";
+    #   package = pkgs.palenight-theme;
+    # };
     gtk3.extraConfig = {
       Settings = ''
         gtk-application-prefer-dark-theme=1
@@ -90,9 +93,9 @@
       enable-hot-corners = false;
     };
     # `gsettings get org.gnome.shell.extensions.user-theme name`
-    "org/gnome/shell/extensions/user-theme" = {
-      name = "palenight";
-    };
+    # "org/gnome/shell/extensions/user-theme" = {
+    #   name = "palenight";
+    # };
     "org/gnome/desktop/wm/preferences" = {
       workspace-names = [ "Main" ];
       button-layout = "appmenu:minimize,maximize,close";
@@ -107,12 +110,14 @@
       show-network = true;
     };
     "org/gnome/desktop/background" = {
-      picture-uri = "file://${./shapes.jpg}";
-      picture-uri-dark = "file://${./shapes.jpg}";
+      # picture-uri = "file://${./shapes.jpg}";
+      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/dune-l.svg";
+      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/dune-d.svg";
+      primary-color = "#f7a957";
     };
     "org/gnome/desktop/screensaver" = {
-      picture-uri = "file://${./shapes.jpg}";
-      primary-color = "#3465a4";
+      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/dune-d.svg";
+      primary-color = "#f7a957";
       secondary-color = "#000000";
     };
     "org/gnome/desktop/session" = {

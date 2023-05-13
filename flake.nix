@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs, home-manager }:
+  outputs = { self, nixpkgs, home-manager, hyprland }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -66,6 +67,8 @@
             dunxen = home-manager.lib.homeManagerConfiguration {
               inherit pkgs;
               modules = [
+                hyprland.homeManagerModules.default
+                {wayland.windowManager.hyprland.enable = true;}
                 ./users/dunxen/home.nix
               ];
             };
@@ -105,6 +108,8 @@
           brute = nixpkgs.lib.nixosSystem {
             inherit (x86_64Base) system;
             modules = x86_64Base.modules ++ [
+              hyprland.nixosModules.default
+              {programs.hyprland.enable = true;}
               platforms.brute
               traits.machine
               traits.workstation
@@ -117,6 +122,8 @@
           neon = nixpkgs.lib.nixosSystem {
             inherit (x86_64Base) system;
             modules = x86_64Base.modules ++ [
+              hyprland.nixosModules.default
+              {programs.hyprland.enable = true;}
               platforms.neon
               traits.machine
               traits.workstation
