@@ -106,6 +106,9 @@
       show-processor = true;
       show-network = true;
     };
+    "org/gnome/shell/extensions/dash-to-dock" = {
+      transparency-mode = "DYNAMIC";
+    };
     "org/gnome/desktop/background" = {
       # picture-uri = "file://${./shapes.jpg}";
       picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/dune-l.svg";

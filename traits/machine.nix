@@ -73,6 +73,7 @@
     hardware.i2c.enable = true;
     hardware.hackrf.enable = true;
     hardware.bluetooth.enable = true;
+    hardware.xpadneo.enable = true; # For Xbox One Controller
 
     virtualisation.libvirtd.enable = true;
     virtualisation.libvirtd.onBoot = "ignore";
