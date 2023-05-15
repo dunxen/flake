@@ -13,12 +13,28 @@
       signByDefault = true;
     };
     aliases = {
+      a = "add";
+      b = "branch";
+      c = "commit";
+      ca = "commit --amend";
+      cm = "commit -m";
+      co = "checkout";
+      d = "diff";
       dm = "diff --color-moved=plain";
-      showm = "show --color-moved=plain";
       ds = "diff --staged";
-      lgod = "log --graph --oneline --decorate";
-      gb = "git branch";
+      p = "push";
+      pf = "push --force-with-lease";
+      pl = "pull";
+      l = "log";
+      r = "rebase";
+      s = "status --short";
+      showm = "show --color-moved=plain";
+      ss = "status";
+      forgor = "commit --amend --no-edit";
+      graph = "log --all --decorate --graph --oneline";
+      oops = "checkout --";
     };
+    ignores = ["*~" "*.swp" "*result*" ".direnv" "node_modules"];
     lfs.enable = true;
     extraConfig = {
       pull.rebase = true;
