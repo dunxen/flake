@@ -165,6 +165,7 @@
     bind
     bgpdump
     bundix
+    carapace
     cloudflared
     cloudflare-warp
     cosign
