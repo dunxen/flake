@@ -66,7 +66,7 @@
             dunxen = home-manager.lib.homeManagerConfiguration {
               inherit pkgs;
               modules = [
-                ./users/dunxen/home.nix
+                ./home/home.nix
               ];
             };
           }
@@ -143,7 +143,7 @@
         services.openssh = ./services/openssh.nix;
         # This trait is unfriendly to being bundled with platform-iso
         traits.workstation = ./traits/workstation.nix;
-        users.dunxen = ./users/dunxen;
+        users.dunxen = ./home;
       };
 
       checks = forAllSystems (system:
