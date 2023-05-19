@@ -277,6 +277,21 @@
           exportPdf = "onType";
         };
       }
+      {
+        name = "nickel";
+        indent = {
+          tab-width = 2;
+          unit = "\t";
+        };
+        scope = "source.nickel";
+        injection-regex = "^ni?c(ke)?l$";
+        file-types = ["ncl"];
+        roots = [];
+        comment-token = "#";
+        language-server = {
+          command = "nls";
+        };
+      }
     ];
     settings = {
       theme = "onedark";
