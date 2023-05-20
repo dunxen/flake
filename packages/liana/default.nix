@@ -32,6 +32,7 @@ rustPlatform.buildRustPackage rec {
   nativeBuildInputs = [
     pkg-config
     cmake
+    copyDesktopItems
   ];
 
   buildInputs = [
