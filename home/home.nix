@@ -155,79 +155,84 @@
   };
 
   # Packages to have installed for this profile.
-  home.packages = with pkgs; [
-    age
-    asn
-    asnmap
-    awscli2
-    azure-cli
-    bat
-    bind
-    bgpdump
-    bundix
-    carapace
-    cloudflared
-    cloudflare-warp
-    cosign
-    discord
-    dnsx
-    docker
-    dogdns
-    epiphany
-    exercism
-    fd
-    firefox-wayland
-    flyctl
-    gcc12
-    gh
-    gimp
-    git-crypt
-    glow
-    gnomeExtensions.user-themes
-    gnomeExtensions.vitals
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.pop-shell
-    go
-    google-cloud-sdk
-    htop
-    inkscape
-    julia
-    keybase-gui
-    neofetch
-    nickel
-    nixos-generators
-    nls # Nickel Language Server
-    obsidian
-    protonmail-bridge
-    protonvpn-cli
-    protonvpn-gui
-    riff
-    ripgrep
-    rustup
-    signal-desktop
-    stack
-    starship
-    steam
-    subfinder
-    tailscale
-    termius
-    telegram-desktop
-    typst
-    typst-lsp
-    ungoogled-chromium
-    wasmtime
-    zellij
-    zola
-    zotero
-  ]  ++ (if stdenv.isx86_64 then [
-    kicad
-    obs-studio
-    obs-studio-plugins.obs-gstreamer
-    obs-studio-plugins.obs-vkcapture
-    obs-studio-plugins.obs-pipewire-audio-capture
-    obs-studio-plugins.obs-multi-rtmp
-    obs-studio-plugins.obs-move-transition
-  ] else if stdenv.isAarch64 then [  ] else [  ]);
+  home.packages = let
+    liana = pkgs.callPackage ../packages/liana { };
+  in
+    with pkgs; [
+      age
+      asn
+      asnmap
+      awscli2
+      azure-cli
+      bat
+      bind
+      bgpdump
+      bundix
+      carapace
+      cloudflared
+      cloudflare-warp
+      cosign
+      discord
+      dnsx
+      docker
+      dogdns
+      epiphany
+      exercism
+      fd
+      firefox-wayland
+      flyctl
+      gcc12
+      gh
+      gimp
+      git-crypt
+      glow
+      gnomeExtensions.user-themes
+      gnomeExtensions.vitals
+      gnomeExtensions.dash-to-dock
+      gnomeExtensions.pop-shell
+      go
+      google-cloud-sdk
+      htop
+      inkscape
+      julia
+      keybase-gui
+      liana
+      nickel
+      nixos-generators
+      # nls # Nickel Language Server
+      obsidian
+      protonmail-bridge
+      protonvpn-cli
+      protonvpn-gui
+      riff
+      ripgrep
+      rustup
+      signal-desktop
+      stack
+      starship
+      steam
+      subfinder
+      tailscale
+      termius
+      telegram-desktop
+      typst
+      typst-lsp
+      ungoogled-chromium
+      unixtools.xxd
+      unzip
+      wasmtime
+      zellij
+      zola
+      zotero
+    ]  ++ (if stdenv.isx86_64 then [
+      kicad
+      obs-studio
+      obs-studio-plugins.obs-gstreamer
+      obs-studio-plugins.obs-vkcapture
+      obs-studio-plugins.obs-pipewire-audio-capture
+      obs-studio-plugins.obs-multi-rtmp
+      obs-studio-plugins.obs-move-transition
+    ] else if stdenv.isAarch64 then [  ] else [  ]);
 
   programs.home-manager.enable = true;
 
