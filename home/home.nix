@@ -199,7 +199,7 @@
       liana
       nickel
       nixos-generators
-      # nls # Nickel Language Server
+      nls # Nickel Language Server
       obsidian
       protonmail-bridge
       protonvpn-cli
