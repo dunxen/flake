@@ -169,8 +169,6 @@
       bgpdump
       bundix
       carapace
-      cloudflared
-      cloudflare-warp
       cosign
       discord
       dnsx
