@@ -1,7 +1,10 @@
-{ config, pkgs, lib, ... }: {
-
+{ config, pkgs, lib, ... }:
+let
+  ssh_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs8y3pGOgEefYi6juRp+RECFq/uzYu7o3Qc6Wo0RD90 git@dunxen.dev";
+in {
   home.username = "dunxen";
   home.homeDirectory = "/home/dunxen";
+  home.file.".ssh/allowed_signers".text ="dunxen ${ssh_key}";
   # home.sessionVariables.GTK_THEME = "palenight";
 
   programs.git = {
@@ -9,7 +12,7 @@
     userName = "Duncan Dean";
     userEmail = "git@dunxen.dev";
     signing = {
-      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs8y3pGOgEefYi6juRp+RECFq/uzYu7o3Qc6Wo0RD90 git@dunxen.dev";
+      key = ssh_key;
       signByDefault = true;
     };
     aliases = {
@@ -43,6 +46,7 @@
       core.editor = "hx";
       gpg.format = "ssh";
       gpg.ssh.program = ''${pkgs._1password-gui}/share/1password/op-ssh-sign'';
+      gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
     };
   };
 
