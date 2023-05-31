@@ -198,6 +198,7 @@ in {
       inkscape
       julia
       keybase-gui
+      ledger-live-desktop
       liana
       nickel
       nixos-generators
