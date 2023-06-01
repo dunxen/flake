@@ -174,6 +174,7 @@ in {
       bundix
       carapace
       cosign
+      devbox
       discord
       dnsx
       docker
