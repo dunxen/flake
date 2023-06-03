@@ -226,6 +226,7 @@ in {
       unixtools.xxd
       unzip
       wasmtime
+      wget
       zellij
       zola
       zotero
