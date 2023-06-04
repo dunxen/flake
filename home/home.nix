@@ -225,6 +225,7 @@ in {
       ungoogled-chromium
       unixtools.xxd
       unzip
+      vagrant
       wasmtime
       wget
       zellij

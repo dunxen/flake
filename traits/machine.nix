@@ -83,6 +83,7 @@
     virtualisation.libvirtd.qemu.swtpm.enable = true;
     virtualisation.libvirtd.qemu.swtpm.package = pkgs.swtpm;
     virtualisation.libvirtd.qemu.runAsRoot = false;
+    virtualisation.virtualbox.host.enable = true;
     virtualisation.spiceUSBRedirection.enable = true; # Note that this allows users arbitrary access to USB devices. 
     virtualisation.podman.enable = true;
 
@@ -94,6 +95,10 @@
       adjtime.source = "/persist/etc/adjtime";
       # NIXOS.source = "/persist/etc/NIXOS";
       machine-id.source = "/persist/etc/machine-id";
+      "vbox/networks.conf".text = ''
+        * 10.0.0.0/8 192.168.0.0/16
+        * 2001::/64
+      '';
     };
     systemd.tmpfiles.rules = [
       "L /var/lib/NetworkManager/secret_key - - - - /persist/var/lib/NetworkManager/secret_key"
