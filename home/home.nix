@@ -206,6 +206,7 @@ in {
       nixos-generators
       nls # Nickel Language Server
       obsidian
+      ookla-speedtest
       protonmail-bridge
       protonvpn-cli
       protonvpn-gui
