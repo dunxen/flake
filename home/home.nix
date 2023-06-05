@@ -221,6 +221,7 @@ in {
       tailscale
       termius
       telegram-desktop
+      thunderbird
       typst
       typst-lsp
       ungoogled-chromium
