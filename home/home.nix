@@ -93,41 +93,17 @@ in {
 
   # Use `dconf watch /` to track stateful changes you are doing, then set them here.
   dconf.settings = {
-    "org/gnome/shell" = {
-      disable-user-extensions = false;
-      disable-extension-version-validation = true;
-      # `gnome-extensions list` for a list
-      enabled-extensions = [
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
-        "Vitals@CoreCoding.com"
-        "pop-shell@system76.com"
-        "dash-to-dock@micxgx.gmail.com"
-      ];
-      favorite-apps = [ "firefox.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" ];
-    };
+    # Desktop preferences
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
     };
-    # `gsettings get org.gnome.shell.extensions.user-theme name`
-    # "org/gnome/shell/extensions/user-theme" = {
-    #   name = "palenight";
-    # };
     "org/gnome/desktop/wm/preferences" = {
       workspace-names = [ "Main" ];
       button-layout = "appmenu:minimize,maximize,close";
     };
-    "org/gnome/shell/extensions/vitals" = {
-      show-storage = false;
-      show-voltage = true;
-      show-memory = true;
-      show-fan = true;
-      show-temperature = true;
-      show-processor = true;
-      show-network = true;
-    };
-    "org/gnome/shell/extensions/dash-to-dock" = {
-      transparency-mode = "DYNAMIC";
+    "org/gnome/desktop/datetime" = {
+      automatic-timezone = true;
     };
     "org/gnome/desktop/background" = {
       # picture-uri = "file://${./shapes.jpg}";
@@ -144,17 +120,52 @@ in {
       idle-delay = lib.hm.gvariant.mkUint32 600;
     };
     "org/gnome/desktop/notifications" = {
-      show-in-lock-scree = false;
+      show-in-lock-screen = false;
     };
     "org/gnome/desktop/peripherals/mouse" = {
       natural-scroll = true;
     };
-    "org/gnome/settings-daemon/plugins/power" = {
-      sleep-inactive-ac-timeout = 7200;
-    };
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
       edge-tiling = true;
+    };
+
+    # Shell preferences
+    "org/gnome/shell" = {
+      disable-user-extensions = false;
+      disable-extension-version-validation = true;
+      # `gnome-extensions list` for a list
+      enabled-extensions = [
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        "Vitals@CoreCoding.com"
+        "pop-shell@system76.com"
+        "dash-to-dock@micxgx.gmail.com"
+      ];
+      favorite-apps = [ "firefox.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" ];
+    };
+    # `gsettings get org.gnome.shell.extensions.user-theme name`
+    # "org/gnome/shell/extensions/user-theme" = {
+    #   name = "palenight";
+    # };
+    "org/gnome/shell/extensions/vitals" = {
+      show-storage = false;
+      show-voltage = true;
+      show-memory = true;
+      show-fan = true;
+      show-temperature = true;
+      show-processor = true;
+      show-network = true;
+    };
+    "org/gnome/shell/extensions/dash-to-dock" = {
+      transparency-mode = "DYNAMIC";
+    };
+
+    # Other preferences
+    "org/gnome/settings-daemon/plugins/power" = {
+      sleep-inactive-ac-timeout = 7200;
+    };
+    "org/gnome/system/location" = {
+      enabled = true;
     };
   };
 
