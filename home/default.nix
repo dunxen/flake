@@ -10,7 +10,7 @@
       passwordFile = "/persist/encrypted-passwords/dunxen";
       shell = pkgs.nushell;
       extraGroups = [ "wheel" "disk" "networkmanager" "libvirtd" "qemu-libvirtd" "kvm" "i2c" "plugdev" "wireshark" "docker" "vboxusers" ];
-      openssh.authorizedKeys.keys = [];
+      openssh.authorizedKeys.keys = [ ];
     };
     programs._1password.enable = true;
     programs._1password-gui = {

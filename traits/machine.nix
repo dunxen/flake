@@ -64,7 +64,7 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
-    
+
     services.tailscale.enable = true;
     services.tor.enable = true;
 

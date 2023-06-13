@@ -46,13 +46,15 @@ rustPlatform.buildRustPackage rec {
     install -Dm0644 $src/gui/ui/static/logos/liana-app-icon.svg $out/share/icons/hicolor/scalable/apps/liana.svg
   '';
 
-  desktopItems = [ (makeDesktopItem {
-    name = "Liana";
-    exec = "liana-gui";
-    icon = "liana";
-    desktopName = "Liana";
-    comment = meta.description;
-  }) ];
+  desktopItems = [
+    (makeDesktopItem {
+      name = "Liana";
+      exec = "liana-gui";
+      icon = "liana";
+      desktopName = "Liana";
+      comment = meta.description;
+    })
+  ];
 
   doCheck = true;
 

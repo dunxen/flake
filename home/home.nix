@@ -1,10 +1,11 @@
 { config, pkgs, lib, ... }:
 let
   ssh_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs8y3pGOgEefYi6juRp+RECFq/uzYu7o3Qc6Wo0RD90 git@dunxen.dev";
-in {
+in
+{
   home.username = "dunxen";
   home.homeDirectory = "/home/dunxen";
-  home.file.".ssh/allowed_signers".text ="dunxen ${ssh_key}";
+  home.file.".ssh/allowed_signers".text = "dunxen ${ssh_key}";
   # home.sessionVariables.GTK_THEME = "palenight";
 
   programs.git = {
@@ -37,7 +38,7 @@ in {
       graph = "log --all --decorate --graph --oneline";
       oops = "checkout --";
     };
-    ignores = ["*~" "*.swp" "*result*" ".direnv" "node_modules"];
+    ignores = [ "*~" "*.swp" "*result*" ".direnv" "node_modules" ];
     lfs.enable = true;
     extraConfig = {
       pull.rebase = true;
@@ -170,9 +171,10 @@ in {
   };
 
   # Packages to have installed for this profile.
-  home.packages = let
-    liana = pkgs.callPackage ../packages/liana { };
-  in
+  home.packages =
+    let
+      liana = pkgs.callPackage ../packages/liana { };
+    in
     with pkgs; [
       age
       asn
@@ -244,7 +246,7 @@ in {
       zellij
       zola
       zotero
-    ]  ++ (if stdenv.isx86_64 then [
+    ] ++ (if stdenv.isx86_64 then [
       kicad
       obs-studio
       obs-studio-plugins.obs-gstreamer
@@ -252,7 +254,7 @@ in {
       obs-studio-plugins.obs-pipewire-audio-capture
       obs-studio-plugins.obs-multi-rtmp
       obs-studio-plugins.obs-move-transition
-    ] else if stdenv.isAarch64 then [  ] else [  ]);
+    ] else if stdenv.isAarch64 then [ ] else [ ]);
 
   programs.home-manager.enable = true;
 
@@ -269,7 +271,7 @@ in {
 
   programs.atuin = {
     enable = true;
-    flags = ["--disable-up-arrow"];
+    flags = [ "--disable-up-arrow" ];
     enableNushellIntegration = true;
   };
 
@@ -293,8 +295,8 @@ in {
           name = "typst";
           scope = "source.typst";
           injection-regex = "^typ(st)?$";
-          file-types = ["typ"];
-          roots = [];
+          file-types = [ "typ" ];
+          roots = [ ];
           comment-token = "//";
           language-server = {
             command = "typst-lsp";
@@ -311,8 +313,8 @@ in {
           };
           scope = "source.nickel";
           injection-regex = "^ni?c(ke)?l$";
-          file-types = ["ncl"];
-          roots = [];
+          file-types = [ "ncl" ];
+          roots = [ ];
           comment-token = "#";
           language-server = {
             command = "nls";

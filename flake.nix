@@ -21,7 +21,7 @@
       };
 
       packages = forAllSystems
-        (system: 
+        (system:
           let
             pkgs = import nixpkgs {
               inherit system;
