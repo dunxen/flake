@@ -16,7 +16,7 @@
       enable = true;
       antialias = true;
       hinting.enable = true;
-      hinting.style = "hintfull";
+      hinting.style = "full";
     };
 
     fonts.enableDefaultFonts = true;
