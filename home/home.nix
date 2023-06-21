@@ -212,6 +212,7 @@ in
       inkscape
       julia
       keybase-gui
+      kubernetes-helm
       ledger
       ledger-live-desktop
       liana
