@@ -5,9 +5,7 @@
 
 {
   config = {
-    time.timeZone = "Africa/Johannesburg";
-    # Windows wants hardware clock in local time instead of UTC
-    time.hardwareClockInLocalTime = true;
+    # time.timeZone = "Africa/Johannesburg";
 
     i18n.defaultLocale = "en_ZA.UTF-8";
     i18n.supportedLocales = [ "all" ];
