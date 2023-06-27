@@ -108,13 +108,14 @@ in
     };
     "org/gnome/desktop/background" = {
       # picture-uri = "file://${./shapes.jpg}";
-      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/dune-l.svg";
-      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/dune-d.svg";
-      primary-color = "#f7a957";
+      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-l.svg";
+      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-d.svg";
+      primary-color = "#241f31";
+      secondary-color = "#000000";
     };
     "org/gnome/desktop/screensaver" = {
-      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/dune-d.svg";
-      primary-color = "#f7a957";
+      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-d.svg";
+      primary-color = "#241f31";
       secondary-color = "#000000";
     };
     "org/gnome/desktop/session" = {
@@ -356,7 +357,7 @@ in
     enable = true;
     theme = "GitHub Dark";
     font.name = "JetBrains Mono Nerd Font";
-    font.size = 14.0;
+    font.size = 13.0;
     settings = {
       background_opacity = "0.95";
       window_padding_width = 6;
