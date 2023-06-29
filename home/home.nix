@@ -6,6 +6,15 @@ in
   home.username = "dunxen";
   home.homeDirectory = "/home/dunxen";
   home.file.".ssh/allowed_signers".text = "dunxen ${ssh_key}";
+  home.file.".toggle-dark-mode.sh".text = ''
+    #!/bin/bash
+    if gsettings get org.gnome.desktop.interface color-scheme | grep -q 'light'
+    then
+      gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    else
+      gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+    fi
+  '';
   # home.sessionVariables.GTK_THEME = "palenight";
 
   programs.git = {
@@ -94,6 +103,9 @@ in
 
   # Use `dconf watch /` to track stateful changes you are doing, then set them here.
   dconf.settings = {
+    "org/gnome/Console" = {
+      theme = "auto";
+    };
     # Desktop preferences
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -143,7 +155,7 @@ in
         "pop-shell@system76.com"
         "dash-to-dock@micxgx.gmail.com"
       ];
-      favorite-apps = [ "firefox.desktop" "kitty.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" ];
+      favorite-apps = [ "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" ];
     };
     # `gsettings get org.gnome.shell.extensions.user-theme name`
     # "org/gnome/shell/extensions/user-theme" = {
@@ -163,6 +175,17 @@ in
     };
 
     # Other preferences
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      ];
+    };
+    # Keybindings
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      name = "Toggle Light/Dark Mode";
+      binding = "<Shift><Super>d";
+      command = "xterm -e bash /home/dunxen/.toggle-dark-mode.sh";
+    };
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-timeout = 7200;
     };
@@ -180,8 +203,6 @@ in
       age
       asn
       asnmap
-      awscli2
-      azure-cli
       bat
       bind
       bgpdump
@@ -325,7 +346,7 @@ in
       ];
     };
     settings = {
-      theme = "onedark";
+      theme = "onelight";
       editor = {
         line-number = "relative";
         color-modes = true;
@@ -350,17 +371,6 @@ in
         };
         file-picker.hidden = false;
       };
-    };
-  };
-
-  programs.kitty = {
-    enable = true;
-    theme = "GitHub Dark";
-    font.name = "JetBrains Mono Nerd Font";
-    font.size = 13.0;
-    settings = {
-      background_opacity = "0.95";
-      window_padding_width = 6;
     };
   };
 
