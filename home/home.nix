@@ -155,7 +155,7 @@ in
         "pop-shell@system76.com"
         "dash-to-dock@micxgx.gmail.com"
       ];
-      favorite-apps = [ "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" ];
+      favorite-apps = [ "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "1password.desktop", "org.wezfurlong.wezterm.desktop" ];
     };
     # `gsettings get org.gnome.shell.extensions.user-theme name`
     # "org/gnome/shell/extensions/user-theme" = {
@@ -265,6 +265,7 @@ in
       unzip
       vagrant
       wasmtime
+      wezterm
       wget
       zellij
       zola
