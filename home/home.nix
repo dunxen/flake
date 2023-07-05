@@ -8,11 +8,17 @@ in
   home.file.".ssh/allowed_signers".text = "dunxen ${ssh_key}";
   home.file.".toggle-dark-mode.sh".text = ''
     #!/bin/bash
+
+    # Fail early, fail often.
+    set -eu -o pipefail
+
     if gsettings get org.gnome.desktop.interface color-scheme | grep -q 'light'
     then
       gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+      sed -i 's/theme = ".*"/theme = "tokyonight_storm"/' /home/dunxen/.config/helix/config.toml
     else
       gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+      sed -i 's/theme = ".*"/theme = "tomorrow"/' /home/dunxen/.config/helix/config.toml
     fi
   '';
   # home.sessionVariables.GTK_THEME = "palenight";
@@ -348,7 +354,7 @@ in
       ];
     };
     settings = {
-      theme = "onelight";
+      theme = "tomorrow";
       editor = {
         line-number = "relative";
         color-modes = true;
