@@ -18,7 +18,7 @@ in
       sed -i 's/theme = ".*"/theme = "tokyonight_storm"/' /home/dunxen/.config/helix/config.toml
     else
       gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-      sed -i 's/theme = ".*"/theme = "tomorrow"/' /home/dunxen/.config/helix/config.toml
+      sed -i 's/theme = ".*"/theme = "nord_light"/' /home/dunxen/.config/helix/config.toml
     fi
   '';
   # home.sessionVariables.GTK_THEME = "palenight";
@@ -354,7 +354,7 @@ in
       ];
     };
     settings = {
-      theme = "tomorrow";
+      theme = "tokyonight_storm";
       editor = {
         line-number = "relative";
         color-modes = true;
