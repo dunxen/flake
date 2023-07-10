@@ -258,7 +258,6 @@ in
       rustup
       signal-desktop
       stack
-      starship
       steam
       subfinder
       tailscale
@@ -298,6 +297,13 @@ in
   programs.starship = {
     enable = true;
     enableNushellIntegration = true;
+    settings = {
+      time = {
+        disabled = false;
+        time_format = "%T";
+        utc_time_offset = "+2";
+      };
+    };
   };
 
   programs.atuin = {
