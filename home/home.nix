@@ -88,10 +88,10 @@ in
 
   gtk = {
     enable = true;
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
+    # iconTheme = {
+    #   name = "Papirus-Dark";
+    #   package = pkgs.papirus-icon-theme;
+    # };
     # theme = {
     #   name = "palenight";
     #   package = pkgs.palenight-theme;
@@ -236,7 +236,6 @@ in
       gnomeExtensions.dash-to-dock
       gnomeExtensions.pop-shell
       go
-      google-cloud-sdk
       htop
       inkscape
       julia
