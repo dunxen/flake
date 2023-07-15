@@ -58,7 +58,7 @@
     programs.nm-applet.enable = true;
 
     programs.adb.enable = true;
-    users.users.dunxen.extraGroups = ["adbusers"];
+    users.users.dunxen.extraGroups = [ "adbusers" ];
 
     sound.enable = true;
     services.pipewire = {
