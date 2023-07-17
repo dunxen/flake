@@ -208,7 +208,6 @@ in
     in
     with pkgs; [
       age
-      android-studio
       asn
       asnmap
       bat
