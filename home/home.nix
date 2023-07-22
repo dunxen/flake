@@ -22,7 +22,6 @@ in
     fi
   '';
   # home.sessionVariables.GTK_THEME = "palenight";
-  home.file.".wezterm.lua".source = ./config/.wezterm.lua;
 
   programs.git = {
     enable = true;
@@ -162,7 +161,7 @@ in
         "pop-shell@system76.com"
         "dash-to-dock@micxgx.gmail.com"
       ];
-      favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" "org.wezfurlong.wezterm.desktop" ];
+      favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" "Alacritty.desktop" ];
     };
     # `gsettings get org.gnome.shell.extensions.user-theme name`
     # "org/gnome/shell/extensions/user-theme" = {
@@ -256,6 +255,7 @@ in
       ripgrep
       rustup
       signal-desktop
+      sparrow
       stack
       steam
       subfinder
@@ -270,12 +270,10 @@ in
       unzip
       vagrant
       wasmtime
-      wezterm
       wget
       zellij
       zola
       zotero
-    ] ++ (if stdenv.isx86_64 then [
       kicad
       obs-studio
       obs-studio-plugins.obs-gstreamer
@@ -283,7 +281,7 @@ in
       obs-studio-plugins.obs-pipewire-audio-capture
       obs-studio-plugins.obs-multi-rtmp
       obs-studio-plugins.obs-move-transition
-    ] else if stdenv.isAarch64 then [ ] else [ ]);
+    ];
 
   programs.home-manager.enable = true;
 
@@ -314,6 +312,16 @@ in
   programs.direnv = {
     enable = true;
     enableNushellIntegration = true;
+  };
+
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      window.padding = {
+        x = 8;
+        y = 8;
+      };
+    };
   };
 
   programs.helix = {
