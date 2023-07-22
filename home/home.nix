@@ -229,6 +229,7 @@ in
       gh
       gimp
       git-crypt
+      gitoxide
       glow
       gnomeExtensions.user-themes
       gnomeExtensions.vitals
