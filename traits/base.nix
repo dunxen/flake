@@ -5,10 +5,17 @@
 
 {
   config = {
-    # time.timeZone = "Africa/Johannesburg";
+    time.timeZone = "Africa/Johannesburg";
 
     i18n.defaultLocale = "en_ZA.UTF-8";
     i18n.supportedLocales = [ "all" ];
+    i18n.inputMethod = {
+      enabled = "fcitx5";
+      fcitx5.addons = with pkgs; [
+        fcitx5-mozc
+        fcitx5-gtk
+      ];
+    };
 
     environment.systemPackages = with pkgs; [
       # Shell utilities
