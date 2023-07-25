@@ -37,6 +37,8 @@
             unsafe-bootstrap = pkgs.callPackage ./packages/unsafe-bootstrap { };
           });
 
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+
       devShells = forAllSystems
         (system:
           let
@@ -68,7 +70,7 @@
               inherit pkgs;
               modules = [
                 hyprland.homeManagerModules.default
-                {wayland.windowManager.hyprland.enable = true;}
+                { wayland.windowManager.hyprland.enable = true; }
                 ./home/home.nix
               ];
             };
