@@ -1,4 +1,7 @@
 { config, pkgs, lib, ... }:
+
+with lib.hm.gvariant;
+
 let
   ssh_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs8y3pGOgEefYi6juRp+RECFq/uzYu7o3Qc6Wo0RD90 git@dunxen.dev";
 in
@@ -137,13 +140,16 @@ in
       secondary-color = "#000000";
     };
     "org/gnome/desktop/session" = {
-      idle-delay = lib.hm.gvariant.mkUint32 600;
+      idle-delay = mkUint32 600;
     };
     "org/gnome/desktop/notifications" = {
       show-in-lock-screen = false;
     };
     "org/gnome/desktop/peripherals/mouse" = {
       natural-scroll = true;
+    };
+    "org/gnome/desktop/input-sources" = {
+      sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "de+neo" ]) ];
     };
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
