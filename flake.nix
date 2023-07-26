@@ -7,10 +7,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland }:
+  outputs = { self, nixpkgs, home-manager }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -69,8 +68,6 @@
             dunxen = home-manager.lib.homeManagerConfiguration {
               inherit pkgs;
               modules = [
-                hyprland.homeManagerModules.default
-                { wayland.windowManager.hyprland.enable = true; }
                 ./home/home.nix
               ];
             };
