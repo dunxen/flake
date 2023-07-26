@@ -19,8 +19,8 @@
       hinting.style = "full";
     };
 
-    fonts.enableDefaultFonts = true;
-    fonts.fonts = with pkgs; [
+    fonts.enableDefaultPackages = true;
+    fonts.packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
