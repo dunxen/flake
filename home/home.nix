@@ -220,6 +220,7 @@ in
       bgpdump
       bundix
       carapace
+      comma
       cosign
       devbox
       discord
