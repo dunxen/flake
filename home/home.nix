@@ -276,6 +276,7 @@ in
       unixtools.xxd
       unzip
       vagrant
+      vlc
       wasmtime
       wget
       zellij
