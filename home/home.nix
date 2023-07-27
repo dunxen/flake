@@ -315,11 +315,11 @@ in
   #   };
   # };
 
-  programs.atuin = {
-    enable = true;
-    flags = [ "--disable-up-arrow" ];
-    enableNushellIntegration = true;
-  };
+  # programs.atuin = {
+  #   enable = true;
+  #   flags = [ "--disable-up-arrow" ];
+  #   enableNushellIntegration = true;
+  # };
 
   programs.direnv = {
     enable = true;

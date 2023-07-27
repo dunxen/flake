@@ -60,9 +60,6 @@
       "/share/nix-direnv"
     ];
 
-    programs.bash.promptInit = ''
-      eval "$(${pkgs.starship}/bin/starship init bash)"
-    '';
     programs.bash.shellInit = ''
     '';
     programs.bash.loginShellInit = ''
