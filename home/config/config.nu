@@ -190,6 +190,7 @@ alias bitcoin-cli = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin-cl
 alias bitcoin-tx = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin-tx
 alias bitcoin-wallet = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoind-wallet
 alias bitcoin-util = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin-util
+alias cider = appimage-run /home/dunxen/AppImages/Cider-2.1.1.AppImage
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {

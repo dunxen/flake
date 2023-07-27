@@ -321,10 +321,10 @@ in
   #   enableNushellIntegration = true;
   # };
 
-  programs.direnv = {
-    enable = true;
-    # enableNushellIntegration = true;
-  };
+  # programs.direnv = {
+  #   enable = true;
+  #   enableNushellIntegration = true;
+  # };
 
   programs.alacritty = {
     enable = true;
