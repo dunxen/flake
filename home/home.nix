@@ -213,6 +213,7 @@ in
     in
     with pkgs; [
       age
+      appimage-run
       asn
       asnmap
       bat
