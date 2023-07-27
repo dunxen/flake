@@ -42,13 +42,22 @@ def create_right_prompt [] {
     ([$last_exit_code, (char space), $time_segment] | str join)
 }
 
+def create_prompt_indicator [] {
+    (ansi reset)
+    if ($env.LAST_EXIT_CODE != 0) {
+        ([ (ansi rb) " 🗲 " ] | str join)
+    } else {
+        ([ (ansi blue) " ₿ " ] | str join)
+    }
+}
+
 # Use nushell functions to define your right and left prompt
 $env.PROMPT_COMMAND = {|| create_left_prompt }
-# $env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
+$env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
 
 # The prompt indicators are environmental variables that represent
 # the state of the prompt
-$env.PROMPT_INDICATOR = {|| " > " }
+$env.PROMPT_INDICATOR = {|| create_prompt_indicator }
 $env.PROMPT_INDICATOR_VI_INSERT = {|| " : " }
 $env.PROMPT_INDICATOR_VI_NORMAL = {|| " > " }
 $env.PROMPT_MULTILINE_INDICATOR = {|| "::: " }
