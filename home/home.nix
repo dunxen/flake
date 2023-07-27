@@ -237,6 +237,7 @@ in
       gh
       gimp
       git-crypt
+      git-nomad # Synchronise work-in-progress git branches in a light weight fashion
       gitoxide
       glow
       gnomeExtensions.user-themes
