@@ -323,7 +323,7 @@ in
 
   programs.direnv = {
     enable = true;
-    enableNushellIntegration = true;
+    # enableNushellIntegration = true;
   };
 
   programs.alacritty = {
