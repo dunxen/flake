@@ -302,17 +302,18 @@ in
     configFile.source = ./config/config.nu;
   };
 
-  programs.starship = {
-    enable = true;
-    enableNushellIntegration = true;
-    settings = {
-      time = {
-        disabled = false;
-        time_format = "%T";
-        utc_time_offset = "+2";
-      };
-    };
-  };
+  # Disable because nushell v0.83.0 broke things
+  # programs.starship = {
+  #   enable = true;
+  #   enableNushellIntegration = true;
+  #   settings = {
+  #     time = {
+  #       disabled = false;
+  #       time_format = "%T";
+  #       utc_time_offset = "+2";
+  #     };
+  #   };
+  # };
 
   programs.atuin = {
     enable = true;
