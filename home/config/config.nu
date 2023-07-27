@@ -181,7 +181,7 @@ let carapace_completer = {|spans|
 
 # OP Shell Plugins
 
-let-env OP_PLUGIN_ALIASES_SOURCED = 1
+$env.OP_PLUGIN_ALIASES_SOURCED = 1
 alias gh = op plugin run -- gh
 
 # Bitcoin dev
@@ -192,7 +192,7 @@ alias bitcoin-wallet = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin
 alias bitcoin-util = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin-util
 
 # The default config record. This is where much of your global configuration is setup.
-let-env config = {
+$env.config = {
   # true or false to enable or disable the welcome banner at startup
   show_banner: true
   ls: {
