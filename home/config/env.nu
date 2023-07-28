@@ -30,7 +30,7 @@ def create_right_prompt [] {
 def create_prompt_indicator [] {
     (ansi reset)
     if ($env.LAST_EXIT_CODE != 0) {
-        ([ (ansi rb) "🗲 " ] | str join)
+        ([ (ansi rb) "🗲  " ] | str join)
     } else {
         ([ (ansi blue) "₿ " ] | str join)
     }
