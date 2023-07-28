@@ -819,3 +819,15 @@ $env.config = {
         }
     ]
 }
+
+# Manual integration of direnv as nushell 0.83.0 broke it
+$env.config = ($env | default {} config).config
+$env.config = ($env.config | default {} hooks)
+$env.config = ($env.config | update hooks ($env.config.hooks | default [] pre_prompt))
+$env.config = ($env.config | update hooks.pre_prompt ($env.config.hooks.pre_prompt | append {
+  code: "
+    let _direnv = (direnv export json | from json)
+    let _direnv = if ($_direnv | length) == 1 { $_direnv } else { {} }
+    $_direnv | load-env
+    "
+}))

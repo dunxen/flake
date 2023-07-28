@@ -224,6 +224,7 @@ in
       comma
       cosign
       devbox
+      direnv # Remove when programs.direnv is fixed.
       discord
       dnsx
       docker
@@ -267,6 +268,7 @@ in
       signal-desktop
       sparrow
       stack
+      starship # Remove when programs.starship is fixed.
       steam
       subfinder
       tailscale
@@ -315,12 +317,14 @@ in
   #   };
   # };
 
+  # Disable because nushell v0.83.0 broke things
   # programs.atuin = {
   #   enable = true;
   #   flags = [ "--disable-up-arrow" ];
   #   enableNushellIntegration = true;
   # };
 
+  # Disable because nushell v0.83.0 broke things
   # programs.direnv = {
   #   enable = true;
   #   enableNushellIntegration = true;

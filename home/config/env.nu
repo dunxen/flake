@@ -2,26 +2,11 @@
 #
 # version = 0.83.1
 
+$env.STARSHIP_SHELL = "nu"
+
 def create_left_prompt [] {
-    mut home = ""
-    try {
-        if $nu.os-info.name == "windows" {
-            $home = $env.USERPROFILE
-        } else {
-            $home = $env.HOME
-        }
-    }
-
-    let dir = ([
-        ($env.PWD | str substring 0..($home | str length) | str replace --string $home "~"),
-        ($env.PWD | str substring ($home | str length)..)
-    ] | str join)
-
-    let path_color = (if (is-admin) { ansi red_bold } else { ansi green_bold })
-    let separator_color = (if (is-admin) { ansi light_red_bold } else { ansi light_green_bold })
-    let path_segment = $"($path_color)($dir)"
-
-    $path_segment | str replace --all --string (char path_sep) $"($separator_color)/($path_color)"
+    # Manually include starship as nu 0.83.0 broke it.
+    starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)'
 }
 
 def create_right_prompt [] {
@@ -45,9 +30,9 @@ def create_right_prompt [] {
 def create_prompt_indicator [] {
     (ansi reset)
     if ($env.LAST_EXIT_CODE != 0) {
-        ([ (ansi rb) " 🗲 " ] | str join)
+        ([ (ansi rb) "🗲 " ] | str join)
     } else {
-        ([ (ansi blue) " ₿ " ] | str join)
+        ([ (ansi blue) "₿ " ] | str join)
     }
 }
 
