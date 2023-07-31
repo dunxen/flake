@@ -262,7 +262,6 @@ in
       protonmail-bridge
       protonvpn-cli
       protonvpn-gui
-      qFlipper
       riff
       ripgrep
       rustup
