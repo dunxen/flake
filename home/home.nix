@@ -264,6 +264,7 @@ in
       protonvpn-gui
       riff
       ripgrep
+      ripgrep-all
       rustup
       signal-desktop
       sparrow
