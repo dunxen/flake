@@ -275,6 +275,7 @@ in
       riff
       ripgrep
       ripgrep-all
+      rustdesk
       rustup
       signal-desktop
       sparrow
