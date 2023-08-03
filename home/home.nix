@@ -69,6 +69,16 @@ in
     };
   };
 
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user = {
+        name = "Duncan Dean";
+        email = "git@dunxen.dev";
+      };
+    };
+  };
+
   programs.gpg.enable = true;
 
   services.gpg-agent = {
