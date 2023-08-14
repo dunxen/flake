@@ -264,6 +264,8 @@ in
       ledger
       ledger-live-desktop
       liana
+      lldb
+      llvm
       nickel
       nixos-generators
       nls # Nickel Language Server
