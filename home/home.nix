@@ -177,7 +177,7 @@ in
         "pop-shell@system76.com"
         "dash-to-dock@micxgx.gmail.com"
       ];
-      favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" "Alacritty.desktop" "app.bluebubbles.BlueBubbles.desktop" "thunderbird.desktop" ];
+      favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" "Alacritty.desktop" "thunderbird.desktop" ];
     };
     # `gsettings get org.gnome.shell.extensions.user-theme name`
     # "org/gnome/shell/extensions/user-theme" = {
@@ -275,7 +275,6 @@ in
       riff
       ripgrep
       ripgrep-all
-      rustdesk
       rustup
       signal-desktop
       sparrow
