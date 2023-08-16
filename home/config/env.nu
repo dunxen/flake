@@ -2,13 +2,6 @@
 #
 # version = 0.83.1
 
-$env.STARSHIP_SHELL = "nu"
-
-def create_left_prompt [] {
-    # Manually include starship as nu 0.83.0 broke it.
-    starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)'
-}
-
 def create_right_prompt [] {
     # create a right prompt in magenta with green separators and am/pm underlined
     let time_segment = ([
@@ -37,7 +30,7 @@ def create_prompt_indicator [] {
 }
 
 # Use nushell functions to define your right and left prompt
-$env.PROMPT_COMMAND = {|| create_left_prompt }
+# $env.PROMPT_COMMAND = {|| create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
 
 # The prompt indicators are environmental variables that represent
@@ -56,10 +49,6 @@ $env.ENV_CONVERSIONS = {
         from_string: { |s| $s | split row (char esep) | path expand --no-symlink }
         to_string: { |v| $v | path expand --no-symlink | str join (char esep) }
     }
-    "Path": {
-        from_string: { |s| $s | split row (char esep) | path expand --no-symlink }
-        to_string: { |v| $v | path expand --no-symlink | str join (char esep) }
-    }
 }
 
 # Directories to search for scripts when calling source or use
@@ -73,6 +62,5 @@ $env.NU_PLUGIN_DIRS = [
 ]
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-# $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/home/dunxen/.cargo/bin')
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/home/dunxen/.cabal/bin')
+$env.PATH = ($env.PATH | append '~/.cargo/bin')
+$env.PATH = ($env.PATH | append '~/.cabal/bin')

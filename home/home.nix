@@ -234,7 +234,6 @@ in
       comma
       cosign
       devbox
-      direnv # Remove when programs.direnv is fixed.
       discord
       dnsx
       docker
@@ -257,6 +256,7 @@ in
       gnomeExtensions.pop-shell
       go
       htop
+      hydra-check
       inkscape
       julia
       keybase-gui
@@ -281,7 +281,6 @@ in
       signal-desktop
       sparrow
       stack
-      starship # Remove when programs.starship is fixed.
       steam
       subfinder
       tailscale
@@ -317,31 +316,28 @@ in
     configFile.source = ./config/config.nu;
   };
 
-  # Disable because nushell v0.83.0 broke things
-  # programs.starship = {
-  #   enable = true;
-  #   enableNushellIntegration = true;
-  #   settings = {
-  #     time = {
-  #       disabled = false;
-  #       time_format = "%T";
-  #       utc_time_offset = "+2";
-  #     };
-  #   };
-  # };
+  programs.starship = {
+    enable = true;
+    enableNushellIntegration = true;
+    settings = {
+      time = {
+        disabled = false;
+        time_format = "%T";
+        utc_time_offset = "+2";
+      };
+    };
+  };
 
-  # Disable because nushell v0.83.0 broke things
-  # programs.atuin = {
-  #   enable = true;
-  #   flags = [ "--disable-up-arrow" ];
-  #   enableNushellIntegration = true;
-  # };
+  programs.atuin = {
+    enable = true;
+    # flags = [ "--disable-up-arrow" ];
+    enableNushellIntegration = true;
+  };
 
-  # Disable because nushell v0.83.0 broke things
-  # programs.direnv = {
-  #   enable = true;
-  #   enableNushellIntegration = true;
-  # };
+  programs.direnv = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
 
   programs.alacritty = {
     enable = true;

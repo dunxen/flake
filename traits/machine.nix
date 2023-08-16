@@ -83,7 +83,7 @@
     hardware.bluetooth.enable = true;
     hardware.xpadneo.enable = true; # For Xbox One Controller
 
-    virtualisation.libvirtd.enable = true;
+    # virtualisation.libvirtd.enable = true;
     virtualisation.libvirtd.onBoot = "ignore";
     virtualisation.libvirtd.qemu.package = pkgs.qemu_full;
     virtualisation.libvirtd.qemu.ovmf.enable = true;
@@ -91,7 +91,7 @@
     virtualisation.libvirtd.qemu.swtpm.enable = true;
     virtualisation.libvirtd.qemu.swtpm.package = pkgs.swtpm;
     virtualisation.libvirtd.qemu.runAsRoot = false;
-    virtualisation.virtualbox.host.enable = true;
+    # virtualisation.virtualbox.host.enable = true;
     virtualisation.spiceUSBRedirection.enable = true; # Note that this allows users arbitrary access to USB devices. 
     virtualisation.podman.enable = true;
 
