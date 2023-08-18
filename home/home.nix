@@ -241,6 +241,8 @@ in
       epiphany
       exercism
       fd
+      firecracker
+      firectl
       firefox-wayland
       flyctl
       gcc12
