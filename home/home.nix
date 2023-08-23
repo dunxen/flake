@@ -227,8 +227,9 @@ in
       asn
       asnmap
       bat
-      bind
       bgpdump
+      bind
+      blender-hip
       bundix
       carapace
       comma
