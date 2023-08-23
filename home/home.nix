@@ -506,7 +506,7 @@ in
          * [1] https://blog.mozilla.org/data/2018/08/20/effectively-measuring-search-in-firefox/ ***/
         "toolkit.telemetry.coverage.opt-out" = true; # [HIDDEN PREF]
         "toolkit.coverage.opt-out" = true; # [FF64+] [HIDDEN PREF]
-        "toolkit.coverage.endpoint.base" =  "";
+        "toolkit.coverage.endpoint.base" = "";
         /* 0334: disable PingCentre telemetry (used in several System Add-ons) [FF57+]
          * Defense-in-depth: currently covered by 0331 ***/
         "browser.ping-centre.telemetry" = false;
@@ -522,11 +522,11 @@ in
          * Shield is a telemetry system that can push and test "recipes"
          * [1] https://mozilla.github.io/normandy/ ***/
         "app.normandy.enabled" = false;
-        "app.normandy.api_url" =  "";
+        "app.normandy.api_url" = "";
 
         /** CRASH REPORTS ***/
         /* 0350: disable Crash Reports ***/
-        "breakpad.reportURL" =  "";
+        "breakpad.reportURL" = "";
         "browser.tabs.crashReporting.sendReport" = false; # [FF44+]
         /* 0351: enforce no submission of backlogged Crash Reports [FF58+]
          * [SETTING] Privacy & Security>Firefox Data Collection & Use>Allow Firefox to send backlogged crash reports  ***/
@@ -535,7 +535,7 @@ in
         /** OTHER ***/
         /* 0360: disable Captive Portal detection
          * [1] https://www.eff.org/deeplinks/2017/08/how-captive-portals-interfere-wireless-security-and-privacy ***/
-        "captivedetect.canonicalURL" =  "";
+        "captivedetect.canonicalURL" = "";
         "network.captive-portal-service.enabled" = false; # [FF52+]
         /* 0361: disable Network Connectivity checks [FF65+]
          * [1] https://bugzilla.mozilla.org/1460537 ***/
@@ -698,7 +698,7 @@ in
          * [SETTING] Privacy & Security>HTTPS-Only Mode (and manage exceptions)
          * [TEST] http://example.com [upgrade]
          * [TEST] http://httpforever.com/ | http://http.rip [no upgrade] ***/
-        "dom.security.https_only_mode" =  true; # [FF76+]
+        "dom.security.https_only_mode" = true; # [FF76+]
         /* 1246: disable HTTP background requests [FF82+]
          * When attempting to upgrade, if the server doesn't respond within 3 seconds, Firefox sends
          * a top-level HTTP request without path in order to check if the server supports HTTPS or not
