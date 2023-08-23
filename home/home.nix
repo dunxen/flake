@@ -243,7 +243,6 @@ in
       fd
       firecracker
       firectl
-      firefox-wayland
       flyctl
       gcc12
       gh
@@ -426,4 +425,9 @@ in
   };
 
   home.stateVersion = "22.11";
+
+  programs.firefox = {
+    enable = true;
+    package = pkgs.firefox-wayland;
+  };
 }
