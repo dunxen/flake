@@ -12,7 +12,7 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "liana";
-  version = "1.0";
+  version = "1.1";
 
   src = fetchFromGitHub {
     owner = "wizardsardine";
