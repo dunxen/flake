@@ -290,10 +290,11 @@ in
       thunderbird
       typst
       typst-lsp
-      ungoogled-chromium
       unixtools.xxd
       unzip
       vagrant
+      vivaldi
+      vivaldi-ffmpeg-codecs
       vlc
       wasmtime
       wget
@@ -307,7 +308,6 @@ in
       obs-studio-plugins.obs-pipewire-audio-capture
       obs-studio-plugins.obs-multi-rtmp
       obs-studio-plugins.obs-move-transition
-      zsa-udev-rules
     ];
 
   programs.home-manager.enable = true;
