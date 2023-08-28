@@ -307,6 +307,7 @@ in
       obs-studio-plugins.obs-pipewire-audio-capture
       obs-studio-plugins.obs-multi-rtmp
       obs-studio-plugins.obs-move-transition
+      zsa-udev-rules
     ];
 
   programs.home-manager.enable = true;
