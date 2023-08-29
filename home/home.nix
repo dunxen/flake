@@ -297,6 +297,7 @@ in
       vivaldi-ffmpeg-codecs
       vlc
       wasmtime
+      wally-cli
       wget
       zellij
       zola

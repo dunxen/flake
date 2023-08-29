@@ -82,6 +82,7 @@
     hardware.flipperzero.enable = true;
     hardware.bluetooth.enable = true;
     hardware.xpadneo.enable = true; # For Xbox One Controller
+    hardware.keyboard.zsa.enable = true;
 
     # virtualisation.libvirtd.enable = true;
     virtualisation.libvirtd.onBoot = "ignore";
