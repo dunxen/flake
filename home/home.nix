@@ -174,7 +174,7 @@ in
       enabled-extensions = [
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         "Vitals@CoreCoding.com"
-        "pop-shell@system76.com"
+        # "pop-shell@system76.com"
         "dash-to-dock@micxgx.gmail.com"
       ];
       favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" "Alacritty.desktop" "thunderbird.desktop" ];
@@ -255,7 +255,7 @@ in
       gnomeExtensions.user-themes
       gnomeExtensions.vitals
       gnomeExtensions.dash-to-dock
-      gnomeExtensions.pop-shell
+      # gnomeExtensions.pop-shell
       go
       htop
       hydra-check
