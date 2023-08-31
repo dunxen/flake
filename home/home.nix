@@ -395,7 +395,7 @@ in
       ];
     };
     settings = {
-      theme = "tokyonight_storm";
+      theme = "varua";
       editor = {
         line-number = "relative";
         color-modes = true;
