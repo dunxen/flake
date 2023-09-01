@@ -12,20 +12,19 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "liana";
-  version = "1.1";
+  version = "2.0rc1";
 
   src = fetchFromGitHub {
     owner = "wizardsardine";
     repo = pname;
     rev = "v${version}";
-    hash = "sha256-cqvjPa/GXDdFv8XEPJgHfKP/Duzv+jmp1yZ1rlKPfE8=";
+    hash = "sha256-MKNtUlgqatJ7votqoyX3YSowixSRhaIlXnAPfNaym3s=";
   };
 
   cargoLock = {
-    lockFile = "${src}/gui/Cargo.lock";
+    lockFile = ./Cargo.lock;
     outputHashes = {
-      "liana-1.1.0" = "sha256-ncy7/w9kqD3w+/v0OVKgtgCHCF7Ram327I8R6IJe/s8=";
-      "miniscript-9.0.0" = "sha256-5ITjVqh5frqjTTs993xqo5WwDZ5dDAfFn4DGqt2QbiY=";
+      "liana-2.0.0" = "sha256-vIqnjBrszNHy0CmvJF8PKk91DHE5IdNUsKRycGO1Hes=";
     };
   };
 
