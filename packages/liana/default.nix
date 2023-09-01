@@ -9,6 +9,8 @@
 , makeDesktopItem
 , systemd
 , cmake
+, pkgs
+, makeWrapper
 }:
 rustPlatform.buildRustPackage rec {
   pname = "liana";
@@ -32,10 +34,20 @@ rustPlatform.buildRustPackage rec {
     pkg-config
     cmake
     copyDesktopItems
+    makeWrapper
   ];
 
-  buildInputs = [
+  buildInputs = with pkgs; [
+    expat
     fontconfig
+    freetype
+    freetype.dev
+    libGL
+    pkgconfig
+    xorg.libX11
+    xorg.libXcursor
+    xorg.libXi
+    xorg.libXrandr
     systemd
   ];
 
@@ -43,6 +55,7 @@ rustPlatform.buildRustPackage rec {
 
   postInstall = ''
     install -Dm0644 $src/gui/ui/static/logos/liana-app-icon.svg $out/share/icons/hicolor/scalable/apps/liana.svg
+    wrapProgram $out/bin/liana-gui --prefix LD_LIBRARY_PATH : "${builtins.foldl' (a: b: "${a}:${b}/lib") "${pkgs.vulkan-loader}/lib" buildInputs}"
   '';
 
   desktopItems = [
