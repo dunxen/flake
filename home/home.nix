@@ -138,9 +138,8 @@ in
       automatic-timezone = true;
     };
     "org/gnome/desktop/background" = {
-      # picture-uri = "file://${./shapes.jpg}";
-      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-l.svg";
-      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-d.svg";
+      picture-uri = "file://${./backgrounds/satpaper_latest.png}";
+      picture-uri-dark = "file://${./backgrounds/satpaper_latest.png}";
       primary-color = "#241f31";
       secondary-color = "#000000";
     };
@@ -352,6 +351,7 @@ in
         x = 8;
         y = 8;
       };
+      opacity = 0.85;
     };
   };
 
