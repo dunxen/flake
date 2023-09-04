@@ -195,6 +195,9 @@ in
     "org/gnome/shell/extensions/dash-to-dock" = {
       transparency-mode = "DYNAMIC";
     };
+    "org/gnome/shell/extensions/pop-shell" = {
+      gap-outer = mkUint32 8;
+    };
 
     # Other preferences
     "org/gnome/settings-daemon/plugins/media-keys" = {
