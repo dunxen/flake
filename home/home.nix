@@ -351,7 +351,7 @@ in
         x = 8;
         y = 8;
       };
-      opacity = 0.85;
+      window.opacity = 0.85;
     };
   };
 

@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.3.tar.gz";
   };
 
-  outputs = { self, nixpkgs, home-manager }:
+  outputs = { self, nixpkgs, home-manager, fh }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -90,6 +91,9 @@
             system = "x86_64-linux";
             modules = with self.nixosModules; [
               ({ config = { nix.registry.nixpkgs.flake = nixpkgs; }; })
+              {
+                environment.systemPackages = [ fh.packages.x86_64-linux.default ];
+              }
               home-manager.nixosModules.home-manager
               traits.overlay
               traits.base
