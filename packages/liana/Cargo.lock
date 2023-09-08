@@ -133,9 +133,9 @@ dependencies = [
 
 [[package]]
 name = "async-hwi"
-version = "0.0.10"
+version = "0.0.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22355924b351ed9bad0e8b400d0b039eb624259e80ad4afb978e04a35e81ea93"
+checksum = "d29e54987aab24867f5259b95d5c7f3d46bf69ad8ddfb01dde24a88c00a9e93d"
 dependencies = [
  "async-trait",
  "base64 0.13.1",
@@ -1750,8 +1750,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "215d51fa4f70dbb63775d7141243c4d98d4d525d8949695601f8fbac7dcbc04e"
+source = "git+https://github.com/edouardparis/iced?branch=fix-futures-recipe#2d8318b13bdf8aaf31bc6d5a72b22313ed2d10cf"
 dependencies = [
  "futures",
  "log",
@@ -2114,7 +2113,7 @@ dependencies = [
 [[package]]
 name = "liana"
 version = "2.0.0"
-source = "git+https://github.com/wizardsardine/liana?branch=2.x#7b5ec48cecd445035ce2e96bb3d5e3fb9d670d5c"
+source = "git+https://github.com/wizardsardine/liana?branch=2.x#bb081099241b38d36942d9344668ed88fa05f993"
 dependencies = [
  "backtrace",
  "bip39",

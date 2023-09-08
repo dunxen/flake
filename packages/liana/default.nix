@@ -1,36 +1,45 @@
 { lib
+, pkgs
 , rustPlatform
 , fetchFromGitHub
 , llvmPackages
 , fetchurl
-, pkg-config
-, fontconfig
-, copyDesktopItems
 , makeDesktopItem
-, systemd
-, cmake
-, pkgs
-, makeWrapper
 }:
+let
+  runtimeLibs = with pkgs; [
+    expat
+    fontconfig
+    freetype
+    freetype.dev
+    libGL
+    vulkan-loader
+    xorg.libX11
+    xorg.libXcursor
+    xorg.libXi
+    xorg.libXrandr
+  ];
+in
 rustPlatform.buildRustPackage rec {
   pname = "liana";
-  version = "2.0rc1";
+  version = "2.0";
 
   src = fetchFromGitHub {
     owner = "wizardsardine";
     repo = pname;
     rev = "v${version}";
-    hash = "sha256-MKNtUlgqatJ7votqoyX3YSowixSRhaIlXnAPfNaym3s=";
+    hash = "sha256-GQNPKlqOBoh684x57gVV3CImgO7HBqt3UFp6CHC13do=";
   };
 
   cargoLock = {
     lockFile = ./Cargo.lock;
     outputHashes = {
-      "liana-2.0.0" = "sha256-vIqnjBrszNHy0CmvJF8PKk91DHE5IdNUsKRycGO1Hes=";
+      "liana-2.0.0" = "sha256-Dv/Ad8Kv7Mit8yhewzANbUbngQjtQaap/NQy9jqnbfA=";
+      "iced_futures-0.6.0" = "sha256-ejkAxU6DwiX1/119eA0GRapSmz7dqwx9M0uMwyDHATQ=";
     };
   };
 
-  nativeBuildInputs = [
+  nativeBuildInputs = with pkgs; [
     pkg-config
     cmake
     copyDesktopItems
@@ -38,24 +47,15 @@ rustPlatform.buildRustPackage rec {
   ];
 
   buildInputs = with pkgs; [
-    expat
     fontconfig
-    freetype
-    freetype.dev
-    libGL
-    pkgconfig
-    xorg.libX11
-    xorg.libXcursor
-    xorg.libXi
-    xorg.libXrandr
     systemd
   ];
 
   sourceRoot = "source/gui";
 
   postInstall = ''
-    install -Dm0644 $src/gui/ui/static/logos/liana-app-icon.svg $out/share/icons/hicolor/scalable/apps/liana.svg
-    wrapProgram $out/bin/liana-gui --prefix LD_LIBRARY_PATH : "${builtins.foldl' (a: b: "${a}:${b}/lib") "${pkgs.vulkan-loader}/lib" buildInputs}"
+    install -Dm0644 ./ui/static/logos/liana-app-icon.svg $out/share/icons/hicolor/scalable/apps/liana.svg
+    wrapProgram $out/bin/liana-gui --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath runtimeLibs}"
   '';
 
   desktopItems = [
@@ -78,4 +78,3 @@ rustPlatform.buildRustPackage rec {
     platforms = platforms.linux;
   };
 }
-
