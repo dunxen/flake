@@ -220,9 +220,6 @@ in
 
   # Packages to have installed for this profile.
   home.packages =
-    let
-      liana = pkgs.callPackage ../packages/liana { };
-    in
     with pkgs; [
       age
       appimage-run
@@ -232,6 +229,7 @@ in
       bgpdump
       bind
       blender-hip
+      bun
       bundix
       carapace
       comma
