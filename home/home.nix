@@ -239,6 +239,7 @@ in
       dnsx
       docker
       dogdns
+      earthly
       elmerfem
       epiphany
       exercism
