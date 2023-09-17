@@ -259,7 +259,7 @@ in
       gnomeExtensions.dash-to-dock
       gnomeExtensions.pop-shell
       go
-      godot
+      godot_4
       htop
       hydra-check
       inkscape
