@@ -252,13 +252,14 @@ in
       gimp
       git-crypt
       git-nomad # Synchronise work-in-progress git branches in a light weight fashion
-      # gitoxide
+      gitoxide
       glow
       gnomeExtensions.user-themes
       gnomeExtensions.vitals
       gnomeExtensions.dash-to-dock
       gnomeExtensions.pop-shell
       go
+      godot
       htop
       hydra-check
       inkscape
