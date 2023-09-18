@@ -158,7 +158,7 @@ in
       natural-scroll = true;
     };
     "org/gnome/desktop/input-sources" = {
-      sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "us+colemak" ]) ];
+      sources = [ (mkTuple [ "xkb" "us" ]) ];
     };
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
