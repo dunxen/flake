@@ -263,6 +263,7 @@ in
       htop
       hydra-check
       inkscape
+      jetbrains.rust-rover
       julia
       keybase-gui
       kubernetes-helm
