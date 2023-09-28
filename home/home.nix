@@ -266,7 +266,6 @@ in
       julia
       keybase-gui
       kubernetes-helm
-      lapce
       ledger
       ledger-live-desktop
       liana
