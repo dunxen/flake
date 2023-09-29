@@ -138,8 +138,8 @@ in
       automatic-timezone = true;
     };
     "org/gnome/desktop/background" = {
-      picture-uri = "file://${./backgrounds/satpaper_latest.png}";
-      picture-uri-dark = "file://${./backgrounds/satpaper_latest.png}";
+      picture-uri = "file://${./backgrounds/flow.jpg}";
+      picture-uri-dark = "file://${./backgrounds/flow.jpg}";
       primary-color = "#241f31";
       secondary-color = "#000000";
     };
