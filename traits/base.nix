@@ -95,6 +95,11 @@
 
     # Hack: https://github.com/NixOS/nixpkgs/issues/180175
     # systemd.services.systemd-udevd.restartIfChanged = false;
+    systemd.services.NetworkManager-wait-online = {
+      serviceConfig = {
+        ExecStart = [ "" "${pkgs.networkmanager}/bin/nm-online -q" ];
+      };
+    };
 
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions
