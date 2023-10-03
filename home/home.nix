@@ -175,6 +175,7 @@ in
         "Vitals@CoreCoding.com"
         "pop-shell@system76.com"
         "dash-to-dock@micxgx.gmail.com"
+        "appindicatorsupport@rgcjonas.gmail.com"
       ];
       favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" "Alacritty.desktop" "thunderbird.desktop" ];
     };
@@ -254,6 +255,7 @@ in
       git-nomad # Synchronise work-in-progress git branches in a light weight fashion
       # gitoxide
       glow
+      gnomeExtensions.appindicator
       gnomeExtensions.user-themes
       gnomeExtensions.vitals
       gnomeExtensions.dash-to-dock
