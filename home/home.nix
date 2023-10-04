@@ -232,6 +232,7 @@ in
       blender-hip
       bun
       bundix
+      calculix
       carapace
       comma
       cosign
@@ -256,6 +257,7 @@ in
       git-nomad # Synchronise work-in-progress git branches in a light weight fashion
       # gitoxide
       glow
+      gmsh
       gnomeExtensions.appindicator
       gnomeExtensions.user-themes
       gnomeExtensions.vitals
