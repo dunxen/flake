@@ -9,7 +9,7 @@
       createHome = true;
       hashedPasswordFile = "/persist/encrypted-passwords/dunxen";
       shell = pkgs.nushell;
-      extraGroups = [ "wheel" "disk" "networkmanager" "libvirtd" "qemu-libvirtd" "kvm" "i2c" "plugdev" "wireshark" "docker" "vboxusers" ];
+      extraGroups = [ "wheel" "disk" "networkmanager" "libvirtd" "qemu-libvirtd" "kvm" "i2c" "plugdev" "wireshark" "docker" "vboxusers" "dialout" ];
       openssh.authorizedKeys.keys = [ ];
     };
     programs._1password.enable = true;
