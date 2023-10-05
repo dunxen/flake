@@ -301,6 +301,7 @@ in
       typst-lsp
       unixtools.xxd
       unzip
+      usbutils
       vagrant
       vivaldi
       vivaldi-ffmpeg-codecs
