@@ -227,6 +227,7 @@ in
       asn
       asnmap
       bat
+      beeper
       bgpdump
       bind
       blender-hip
