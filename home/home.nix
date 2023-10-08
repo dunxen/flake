@@ -246,6 +246,7 @@ in
       element-desktop
       elmerfem
       epiphany
+      esptool
       exercism
       fd
       firecracker

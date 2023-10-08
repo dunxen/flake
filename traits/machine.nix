@@ -79,6 +79,7 @@
     hardware.pulseaudio.enable = false;
     hardware.i2c.enable = true;
     hardware.hackrf.enable = true;
+    hardware.rtl-sdr.enable = true;
     hardware.flipperzero.enable = true;
     hardware.bluetooth.enable = true;
     hardware.xpadneo.enable = true; # For Xbox One Controller
