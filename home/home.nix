@@ -279,7 +279,7 @@ in
       llvm
       nickel
       nixos-generators
-      nls # Nickel Language Server
+      # nls # Nickel Language Server
       obsidian
       ookla-speedtest
       protonmail-bridge
