@@ -243,6 +243,7 @@ in
       docker
       dogdns
       earthly
+      element-desktop
       elmerfem
       epiphany
       exercism
