@@ -138,10 +138,10 @@ in
       automatic-timezone = true;
     };
     "org/gnome/desktop/background" = {
-      picture-uri = "file://${./backgrounds/flow.jpg}";
-      picture-uri-dark = "file://${./backgrounds/flow.jpg}";
+      picture-uri = "file://${./backgrounds/jelly.svg}";
+      picture-uri-dark = "file://${./backgrounds/jelly.svg}";
       primary-color = "#241f31";
-      secondary-color = "#000000";
+      secondary-color = "#030f36";
     };
     "org/gnome/desktop/screensaver" = {
       picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-d.svg";
