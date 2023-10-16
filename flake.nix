@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.5.tar.gz";
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.6.tar.gz";
   };
 
   outputs = { self, nixpkgs, home-manager, fh }:
