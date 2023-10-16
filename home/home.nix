@@ -177,7 +177,7 @@ in
         "dash-to-dock@micxgx.gmail.com"
         "appindicatorsupport@rgcjonas.gmail.com"
       ];
-      favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" "Alacritty.desktop" "thunderbird.desktop" ];
+      favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "1password.desktop" "Alacritty.desktop" "thunderbird.desktop" "obsidian.desktop" ];
     };
     # `gsettings get org.gnome.shell.extensions.user-theme name`
     # "org/gnome/shell/extensions/user-theme" = {
@@ -258,7 +258,7 @@ in
       gimp
       git-crypt
       git-nomad # Synchronise work-in-progress git branches in a light weight fashion
-      # gitoxide
+      gitoxide
       glow
       gmsh
       gnomeExtensions.appindicator
@@ -282,7 +282,7 @@ in
       llvm
       nickel
       nixos-generators
-      # nls # Nickel Language Server
+      nls # Nickel Language Server
       obsidian
       ookla-speedtest
       protonmail-bridge
