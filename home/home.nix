@@ -296,6 +296,7 @@ in
       stack
       steam
       subfinder
+      swift
       tailscale
       termius
       telegram-desktop
