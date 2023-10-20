@@ -2,12 +2,12 @@
   description = "dunxen's Flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.0.tar.gz";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.6.tar.gz";
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.7.tar.gz";
   };
 
   outputs = { self, nixpkgs, home-manager, fh }:

@@ -36,7 +36,7 @@
       },
       "original": {
         "type": "tarball",
-        "url": "https://flakehub.com/f/DeterminateSystems/fh/0.1.6.tar.gz"
+        "url": "https://flakehub.com/f/DeterminateSystems/fh/0.1.7.tar.gz"
       }
     },
     "flake-compat": {
@@ -108,18 +108,15 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1697456312,
         "narHash": "sha256-roiSnrqb5r+ehnKCauPLugoU8S36KgmWraHgRqVYndo=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
         "rev": "ca012a02bf8327be9e488546faecae5e05d7d749",
-        "type": "github"
+        "revCount": 536534,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.1.536534%2Brev-ca012a02bf8327be9e488546faecae5e05d7d749/018b3f36-b511-7e80-9e18-764e17d65d0b/source.tar.gz"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "type": "tarball",
+        "url": "https://flakehub.com/f/NixOS/nixpkgs/0.1.0.tar.gz"
       }
     },
     "root": {
