@@ -53,6 +53,53 @@
     networking.networkmanager.enable = true;
     networking.wireless.enable = false; # For Network Manager
     networking.firewall.enable = true;
+    networking.networkmanager.dns = "none";
+    networking.nameservers = [ "127.0.0.1" "::1" ];
+    services.dnscrypt-proxy2 = {
+      enable = true;
+      settings = {
+        ipv6_servers = true;
+        ipv4_servers = true;
+        require_dnssec = true;
+        doh_servers = true;
+        odoh_servers = true;
+
+        sources.public-resolvers = {
+          urls = [
+            "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
+            "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"
+          ];
+          cache_file = "/var/lib/dnscrypt-proxy2/public-resolvers.md";
+          minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
+        };
+        sources.odoh-servers = {
+          urls = [
+            "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/odoh-servers.md"
+            "https://download.dnscrypt.info/resolvers-list/v3/odoh-servers.md"
+          ];
+          cache_file = "odoh-servers.md";
+          minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
+          refresh_delay = 24;
+          prefix = "";
+        };
+        sources.odoh-relays = {
+          urls = [
+            "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/odoh-relays.md"
+            "https://download.dnscrypt.info/resolvers-list/v3/odoh-relays.md"
+          ];
+          cache_file = "odoh-relays.md";
+          minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
+          refresh_delay = 24;
+          prefix = "";
+        };
+        # You can choose a specific set of servers from https://github.com/DNSCrypt/dnscrypt-resolvers/blob/master/v3/public-resolvers.md
+        server_names = [ "cloudflare" ];
+      };
+    };
+    systemd.services.dnscrypt-proxy2.serviceConfig = {
+      StateDirectory = "dnscrypt-proxy";
+    };
+
     # For libvirt: https://releases.nixos.org/nix-dev/2016-January/019069.html
     networking.firewall.checkReversePath = false;
 
