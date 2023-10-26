@@ -252,7 +252,8 @@ in
       firecracker
       firectl
       flyctl
-      freecad
+      # See https://github.com/NixOS/nixpkgs/issues/263452
+      # freecad
       gcc12
       gh
       gimp
@@ -296,7 +297,6 @@ in
       stack
       steam
       subfinder
-      swift
       tailscale
       termius
       telegram-desktop
@@ -315,7 +315,6 @@ in
       wget
       zellij
       zola
-      zotero
       kicad
       obs-studio
       obs-studio-plugins.obs-gstreamer
