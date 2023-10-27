@@ -53,6 +53,37 @@ in
     enable = true;
   };
 
+  programs.swaylock = {
+    enable = true;
+    package = pkgs.swaylock-effects;
+    settings = {
+      daemonize = true;
+      clock = true;
+      effect-blur = "8x5";
+      effect-vignette = "0.5:0.5";
+      ignore-empty-password = true;
+      indicator = true;
+      image = "~/flake/home/backgrounds/meerkat.jpg";
+      grace = 2;
+      ring-color = "#FF9F1C";
+    };
+  };
+
+  services.swayidle = {
+    enable = true;
+    timeouts = [
+      {
+        timeout = 120;
+        command = "${config.programs.swaylock.package}/bin/swaylock";
+      }
+      {
+        timeout = 600;
+        command = "${config.wayland.windowManager.sway.package}/bin/swaymsg 'output * dpms off'";
+        resumeCommand = "${config.wayland.windowManager.sway.package}/bin/swaymsg 'output * dpms on'";
+      }
+    ];
+  };
+
   programs.git = {
     enable = true;
     userName = "Duncan Dean";
@@ -326,8 +357,6 @@ in
       subfinder
       # ---  sway --- #
       swaybg
-      swaylock
-      swayidle
       wl-clipboard
       mako
       wofi
