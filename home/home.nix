@@ -26,6 +26,33 @@ in
   '';
   # home.sessionVariables.GTK_THEME = "palenight";
 
+  wayland.windowManager.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+    config = {
+      modifier = "Mod4";
+      terminal = "alacritty";
+      menu = "wofi --show run";
+      bars = [{
+        fonts.size = 15.0;
+        command = "waybar";
+        position = "top";
+      }];
+      output = {
+        eDP-1 = {
+          scale = "2";
+        };
+      };
+      startup = [
+        {command = "swaybg --image ~/flake/home/backgrounds/meerkat.jpg";}
+      ];
+    };
+  };
+
+  services.dunst = {
+    enable = true;
+  };
+
   programs.git = {
     enable = true;
     userName = "Duncan Dean";
@@ -297,6 +324,15 @@ in
       stack
       steam
       subfinder
+      # ---  sway --- #
+      swaybg
+      swaylock
+      swayidle
+      wl-clipboard
+      mako
+      wofi
+      waybar
+      # --- /sway --- #
       tailscale
       termius
       telegram-desktop

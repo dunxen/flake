@@ -9,6 +9,16 @@
     hardware.opengl.driSupport = true;
     hardware.opengl.extraPackages = with pkgs; [ libvdpau vdpauinfo libvdpau-va-gl ];
 
+    xdg = {
+      portal = {
+        enable = true;
+        extraPortals = with pkgs; [
+          xdg-desktop-portal-wlr
+          # xdg-desktop-portal-gtk
+        ];
+      };
+    };
+
     #hardware.steam-hardware.enable = true;
     #hardware.xpadneo.enable = true;
 
@@ -21,6 +31,7 @@
 
     fonts.enableDefaultPackages = true;
     fonts.packages = with pkgs; [
+      font-awesome
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji

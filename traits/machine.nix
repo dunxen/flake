@@ -122,6 +122,10 @@
 
     security.rtkit.enable = true;
     security.polkit.enable = true;
+    # Allow swaylock to unlock the computer for us
+    security.pam.services.swaylock = {
+      text = "auth include login";
+    };
 
     hardware.pulseaudio.enable = false;
     hardware.i2c.enable = true;

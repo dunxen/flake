@@ -9,6 +9,7 @@
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.displayManager.autoLogin.enable = false;
     services.xserver.desktopManager.gnome.enable = true;
+    services.xserver.displayManager.sessionPackages = with pkgs; [ sway ];
     environment.gnome.excludePackages = (with pkgs; [
       gnome-photos
       gnome-tour
