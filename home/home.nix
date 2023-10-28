@@ -20,7 +20,7 @@ in
     config = {
       modifier = "Mod4";
       terminal = "alacritty";
-      menu = "wofi --show drun";
+      menu = "rofi -show drun";
       bars = [{
         fonts.size = 15.0;
         command = "waybar";
@@ -269,7 +269,7 @@ in
       swaybg
       wl-clipboard
       mako
-      wofi
+      rofi
       waybar
       # --- /sway --- #
       tailscale
