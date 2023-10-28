@@ -8,6 +8,7 @@
   home.packages = with pkgs; [ 
     waybar
     swww
+    polkit-kde-agent
   ];
   
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -27,9 +28,10 @@
 
     exec-once = hyprctl setcursor Bibata-Modern-Classic 24
     exec-once = dunst
+    exec-once = ${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
 
     source = /home/dunxen/.config/hypr/colors
-    exec = pkill waybar & sleep 0.5 && waybar
+    exec = pkill waybar & sleep 0.5 && waybar --style '/home/dunxen/flake/home/programs/hypr/themes/minimal/waybar/style.css' --config '/home/dunxen/flake/home/programs/hypr/themes/minimal/waybar/config'
     exec-once = swww init & sleep 0.5
     exec-once = swww img /home/dunxen/flake/home/wallpapers/flow.jpg
 
@@ -117,7 +119,7 @@
     bind = $mainMod, RETURN, exec, alacritty
     bind = $mainMod, B, exec, firefox
     bind = $mainMod, Q, killactive,
-    bind = $mainMod, M, exit,
+    bind = $mainMod SHIFT, E, exit,
     bind = $mainMod, F, exec, nautilus
     bind = $mainMod, V, togglefloating,
     bind = $mainMod, D, exec, rofi -show drun

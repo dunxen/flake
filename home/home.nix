@@ -53,6 +53,21 @@ in
     #   name = "palenight";
     #   package = pkgs.palenight-theme;
     # };
+    iconTheme = {
+      name = "Yaru-magenta-dark";
+      package = pkgs.yaru-theme;
+    };
+
+    theme = {
+      name = "Tokyonight-Dark-B-LB";
+      package = pkgs.tokyo-night-gtk;
+    };
+
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+    };
+
     gtk3.extraConfig = {
       Settings = ''
         gtk-application-prefer-dark-theme=1
@@ -247,6 +262,7 @@ in
       wl-clipboard
       mako
       rofi
+      wofi
       tailscale
       termius
       telegram-desktop
