@@ -9,7 +9,7 @@
       effect-vignette = "0.5:0.5";
       ignore-empty-password = true;
       indicator = true;
-      image = "~/flake/home/wallpapers/meerkat.jpg";
+      image = "~/flake/home/wallpapers/flow.jpg";
       grace = 2;
       ring-color = "#FF9F1C";
     };

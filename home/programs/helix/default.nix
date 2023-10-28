@@ -17,12 +17,12 @@
           file-types = [ "typ" ];
           roots = [ ];
           comment-token = "//";
-          language-server = {
-            command = "typst-lsp";
-          };
-          config = {
-            exportPdf = "onType";
-          };
+          # language-server = {
+          #   command = "typst-lsp";
+          # };
+          # config = {
+          #   exportPdf = "onType";
+          # };
         }
         {
           name = "nickel";
@@ -35,15 +35,15 @@
           file-types = [ "ncl" ];
           roots = [ ];
           comment-token = "#";
-          language-server = {
-            command = "nls";
-          };
+          # language-server = {
+          #   command = "nls";
+          # };
         }
         {
           name = "nix";
-          language-server = {
-            command = "nil";
-          };
+          # language-server = {
+          #   command = "nil";
+          # };
         }
       ];
     };

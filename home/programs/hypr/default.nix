@@ -13,7 +13,7 @@
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
     enable = true;
-    systemdIntegration = true;
+    systemd.enable = true;
     extraConfig = ''
 
     # Monitor
@@ -30,19 +30,13 @@
 
     source = /home/dunxen/.config/hypr/colors
     exec = pkill waybar & sleep 0.5 && waybar
-    exec-once = swww img /home/dunxen/flake/home/wallpapers/meerkat.jpg
-
-    # Set en layout at startup
+    exec-once = swww init & sleep 0.5
+    exec-once = swww img /home/dunxen/flake/home/wallpapers/flow.jpg
 
     # Input config
     input {
-        kb_layout = br,us
-        kb_variant =
-        kb_model =
-        kb_options =
-        kb_rules =
-
         follow_mouse = 1
+        natural_scroll = 1
 
         touchpad {
             natural_scroll = false
@@ -127,9 +121,8 @@
     bind = $mainMod, F, exec, nautilus
     bind = $mainMod, V, togglefloating,
     bind = $mainMod, D, exec, rofi -show drun
-    bind = $mainMod, R, exec, rofiWindow
     bind = $mainMod, P, pseudo, # dwindle
-    bind = $mainMod, J, togglesplit, # dwindle
+    bind = $mainMod, S, togglesplit, # dwindle
 
     # Switch Keyboard Layouts
     bind = $mainMod, SPACE, exec, hyprctl switchxkblayout teclado-gamer-husky-blizzard next
@@ -152,10 +145,10 @@
     bind = SUPER,Tab,bringactivetotop,
 
     # Move focus with mainMod + arrow keys
-    bind = $mainMod, left, movefocus, l
-    bind = $mainMod, right, movefocus, r
-    bind = $mainMod, up, movefocus, u
-    bind = $mainMod, down, movefocus, d
+    bind = $mainMod, h, movefocus, l
+    bind = $mainMod, l, movefocus, r
+    bind = $mainMod, k, movefocus, u
+    bind = $mainMod, j, movefocus, d
 
     # Switch workspaces with mainMod + [0-9]
     bind = $mainMod, 1, workspace, 1
