@@ -8,9 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.7.tar.gz";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs, home-manager, fh }:
+  outputs = { self, nixpkgs, home-manager, fh, hyprland }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -94,7 +95,6 @@
               {
                 environment.systemPackages = [ fh.packages.x86_64-linux.default ];
               }
-              home-manager.nixosModules.home-manager
               traits.overlay
               traits.base
               services.openssh
@@ -108,25 +108,41 @@
               platforms.iso
             ];
           };
-          brute = nixpkgs.lib.nixosSystem {
+          brute = nixpkgs.lib.nixosSystem rec {
             inherit (x86_64Base) system;
+            specialArgs = { inherit hyprland; };
             modules = x86_64Base.modules ++ [
+              hyprland.nixosModules.default
+              home-manager.nixosModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.extraSpecialArgs = specialArgs;
+              }
               platforms.brute
               traits.machine
               traits.workstation
-              traits.gnome
+              traits.headed
               traits.hardened
               traits.gaming
               users.dunxen
             ];
           };
-          neon = nixpkgs.lib.nixosSystem {
+          neon = nixpkgs.lib.nixosSystem rec {
             inherit (x86_64Base) system;
+            specialArgs = { inherit hyprland; };
             modules = x86_64Base.modules ++ [
+              hyprland.nixosModules.default
+              home-manager.nixosModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.extraSpecialArgs = specialArgs;
+              }
               platforms.neon
               traits.machine
               traits.workstation
-              traits.gnome
+              traits.headed
               traits.hardened
               users.dunxen
             ];
@@ -142,7 +158,7 @@
         traits.base = ./traits/base.nix;
         traits.machine = ./traits/machine.nix;
         traits.gaming = ./traits/gaming.nix;
-        traits.gnome = ./traits/gnome.nix;
+        traits.headed = ./traits/headed.nix;
         traits.hardened = ./traits/hardened.nix;
         traits.sourceBuild = ./traits/source-build.nix;
         services.openssh = ./services/openssh.nix;

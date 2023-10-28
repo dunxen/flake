@@ -1,7 +1,7 @@
 /*
   A trait for headed boxxen
 */
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, hyprland, ... }:
 
 {
   config = {
@@ -37,5 +37,10 @@
     services.gnome.gnome-keyring.enable = true;
 
     programs.dconf.enable = true;
+
+    programs.hyprland = {
+      enable = true;
+      package = hyprland.packages.${pkgs.system}.hyprland;
+    };
   };
 }

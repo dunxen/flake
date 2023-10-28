@@ -8,8 +8,10 @@
     ./git
     ./gpg
     ./helix
+    ./hypr
     ./nushell
     ./ssh
     ./starship
+    ./swaylock
   ];
 }
