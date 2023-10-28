@@ -14,31 +14,9 @@ in
   home.homeDirectory = "/home/dunxen";
   home.file.".ssh/allowed_signers".text = "dunxen ${ssh_key}";
 
-  wayland.windowManager.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-    config = {
-      modifier = "Mod4";
-      terminal = "alacritty";
-      menu = "rofi -show drun";
-      bars = [{
-        fonts.size = 15.0;
-        command = "waybar";
-        position = "top";
-      }];
-      output = {
-        eDP-1 = {
-          scale = "2";
-        };
-      };
-      startup = [
-        { command = "swaybg --image ~/flake/home/wallpapers/meerkat.jpg"; }
-      ];
-    };
-  };
-
   services.swayidle = {
     enable = true;
+    systemdTarget = "graphical-session.target";
     timeouts = [
       {
         timeout = 120;
@@ -46,8 +24,8 @@ in
       }
       {
         timeout = 600;
-        command = "${config.wayland.windowManager.sway.package}/bin/swaymsg 'output * dpms off'";
-        resumeCommand = "${config.wayland.windowManager.sway.package}/bin/swaymsg 'output * dpms on'";
+        command = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl dispatch dpms off";
+        resumeCommand = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl dispatch dpms on";
       }
     ];
   };
@@ -266,13 +244,9 @@ in
       stack
       steam
       subfinder
-      # ---  sway --- #
-      swaybg
       wl-clipboard
       mako
       rofi
-      waybar
-      # --- /sway --- #
       tailscale
       termius
       telegram-desktop
