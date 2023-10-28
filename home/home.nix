@@ -203,6 +203,7 @@ in
       calculix
       carapace
       comma
+      cool-retro-term
       cosign
       devbox
       discord
