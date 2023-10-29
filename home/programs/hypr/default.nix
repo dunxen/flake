@@ -31,7 +31,7 @@
     exec-once = ${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
 
     source = /home/dunxen/.config/hypr/colors
-    exec = pkill waybar & sleep 0.5 && waybar --style '/home/dunxen/flake/home/programs/hypr/themes/minimal/waybar/style.css' --config '/home/dunxen/flake/home/programs/hypr/themes/minimal/waybar/config'
+    exec = pkill waybar & sleep 0.5 && waybar --style '/home/dunxen/flake/home/programs/hypr/waybar/style.css' --config '/home/dunxen/flake/home/programs/hypr/waybar/config'
     exec-once = swww init & sleep 0.5
     exec-once = swww img /home/dunxen/flake/home/wallpapers/flow.jpg
 
@@ -48,14 +48,19 @@
     }
 
     general {
-
         gaps_in = 5
-        gaps_out = 20
+        gaps_out = 10
         border_size = 2
         col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
         col.inactive_border = rgba(595959aa)
 
         layout = dwindle
+    }
+
+    misc {
+        mouse_move_focuses_monitor = 0
+        disable_splash_rendering = 1
+        mouse_move_enables_dpms = 1
     }
 
     decoration {
@@ -113,6 +118,16 @@
     windowrule=float,^(mpv)$
     windowrule=center,^(mpv)$
     #windowrule=pin,^(firefox)$
+
+    workspace = 1, monitor:HDMI-A-1
+    workspace = 2, monitor:DP-3, default:true
+    workspace = 3, monitor:DVI-D-1
+    workspace = 4, monitor:HDMI-A-1
+    workspace = 5, monitor:DP-3
+    workspace = 6, monitor:DVI-D-1
+    workspace = 7, monitor:HDMI-A-1
+    workspace = 8, monitor:DP-3
+    workspace = 9, monitor:DVI-D-1
 
     $mainMod = SUPER
     bind = $mainMod, G, fullscreen,
