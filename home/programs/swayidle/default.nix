@@ -1,4 +1,4 @@
-{ pkgs, self, ... }: let
+{ pkgs, ... }: let
   suspendScript = pkgs.writeShellScript "suspend-script" ''
     ${pkgs.pipewire}/bin/pw-cli i all | ${pkgs.ripgrep}/bin/rg running
     # only suspend if audio isn't running
@@ -22,7 +22,15 @@ in {
     ];
     timeouts = [
       {
-        timeout = 330;
+        timeout = 100;
+        command = "${pkgs.systemd}/bin/loginctl lock-session";
+      }
+      {
+        timeout = 120;
+        command = "${pkgs.hyprland}/bin/hyprctl dispatch dpms off";
+      }
+      {
+        timeout = 3600;
         command = suspendScript.outPath;
       }
     ];
