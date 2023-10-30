@@ -110,7 +110,7 @@
           };
           brute = nixpkgs.lib.nixosSystem rec {
             inherit (x86_64Base) system;
-            specialArgs = { inherit hyprland; };
+            specialArgs = { inherit hyprland; inherit self; };
             modules = x86_64Base.modules ++ [
               hyprland.nixosModules.default
               home-manager.nixosModules.home-manager
@@ -130,7 +130,7 @@
           };
           neon = nixpkgs.lib.nixosSystem rec {
             inherit (x86_64Base) system;
-            specialArgs = { inherit hyprland; };
+            specialArgs = { inherit hyprland; inherit self; };
             modules = x86_64Base.modules ++ [
               hyprland.nixosModules.default
               home-manager.nixosModules.home-manager

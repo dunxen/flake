@@ -97,7 +97,7 @@
     },
     "custom/power":{
         "format": " ",
-        "on-click": "bash ~/flake/home/programs/hypr/waybar/leave.sh",
+        "on-click": "bash ${self}/home/programs/hypr/waybar/leave.sh",
     },
     "custom/updates":{
         "format": "{} Update(s)",

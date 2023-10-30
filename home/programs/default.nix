@@ -7,11 +7,12 @@
     ./firefox
     ./git
     ./gpg
+    ./gtklock
     ./helix
     ./hypr
     ./nushell
     ./ssh
     ./starship
-    ./swaylock
+    ./swayidle
   ];
 }

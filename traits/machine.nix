@@ -122,8 +122,8 @@
 
     security.rtkit.enable = true;
     security.polkit.enable = true;
-    # Allow swaylock to unlock the computer for us
-    security.pam.services.swaylock = {
+    # Allow gtklock to unlock the computer for us
+    security.pam.services.gtklock = {
       text = "auth include login";
     };
 

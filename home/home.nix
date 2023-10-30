@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 with lib.hm.gvariant;
 
@@ -13,23 +13,6 @@ in
   home.username = "dunxen";
   home.homeDirectory = "/home/dunxen";
   home.file.".ssh/allowed_signers".text = "dunxen ${ssh_key}";
-
-  services.swayidle = {
-    enable = true;
-    systemdTarget = "graphical-session.target";
-    timeouts = [
-      {
-        timeout = 120;
-        command = "${config.programs.swaylock.package}/bin/swaylock";
-      }
-      {
-        timeout = 600;
-        command = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl dispatch dpms off";
-        resumeCommand = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl dispatch dpms on";
-      }
-    ];
-  };
-  systemd.user.services.swayidle.Install.WantedBy = lib.mkForce [ "hyprland-session.target" ];
 
   programs.jujutsu = {
     enable = true;

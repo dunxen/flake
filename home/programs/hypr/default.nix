@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, self, ... }:
 
 {
   imports = [ 
@@ -10,7 +10,10 @@
     swww
     polkit-kde-agent
   ];
-  
+
+  # start swayidle as part of hyprland, not sway
+  systemd.user.services.swayidle.Install.WantedBy = lib.mkForce ["hyprland-session.target"];
+
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
     enable = true;
@@ -31,9 +34,9 @@
     exec-once = ${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
 
     source = /home/dunxen/.config/hypr/colors
-    exec = pkill waybar & sleep 0.5 && waybar --style '/home/dunxen/flake/home/programs/hypr/waybar/style.css' --config '/home/dunxen/flake/home/programs/hypr/waybar/config'
+    exec = pkill waybar & sleep 0.5 && waybar --style '${self}/home/programs/hypr/waybar/style.css' --config '${self}/home/programs/hypr/waybar/config'
     exec-once = swww init & sleep 0.5
-    exec-once = swww img /home/dunxen/flake/home/wallpapers/flow.jpg
+    exec-once = swww img ${self}/home/wallpapers/flow.jpg
 
     # Input config
     input {
@@ -135,6 +138,7 @@
     bind = $mainMod, RETURN, exec, alacritty
     bind = $mainMod, B, exec, firefox
     bind = $mainMod, Q, killactive,
+    bind = $mainMod SHIFT, L, exec, gtklock
     bind = $mainMod SHIFT, E, exit,
     bind = $mainMod, F, exec, nautilus
     bind = $mainMod, V, togglefloating,
