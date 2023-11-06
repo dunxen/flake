@@ -41,7 +41,7 @@
     # Input config
     input {
         # Stop window focus on mouse enter.
-        follow_mouse = 0
+        follow_mouse = 1
         natural_scroll = 1
 
         touchpad {
