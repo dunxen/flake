@@ -214,6 +214,7 @@ in
       gnomeExtensions.pop-shell
       go
       godot_4
+      guix
       htop
       hydra-check
       inkscape
