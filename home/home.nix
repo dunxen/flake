@@ -124,6 +124,7 @@ in
       liana
       lldb
       llvm
+      neofetch
       nickel
       nil # A nix language server
       nixos-generators
@@ -141,7 +142,6 @@ in
       protonvpn-gui
       riff
       ripgrep
-      rofi
       rustup
       signal-desktop
       sparrow
@@ -152,6 +152,7 @@ in
       termius
       telegram-desktop
       thunderbird
+      tofi
       typst
       typst-lsp
       unixtools.xxd

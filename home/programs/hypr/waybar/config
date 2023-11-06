@@ -92,8 +92,8 @@
     },
     "custom/launcher":{
         "format": "氷 ",
-        "on-click": "rofi -show drun",
-        "on-click-right": "killall rofi"
+        "on-click": "tofi-drun",
+        "on-click-right": "killall tofi-drun"
     },
     "custom/power":{
         "format": " ",
