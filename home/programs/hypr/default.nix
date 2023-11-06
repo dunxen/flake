@@ -40,11 +40,12 @@
 
     # Input config
     input {
-        follow_mouse = 1
+        # Stop window focus on mouse enter.
+        follow_mouse = 0
         natural_scroll = 1
 
         touchpad {
-            natural_scroll = false
+            natural_scroll = true
         }
 
         sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
@@ -58,11 +59,14 @@
         col.inactive_border = rgba(595959aa)
 
         layout = dwindle
+        no_cursor_warps = true
     }
 
     misc {
         mouse_move_focuses_monitor = 0
         disable_splash_rendering = 1
+        disable_hyprland_logo = 1
+        key_press_enables_dpms = 1
         mouse_move_enables_dpms = 1
     }
 
