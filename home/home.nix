@@ -31,18 +31,18 @@ in
     enable = true;
 
     iconTheme = {
-      name = "WhiteSur";
-      package = pkgs.whitesur-icon-theme;
+      name = "Yaru-magenta-dark";
+      package = pkgs.yaru-theme;
     };
 
     theme = {
-      name = "WhiteSur";
-      package = pkgs.whitesur-gtk-theme;
+      name = "Tokyonight-Dark-B-LB";
+      package = pkgs.tokyo-night-gtk;
     };
 
     cursorTheme = {
-      name = "WhiteSur";
-      package = pkgs.whitesur-cursors;
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
     };
 
     gtk3.extraConfig = {
