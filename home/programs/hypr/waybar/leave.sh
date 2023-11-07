@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-choice=$(printf "Lock\nLogout\nSuspend\nReboot\nShutdown" | tofi)
+choice=$(printf "Lock\nLogout\nSuspend\nReboot\nShutdown" | wofi --dmemu)
 if [[ $choice == "Lock" ]];then
     gtklock
 elif [[ $choice == "Logout" ]];then

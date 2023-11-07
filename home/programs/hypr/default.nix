@@ -146,7 +146,7 @@
     bind = $mainMod SHIFT, E, exit,
     bind = $mainMod, F, exec, nautilus
     bind = $mainMod, V, togglefloating,
-    bind = $mainMod, D, exec, tofi-drun
+    bind = $mainMod, D, exec, wofi --show drun
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, S, togglesplit, # dwindle
 

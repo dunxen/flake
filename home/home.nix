@@ -98,8 +98,7 @@ in
       firecracker
       firectl
       flyctl
-      # See https://github.com/NixOS/nixpkgs/issues/263452
-      # freecad
+      freecad
       gcc12
       gh
       gimp
@@ -152,7 +151,6 @@ in
       termius
       telegram-desktop
       thunderbird
-      tofi
       typst
       typst-lsp
       unixtools.xxd
@@ -166,6 +164,7 @@ in
       wally-cli
       wget
       wl-clipboard
+      wofi
       zellij
       zola
     ];
