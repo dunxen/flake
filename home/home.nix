@@ -108,6 +108,7 @@ in
       go
       godot_4
       guix
+      gum
       htop
       hydra-check
       inkscape
@@ -122,6 +123,7 @@ in
       lldb
       llvm
       lume
+      mods
       neofetch
       nickel
       nil # A nix language server
