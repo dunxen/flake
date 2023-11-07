@@ -147,6 +147,7 @@
     bind = $mainMod, F, exec, nautilus
     bind = $mainMod, V, togglefloating,
     bind = $mainMod, D, exec, wofi --show drun
+    bind = $mainMod, R, exec, wofi --show run
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, S, togglesplit, # dwindle
 

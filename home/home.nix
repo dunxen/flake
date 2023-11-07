@@ -29,27 +29,20 @@ in
 
   gtk = {
     enable = true;
-    # iconTheme = {
-    #   name = "Papirus-Dark";
-    #   package = pkgs.papirus-icon-theme;
-    # };
-    # theme = {
-    #   name = "palenight";
-    #   package = pkgs.palenight-theme;
-    # };
+
     iconTheme = {
-      name = "Yaru-magenta-dark";
-      package = pkgs.yaru-theme;
+      name = "WhiteSur";
+      package = pkgs.whitesur-icon-theme;
     };
 
     theme = {
-      name = "Tokyonight-Dark-B-LB";
-      package = pkgs.tokyo-night-gtk;
+      name = "WhiteSur";
+      package = pkgs.whitesur-gtk-theme;
     };
 
     cursorTheme = {
-      name = "Bibata-Modern-Classic";
-      package = pkgs.bibata-cursors;
+      name = "WhiteSur";
+      package = pkgs.whitesur-cursors;
     };
 
     gtk3.extraConfig = {
@@ -66,7 +59,11 @@ in
 
   # Packages to have installed for this profile.
   home.packages =
-    with pkgs; [
+    with pkgs;
+  let
+    spacedrive = pkgs.callPackage ../packages/spacedrive { };
+    lume = pkgs.callPackage ../packages/lume {};
+  in [
       age
       appimage-run
       asn
@@ -93,6 +90,7 @@ in
       elmerfem
       epiphany
       esptool
+      evince
       exercism
       fd
       firecracker
@@ -123,6 +121,7 @@ in
       liana
       lldb
       llvm
+      lume
       neofetch
       nickel
       nil # A nix language server
@@ -143,6 +142,7 @@ in
       ripgrep
       rustup
       signal-desktop
+      spacedrive
       sparrow
       stack
       steam
