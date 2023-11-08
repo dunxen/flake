@@ -450,6 +450,7 @@
 
         # WebGPU
         "gfx.webrender.all" = true;
+        "dom.webgpu.ignore-blocklist" = true;
         "dom.webgpu.enabled" = true;
       };
     };
