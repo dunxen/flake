@@ -4,7 +4,7 @@
   home = {
     sessionVariables = {
     EDITOR = "hx";
-    BROWSER = "firefox-nightly";
+    BROWSER = "firefox";
     TERMINAL = "alacritty";
     CLUTTER_BACKEND = "wayland";
     WLR_RENDERER = "vulkan";

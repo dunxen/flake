@@ -447,11 +447,6 @@
         /* 6012: enforce Quarantined Domains [FF115+]
          * [WHY] https://support.mozilla.org/kb/quarantined-domains */
         "extensions.quarantinedDomains.enabled" = true; # [DEFAULT: true]
-
-        # WebGPU
-        "gfx.webrender.all" = true;
-        "dom.webgpu.ignore-blocklist" = true;
-        "dom.webgpu.enabled" = true;
       };
     };
   };
