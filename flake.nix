@@ -9,9 +9,13 @@
     };
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.7.tar.gz";
     hyprland.url = "github:hyprwm/Hyprland";
+    firefox = {
+      url = "github:nix-community/flake-firefox-nightly";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, fh, hyprland }:
+  outputs = { self, nixpkgs, home-manager, fh, hyprland, firefox }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -93,7 +97,10 @@
             modules = with self.nixosModules; [
               ({ config = { nix.registry.nixpkgs.flake = nixpkgs; }; })
               {
-                environment.systemPackages = [ fh.packages.x86_64-linux.default ];
+                environment.systemPackages = [
+                  fh.packages.x86_64-linux.default
+                  firefox.packages.x86_64-linux.firefox-nightly-bin
+                ];
               }
               traits.overlay
               traits.base
