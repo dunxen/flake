@@ -124,7 +124,6 @@
     windowrule=size 934 525,^(mpv)$
     windowrule=float,^(mpv)$
     windowrule=center,^(mpv)$
-    #windowrule=pin,^(firefox)$
 
     workspace = 1, monitor:HDMI-A-1
     workspace = 2, monitor:DP-3, default:true
@@ -140,7 +139,7 @@
     bind = $mainMod, G, fullscreen,
 
     bind = $mainMod, RETURN, exec, alacritty
-    bind = $mainMod, B, exec, firefox
+    bind = $mainMod, B, exec, firefox-nightly
     bind = $mainMod, Q, killactive,
     bind = $mainMod SHIFT, L, exec, gtklock
     bind = $mainMod SHIFT, E, exit,
