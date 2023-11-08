@@ -162,6 +162,7 @@ in
       vivaldi
       vivaldi-ffmpeg-codecs
       vlc
+      vulkan-tools
       wasmtime
       wally-cli
       wget
