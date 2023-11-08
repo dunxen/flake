@@ -2,6 +2,17 @@
   programs.helix = {
     enable = true;
     languages = {
+      language-server = {
+        nls = {
+          command = "nls";
+        };
+        typst-lsp = {
+          command = "typst-lsp";
+        };
+        nil = {
+          command = "nil";
+        };
+      };
       language = [
         {
           name = "rust";
@@ -17,12 +28,7 @@
           file-types = [ "typ" ];
           roots = [ ];
           comment-token = "//";
-          # language-server = {
-          #   command = "typst-lsp";
-          # };
-          # config = {
-          #   exportPdf = "onType";
-          # };
+          language-servers = [ "typst-lsp" ];
         }
         {
           name = "nickel";
@@ -35,15 +41,11 @@
           file-types = [ "ncl" ];
           roots = [ ];
           comment-token = "#";
-          # language-server = {
-          #   command = "nls";
-          # };
+          language-servers = [ "nls" ];
         }
         {
           name = "nix";
-          # language-server = {
-          #   command = "nil";
-          # };
+          language-servers = [ "nil" ];
         }
       ];
     };
