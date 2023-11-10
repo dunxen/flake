@@ -142,8 +142,9 @@ let carapace_completer = {|spans|
 $env.OP_PLUGIN_ALIASES_SOURCED = 1
 alias gh = op plugin run -- gh
 
-$env.OPENAI_API_KEY = "op://Personal/g4xdmnzzep2752cbixesdzgpki/credential"
-alias mods = op run -- mods
+def-env set_mods_api_keys [] {
+    $env.OPENAI_API_KEY = $"(op read 'op://Personal/g4xdmnzzep2752cbixesdzgpki/credential')"
+}
 
 # Bitcoin dev
 alias bitcoind = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoind
