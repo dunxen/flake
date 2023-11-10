@@ -64,3 +64,5 @@ $env.NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 $env.PATH = ($env.PATH | append '~/.cargo/bin')
 $env.PATH = ($env.PATH | append '~/.cabal/bin')
+
+$env.EDITOR = "hx"
