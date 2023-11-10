@@ -21,7 +21,7 @@
     extraConfig = ''
 
     # Monitor
-    monitor=DP-1,3840x2160@60,auto,1
+    monitor=,highres,auto,1
 
     # Fix slow startup
     exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -125,16 +125,6 @@
     windowrule=float,^(mpv)$
     windowrule=center,^(mpv)$
 
-    workspace = 1, monitor:HDMI-A-1
-    workspace = 2, monitor:DP-3, default:true
-    workspace = 3, monitor:DVI-D-1
-    workspace = 4, monitor:HDMI-A-1
-    workspace = 5, monitor:DP-3
-    workspace = 6, monitor:DVI-D-1
-    workspace = 7, monitor:HDMI-A-1
-    workspace = 8, monitor:DP-3
-    workspace = 9, monitor:DVI-D-1
-
     $mainMod = SUPER
     bind = $mainMod, G, fullscreen,
 
@@ -151,9 +141,6 @@
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, S, togglesplit, # dwindle
 
-    # Switch Keyboard Layouts
-    bind = $mainMod, SPACE, exec, hyprctl switchxkblayout teclado-gamer-husky-blizzard next
-
     bind = , Print, exec, grim -g "$(slurp)" - | wl-copy
     bind = SHIFT, Print, exec, grim -g "$(slurp)"
 
@@ -161,9 +148,9 @@
     bind =,XF86AudioMicMute,exec,pamixer --default-source -t
     bind =,XF86MonBrightnessDown,exec,light -U 20
     bind =,XF86MonBrightnessUp,exec,light -A 20
-    bind =,XF86AudioMute,exec,pamixer -t
-    bind =,XF86AudioLowerVolume,exec,pamixer -d 10
-    bind =,XF86AudioRaiseVolume,exec,pamixer -i 10
+    binde=, XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+
+    bindl=, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
+    bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     bind =,XF86AudioPlay,exec,playerctl play-pause
     bind =,XF86AudioPause,exec,playerctl play-pause
 
