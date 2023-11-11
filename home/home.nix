@@ -143,6 +143,7 @@ in
       riff
       ripgrep
       rustup
+      sage
       signal-desktop
       spacedrive
       sparrow
@@ -154,6 +155,7 @@ in
       telegram-desktop
       thunderbird
       typst
+      typst-fmt
       typst-lsp
       unixtools.xxd
       unzip

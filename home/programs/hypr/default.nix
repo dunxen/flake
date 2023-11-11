@@ -36,7 +36,7 @@
     source = /home/dunxen/.config/hypr/colors
     exec = pkill waybar & sleep 0.5 && waybar --style '${self}/home/programs/hypr/waybar/style.css' --config '${self}/home/programs/hypr/waybar/config'
     exec-once = swww init & sleep 0.5
-    exec-once = swww img ${self}/home/wallpapers/shibuya.jpg
+    exec-once = swww img ${self}/home/wallpapers/hanami.png
 
     # Input config
     input {
