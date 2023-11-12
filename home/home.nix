@@ -137,6 +137,7 @@ in
       obs-studio-plugins.obs-pipewire-audio-capture
       obs-studio-plugins.obs-multi-rtmp
       obs-studio-plugins.obs-move-transition
+      oculante
       ookla-speedtest
       protonmail-bridge
       protonvpn-cli
