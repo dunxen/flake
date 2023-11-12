@@ -7,9 +7,6 @@
         nls = {
           command = "nls";
         };
-        typst-lsp = {
-          command = "typst-lsp";
-        };
         nil = {
           command = "nil";
         };
@@ -21,15 +18,6 @@
             tab-width = 4;
             unit = "\t";
           };
-        }
-        {
-          name = "typst";
-          scope = "source.typst";
-          injection-regex = "^typ(st)?$";
-          file-types = [ "typ" ];
-          roots = [ ];
-          comment-token = "//";
-          language-servers = [ "typst-lsp" ];
         }
         {
           name = "nickel";
