@@ -47,7 +47,6 @@
       gptfdisk
       fio
       smartmontools
-      helix
       rnix-lsp
       graphviz
       simple-http-server
