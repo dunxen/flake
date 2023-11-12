@@ -109,6 +109,7 @@ in
       godot_4
       guix
       gum
+      haskellPackages.epub-tools
       htop
       hydra-check
       inkscape
