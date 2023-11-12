@@ -101,7 +101,7 @@
                 environment.systemPackages = [
                   fh.packages.x86_64-linux.default
                   firefox.packages.x86_64-linux.firefox-nightly-bin
-                  helix.packages.x86_64-linux.helix
+                  helix.packages.x86_64-linux.default
                 ];
               }
               traits.overlay
