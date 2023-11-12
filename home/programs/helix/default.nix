@@ -1,6 +1,7 @@
-{ ... }: {
+{ helix-master, system, ... }: {
   programs.helix = {
     enable = true;
+    package = helix-master.packages."${system}".default;
     languages = {
       language-server = {
         nls = {

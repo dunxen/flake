@@ -13,10 +13,10 @@
       url = "github:nix-community/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    helix.url = "github:helix-editor/helix";
+    helix-master.url = "github:helix-editor/helix";
   };
 
-  outputs = { self, nixpkgs, home-manager, fh, hyprland, firefox, helix }:
+  outputs = { self, nixpkgs, home-manager, fh, hyprland, firefox, helix-master }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -101,7 +101,7 @@
                 environment.systemPackages = [
                   fh.packages.x86_64-linux.default
                   firefox.packages.x86_64-linux.firefox-nightly-bin
-                  helix.packages.x86_64-linux.default
+                  helix-master.packages.x86_64-linux.default
                 ];
               }
               traits.overlay
@@ -119,7 +119,12 @@
           };
           brute = nixpkgs.lib.nixosSystem rec {
             inherit (x86_64Base) system;
-            specialArgs = { inherit hyprland; inherit self; };
+            specialArgs = {
+              inherit hyprland;
+              inherit helix-master;
+              inherit system;
+              inherit self;
+            };
             modules = x86_64Base.modules ++ [
               hyprland.nixosModules.default
               home-manager.nixosModules.home-manager
@@ -139,7 +144,12 @@
           };
           neon = nixpkgs.lib.nixosSystem rec {
             inherit (x86_64Base) system;
-            specialArgs = { inherit hyprland; inherit self; };
+            specialArgs = {
+              inherit hyprland;
+              inherit helix-master;
+              inherit system;
+              inherit self;
+            };
             modules = x86_64Base.modules ++ [
               hyprland.nixosModules.default
               home-manager.nixosModules.home-manager
