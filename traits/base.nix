@@ -1,7 +1,7 @@
 /*
   A trait for all boxxen
 */
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   config = {
@@ -12,7 +12,7 @@
     i18n.inputMethod = {
       enabled = "fcitx5";
       fcitx5.addons = with pkgs; [
-        # fcitx5-mozc
+        fcitx5-mozc
         fcitx5-gtk
       ];
     };
@@ -86,7 +86,6 @@
     nix.extraOptions = ''
       experimental-features = nix-command flakes
     '';
-    # nix.package = pkgs.nixUnstable;
 
     nixpkgs.config.allowUnfree = true;
 

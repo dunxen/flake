@@ -32,6 +32,7 @@
     exec-once = hyprctl setcursor Bibata-Modern-Classic 24
     exec-once = dunst
     exec-once = ${pkgs.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
+    exec-once = fcitx5
 
     source = /home/dunxen/.config/hypr/colors
     exec = pkill waybar & sleep 0.5 && waybar --style '${self}/home/programs/hypr/waybar/style.css' --config '${self}/home/programs/hypr/waybar/config'
