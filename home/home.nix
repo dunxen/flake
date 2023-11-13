@@ -30,53 +30,53 @@ in
   xdg.mimeApps = {
     enable = true;
     associations.added = {
-      "application/pdf" = ["org.gnome.Evince.desktop"];
-      "x-scheme-handler/http" = ["firefox.desktop"];
-      "x-scheme-handler/https" = ["firefox.desktop"];
-      "x-scheme-handler/chrome" = ["firefox.desktop"];
-      "text/html" = ["firefox.desktop"];
-      "application/x-extension-htm" = ["firefox.desktop"];
-      "application/x-extension-html" = ["firefox.desktop"];
-      "application/x-extension-shtml" = ["firefox.desktop"];
-      "application/xhtml+xml" = ["firefox.desktop"];
-      "application/x-extension-xhtml" = ["firefox.desktop"];
-      "application/x-extension-xht" = ["firefox.desktop"];
-      "image/avif" = ["oculante.desktop"];
-      "image/png" = ["oculante.desktop"];
-      "image/webp" = ["oculante.desktop"];
-      "image/jpeg" = ["oculante.desktop"];
-      "image/svg" = ["oculante.desktop"];
-      "image/gif" = ["oculante.desktop"];
-      "image/tiff" = ["oculante.desktop"];
-      "image/bmp" = ["oculante.desktop"];
-      "application/x-ms-dos-executable" = ["wine.desktop"];
-      "x-scheme-handler/mailto" = ["userapp-Thunderbird-PA2251.desktop"];
-      "x-scheme-handler/mid" = ["userapp-Thunderbird-PA2251.desktop"];
+      "application/pdf" = [ "org.gnome.Evince.desktop" ];
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+      "x-scheme-handler/chrome" = [ "firefox.desktop" ];
+      "text/html" = [ "firefox.desktop" ];
+      "application/x-extension-htm" = [ "firefox.desktop" ];
+      "application/x-extension-html" = [ "firefox.desktop" ];
+      "application/x-extension-shtml" = [ "firefox.desktop" ];
+      "application/xhtml+xml" = [ "firefox.desktop" ];
+      "application/x-extension-xhtml" = [ "firefox.desktop" ];
+      "application/x-extension-xht" = [ "firefox.desktop" ];
+      "image/avif" = [ "oculante.desktop" ];
+      "image/png" = [ "oculante.desktop" ];
+      "image/webp" = [ "oculante.desktop" ];
+      "image/jpeg" = [ "oculante.desktop" ];
+      "image/svg" = [ "oculante.desktop" ];
+      "image/gif" = [ "oculante.desktop" ];
+      "image/tiff" = [ "oculante.desktop" ];
+      "image/bmp" = [ "oculante.desktop" ];
+      "application/x-ms-dos-executable" = [ "wine.desktop" ];
+      "x-scheme-handler/mailto" = [ "userapp-Thunderbird-PA2251.desktop" ];
+      "x-scheme-handler/mid" = [ "userapp-Thunderbird-PA2251.desktop" ];
     };
     defaultApplications = {
-      "application/pdf" = ["org.gnome.Evince.desktop"];
-      "x-scheme-handler/http" = ["firefox.desktop"];
-      "x-scheme-handler/https" = ["firefox.desktop"];
-      "x-scheme-handler/chrome" = ["firefox.desktop"];
-      "text/html" = ["firefox.desktop"];
-      "application/x-extension-htm" = ["firefox.desktop"];
-      "application/x-extension-html" = ["firefox.desktop"];
-      "application/x-extension-shtml" = ["firefox.desktop"];
-      "application/xhtml+xml" = ["firefox.desktop"];
-      "application/x-extension-xhtml" = ["firefox.desktop"];
-      "application/x-extension-xht" = ["firefox.desktop"];
-      "image/avif" = ["oculante.desktop"];
-      "image/png" = ["oculante.desktop"];
-      "image/webp" = ["oculante.desktop"];
-      "image/jpeg" = ["oculante.desktop"];
-      "image/svg+xml" = ["oculante.desktop"];
-      "image/gif" = ["oculante.desktop"];
-      "image/tiff" = ["oculante.desktop"];
-      "image/bmp" = ["oculante.desktop"];
-      "application/x-ms-dos-executable" = ["wine.desktop"];
-      "x-scheme-handler/mailto" = ["userapp-Thunderbird-PA2251.desktop"];
-      "message/rfc822" = ["userapp-Thunderbird-PA2251.desktop"];
-      "x-scheme-handler/mid" = ["userapp-Thunderbird-PA2251.desktop"];
+      "application/pdf" = [ "org.gnome.Evince.desktop" ];
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+      "x-scheme-handler/chrome" = [ "firefox.desktop" ];
+      "text/html" = [ "firefox.desktop" ];
+      "application/x-extension-htm" = [ "firefox.desktop" ];
+      "application/x-extension-html" = [ "firefox.desktop" ];
+      "application/x-extension-shtml" = [ "firefox.desktop" ];
+      "application/xhtml+xml" = [ "firefox.desktop" ];
+      "application/x-extension-xhtml" = [ "firefox.desktop" ];
+      "application/x-extension-xht" = [ "firefox.desktop" ];
+      "image/avif" = [ "oculante.desktop" ];
+      "image/png" = [ "oculante.desktop" ];
+      "image/webp" = [ "oculante.desktop" ];
+      "image/jpeg" = [ "oculante.desktop" ];
+      "image/svg+xml" = [ "oculante.desktop" ];
+      "image/gif" = [ "oculante.desktop" ];
+      "image/tiff" = [ "oculante.desktop" ];
+      "image/bmp" = [ "oculante.desktop" ];
+      "application/x-ms-dos-executable" = [ "wine.desktop" ];
+      "x-scheme-handler/mailto" = [ "userapp-Thunderbird-PA2251.desktop" ];
+      "message/rfc822" = [ "userapp-Thunderbird-PA2251.desktop" ];
+      "x-scheme-handler/mid" = [ "userapp-Thunderbird-PA2251.desktop" ];
     };
   };
   xdg.desktopEntries = {
@@ -132,10 +132,11 @@ in
   # Packages to have installed for this profile.
   home.packages =
     with pkgs;
-  let
-    spacedrive = pkgs.callPackage ../packages/spacedrive { };
-    lume = pkgs.callPackage ../packages/lume {};
-  in [
+    let
+      spacedrive = pkgs.callPackage ../packages/spacedrive { };
+      lume = pkgs.callPackage ../packages/lume { };
+    in
+    [
       age
       appimage-run
       asn
