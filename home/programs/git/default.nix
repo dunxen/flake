@@ -39,7 +39,19 @@ in
       pull.rebase = true;
       init.defaultBranch = "main";
       diff.colormoved = "zebra";
-      core.editor = "hx";
+      core = {
+        editor = "hx";
+        pager = "delta";
+      };
+      interactive = {
+        diffFilter = "delta --color-only";
+      };
+      delta = {
+        navigate = true;
+        light = false;
+      };
+      merge.conflictstyle = "diff3";
+      diff.colorMoved = "default";
       gpg.format = "ssh";
       gpg.ssh.program = ''${pkgs._1password-gui}/share/1password/op-ssh-sign'';
       gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
