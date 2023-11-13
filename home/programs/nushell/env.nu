@@ -66,3 +66,4 @@ $env.PATH = ($env.PATH | append '~/.cargo/bin')
 $env.PATH = ($env.PATH | append '~/.cabal/bin')
 
 $env.EDITOR = "hx"
+$env.CARGO_MOMMYS_LITTLE = "pumpkin"
