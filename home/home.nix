@@ -197,6 +197,7 @@ in
       lldb
       llvm
       lume
+      mars-mips
       mods
       neofetch
       nickel
