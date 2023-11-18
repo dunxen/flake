@@ -146,6 +146,7 @@ in
       bgpdump
       bind
       blender-hip
+      blueman
       bun
       bundix
       calculix
@@ -219,13 +220,11 @@ in
       rars
       riff
       ripgrep
-      riscv-pk
       rustup
       sage
       signal-desktop
       spacedrive
       sparrow
-      spike
       stack
       steam
       subfinder
