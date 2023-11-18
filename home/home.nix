@@ -216,13 +216,16 @@ in
       protonmail-bridge
       protonvpn-cli
       protonvpn-gui
+      rars
       riff
       ripgrep
+      riscv-pk
       rustup
       sage
       signal-desktop
       spacedrive
       sparrow
+      spike
       stack
       steam
       subfinder
