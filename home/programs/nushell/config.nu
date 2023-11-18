@@ -142,7 +142,7 @@ let carapace_completer = {|spans|
 $env.OP_PLUGIN_ALIASES_SOURCED = 1
 alias gh = op plugin run -- gh
 
-def-env set_mods_api_keys [] {
+def --env set_mods_api_keys [] {
     $env.OPENAI_API_KEY = $"(op read 'op://Personal/g4xdmnzzep2752cbixesdzgpki/credential')"
 }
 
