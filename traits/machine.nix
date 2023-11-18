@@ -148,7 +148,8 @@
     virtualisation.spiceUSBRedirection.enable = true; # Note that this allows users arbitrary access to USB devices. 
     virtualisation.podman.enable = true;
 
-    services.usbmuxd.enable = true;
+    # For iOS devices. Currently broken
+    # services.usbmuxd.enable = true;
 
     # opt in state
     # From https://mt-caret.github.io/blog/posts/2020-06-29-optin-state.html
