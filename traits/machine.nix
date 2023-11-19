@@ -44,6 +44,7 @@
       i2c-tools
       libimobiledevice
       ifuse
+      qemu
     ];
 
     users.mutableUsers = false;
@@ -136,7 +137,7 @@
     hardware.xpadneo.enable = true; # For Xbox One Controller
     hardware.keyboard.zsa.enable = true;
 
-    # virtualisation.libvirtd.enable = true;
+    virtualisation.libvirtd.enable = true;
     virtualisation.libvirtd.onBoot = "ignore";
     virtualisation.libvirtd.qemu.package = pkgs.qemu_full;
     virtualisation.libvirtd.qemu.ovmf.enable = true;
