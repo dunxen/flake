@@ -184,6 +184,7 @@ in
       guix
       gum
       haskellPackages.epub-tools
+      heaptrack
       htop
       hydra-check
       inkscape
