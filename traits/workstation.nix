@@ -1,7 +1,7 @@
 /*
   A trait for headed boxxen
 */
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   config = {
@@ -13,6 +13,7 @@
       portal = {
         enable = true;
         wlr.enable = true;
+        config.common.default = "*";
       };
     };
 
