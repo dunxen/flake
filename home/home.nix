@@ -179,6 +179,7 @@ in
       gitoxide
       glow
       gmsh
+      gnome.nautilus
       go
       godot_4
       guix
