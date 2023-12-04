@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.8.tar.gz";
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.9.tar.gz";
     hyprland.url = "github:hyprwm/Hyprland";
     firefox = {
       url = "github:nix-community/flake-firefox-nightly";
