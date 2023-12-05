@@ -142,8 +142,8 @@
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, S, togglesplit, # dwindle
 
-    bind = , Print, exec, grim -g "$(slurp)" - | wl-copy
-    bind = SHIFT, Print, exec, grim -g "$(slurp)"
+    bind = $mainMod, T, exec, grim -g "$(slurp)" - | wl-copy
+    bind = $mainMod SHIFT, T, exec, grim -g "$(slurp)"
 
     # Functional keybinds
     bind =,XF86AudioMicMute,exec,pamixer --default-source -t

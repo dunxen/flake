@@ -182,6 +182,7 @@ in
       gnome.nautilus
       go
       godot_4
+      grim
       guix
       gum
       haskellPackages.epub-tools
@@ -225,6 +226,7 @@ in
       rustup
       sage
       signal-desktop
+      slurp
       spacedrive
       sparrow
       stack
