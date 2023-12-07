@@ -178,6 +178,7 @@ in
       git-nomad # Synchronise work-in-progress git branches in a light weight fashion
       gitoxide
       glow
+      glxinfo
       gmsh
       gnome.nautilus
       go
@@ -246,6 +247,7 @@ in
       vivaldi
       vivaldi-ffmpeg-codecs
       vlc
+      vulkan-tools
       wasmtime
       wally-cli
       wget

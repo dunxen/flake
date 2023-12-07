@@ -7,7 +7,7 @@
   config = {
     hardware.opengl.enable = true;
     hardware.opengl.driSupport = true;
-    hardware.opengl.extraPackages = with pkgs; [ libvdpau vdpauinfo libvdpau-va-gl amdvlk ];
+    hardware.opengl.extraPackages = with pkgs; [ libvdpau vdpauinfo libvdpau-va-gl ];
 
     xdg = {
       portal = {
