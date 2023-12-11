@@ -226,6 +226,7 @@ in
       ripgrep
       rustup
       sage
+      scilab-bin
       signal-desktop
       slurp
       spacedrive

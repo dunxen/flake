@@ -87,6 +87,9 @@
     '';
 
     nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.permittedInsecurePackages = [
+      "electron-25.9.0"
+    ];
 
     # Hack: https://github.com/NixOS/nixpkgs/issues/180175
     # systemd.services.systemd-udevd.restartIfChanged = false;
