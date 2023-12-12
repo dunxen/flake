@@ -149,8 +149,8 @@
     bind =,XF86AudioMicMute,exec,pamixer --default-source -t
     bind =,XF86MonBrightnessDown,exec,light -U 20
     bind =,XF86MonBrightnessUp,exec,light -A 20
-    binde=, XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+
-    bindl=, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
+    binde=, XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+    bindl=, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
     bind =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     bind =,XF86AudioPlay,exec,playerctl play-pause
     bind =,XF86AudioPause,exec,playerctl play-pause
