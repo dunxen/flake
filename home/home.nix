@@ -240,7 +240,7 @@ in
       thunderbird
       typst
       typst-fmt
-      typst-lsp
+      # typst-lsp
       unixtools.xxd
       unzip
       usbutils
