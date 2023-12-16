@@ -218,6 +218,7 @@ in
       obs-studio-plugins.obs-move-transition
       oculante
       ookla-speedtest
+      pavucontrol
       protonmail-bridge
       protonvpn-cli
       protonvpn-gui
