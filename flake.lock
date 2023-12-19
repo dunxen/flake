@@ -353,6 +353,22 @@
         "url": "https://flakehub.com/f/NixOS/nixpkgs/0.1.0.tar.gz"
       }
     },
+    "openfoam": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1697107022,
+        "narHash": "sha256-jB94eotEsETKWo4i8OGAfHeVO3qwBnWVAQeElvp2lyA=",
+        "ref": "refs/heads/master",
+        "rev": "c423ebecc1cd1b4bb878e51705a59a1875d9d608",
+        "revCount": 26505,
+        "type": "git",
+        "url": "https://develop.openfoam.com/Development/openfoam"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://develop.openfoam.com/Development/openfoam"
+      }
+    },
     "root": {
       "inputs": {
         "fh": "fh",
@@ -360,7 +376,8 @@
         "helix-master": "helix-master",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "openfoam": "openfoam"
       }
     },
     "rust-analyzer-src": {

@@ -20,9 +20,13 @@
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    openfoam = {
+      url = "git+https://develop.openfoam.com/Development/openfoam";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, fh, hyprland, firefox, helix-master }:
+  outputs = { self, nixpkgs, home-manager, fh, hyprland, firefox, helix-master, openfoam }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -129,6 +133,7 @@
               inherit hyprland;
               inherit helix-master;
               inherit system;
+              inherit openfoam;
               inherit self;
             };
             modules = x86_64Base.modules ++ [
