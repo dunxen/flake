@@ -174,7 +174,6 @@ in
       firecracker
       firectl
       flyctl
-      freecad
       gcc12
       gh
       gimp
