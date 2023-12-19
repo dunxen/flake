@@ -1,4 +1,4 @@
-{ pkgs, lib, openfoam, ... }:
+{ pkgs, lib, ... }:
 
 with lib.hm.gvariant;
 
@@ -135,10 +135,6 @@ in
     let
       spacedrive = pkgs.callPackage ../packages/spacedrive { };
       lume = pkgs.callPackage ../packages/lume { };
-      openfoam-dev = pkgs.callPackage ../packages/openfoam {
-        src = openfoam;
-        mpi = pkgs.openmpi;
-      };
     in
     [
       age
@@ -221,7 +217,6 @@ in
       obs-studio-plugins.obs-move-transition
       oculante
       ookla-speedtest
-      openfoam-dev
       paraview
       pavucontrol
       protonmail-bridge
