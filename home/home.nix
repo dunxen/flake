@@ -133,7 +133,6 @@ in
   home.packages =
     with pkgs;
     let
-      spacedrive = pkgs.callPackage ../packages/spacedrive { };
       lume = pkgs.callPackage ../packages/lume { };
     in
     [
