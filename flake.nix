@@ -169,6 +169,7 @@
               traits.workstation
               traits.headed
               traits.hardened
+              traits.gaming
               users.dunxen
             ];
           };
