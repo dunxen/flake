@@ -225,7 +225,7 @@ in
       riff
       ripgrep
       rustup
-      sage
+      # sage
       scilab-bin
       serial-studio
       signal-desktop
