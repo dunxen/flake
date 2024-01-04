@@ -76,10 +76,8 @@
 
     programs.mosh.enable = true;
 
-    security.sudo.wheelNeedsPassword = false;
-    security.sudo.extraConfig = ''
-      Defaults lecture = never
-    '';
+    security.sudo-rs.enable = true;
+    security.sudo-rs.wheelNeedsPassword = false;
 
     # Use edge NixOS.
     nix.extraOptions = ''
