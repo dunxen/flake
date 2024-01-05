@@ -1,7 +1,7 @@
 /*
   A trait for all boxxen
 */
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   config = {
@@ -76,6 +76,7 @@
 
     programs.mosh.enable = true;
 
+    security.sudo.enable = lib.mkForce false;
     security.sudo-rs.enable = true;
     security.sudo-rs.wheelNeedsPassword = false;
 
