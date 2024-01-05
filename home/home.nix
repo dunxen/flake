@@ -188,6 +188,7 @@ in
       heaptrack
       htop
       hydra-check
+      imhex
       inkscape
       jetbrains.rust-rover
       julia
