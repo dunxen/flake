@@ -153,6 +153,7 @@ alias bitcoin-tx = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin-tx
 alias bitcoin-wallet = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoind-wallet
 alias bitcoin-util = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin-util
 alias cider = appimage-run /home/dunxen/AppImages/Cider-2.2.0.AppImage
+alias flakebox-init = nix flake init -t github:rustshop/flakebox
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
