@@ -153,6 +153,9 @@ in
       comma
       cool-retro-term
       cosign
+      cosmic-edit
+      # not yet available
+      # cosmic-term
       devbox
       discord
       dnsx
