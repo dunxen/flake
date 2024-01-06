@@ -179,6 +179,7 @@ in
       glxinfo
       gmsh
       gnome.nautilus
+      gnuradio
       go
       godot_4
       grim
