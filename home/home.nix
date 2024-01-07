@@ -197,6 +197,7 @@ in
       jetbrains.rust-rover
       julia
       keybase-gui
+      keymapp
       kicad
       kubernetes-helm
       ledger
