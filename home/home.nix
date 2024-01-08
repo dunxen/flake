@@ -154,8 +154,7 @@ in
       cool-retro-term
       cosign
       cosmic-edit
-      # not yet available
-      # cosmic-term
+      cosmic-term
       devbox
       discord
       dnsx
