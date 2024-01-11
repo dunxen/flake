@@ -53,7 +53,7 @@
     services.fail2ban.enable = true;
 
     # I quite often want http servers...
-    networking.firewall.allowedTCPPorts = [ 80 ];
-    networking.firewall.allowedUDPPorts = [ 80 ];
+    networking.firewall.allowedTCPPorts = [ 80 8333 ];
+    networking.firewall.allowedUDPPorts = [ 80 8333 ];
   };
 }
