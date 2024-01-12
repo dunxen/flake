@@ -134,6 +134,7 @@ in
     with pkgs;
     let
       lume = pkgs.callPackage ../packages/lume { };
+      cosmic-files = pkgs.callPackage ../packages/cosmic-files { };
     in
     [
       age
@@ -154,6 +155,7 @@ in
       cool-retro-term
       cosign
       cosmic-edit
+      cosmic-files
       cosmic-term
       devbox
       discord
