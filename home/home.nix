@@ -211,6 +211,7 @@ in
       nickel
       nil # A nix language server
       nixos-generators
+      nixpkgs-review
       nls # Nickel Language Server
       obsidian
       obs-studio
