@@ -182,7 +182,8 @@ in
       glxinfo
       gmsh
       gnome.nautilus
-      gnuradio
+      ## currently broken
+      # gnuradio
       go
       godot_4
       grim
@@ -223,7 +224,7 @@ in
       obs-studio-plugins.obs-move-transition
       oculante
       ookla-speedtest
-      paraview
+      # paraview
       pavucontrol
       protonmail-bridge
       protonvpn-cli
