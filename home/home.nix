@@ -134,7 +134,6 @@ in
     with pkgs;
     let
       lume = pkgs.callPackage ../packages/lume { };
-      cosmic-files = pkgs.callPackage ../packages/cosmic-files { };
     in
     [
       age
