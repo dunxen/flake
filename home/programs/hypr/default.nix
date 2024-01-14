@@ -135,7 +135,7 @@
     bind = $mainMod SHIFT, L, exec, gtklock -i
     bind = $mainMod SHIFT, E, exit,
     bind = $mainMod SHIFT, N,exec,sleep 1 && hyprctl dispatch dpms off
-    bind = $mainMod, F, exec, spacedrive
+    bind = $mainMod, F, exec, cosmic-files
     bind = $mainMod, V, togglefloating,
     bind = $mainMod, D, exec, wofi --show drun
     bind = $mainMod, R, exec, wofi --show run
