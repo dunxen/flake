@@ -27,14 +27,14 @@ in
         timeout = 240;
         command = "${pkgs.systemd}/bin/loginctl lock-session";
       }
-      # {
-      #   timeout = 3600;
-      #   command = "${pkgs.hyprland}/bin/hyprctl dispatch dpms off";
-      # }
       {
         timeout = 3600;
-        command = suspendScript.outPath;
+        command = "${pkgs.hyprland}/bin/hyprctl dispatch dpms off";
       }
+      # {
+      #   timeout = 3600;
+      #   command = suspendScript.outPath;
+      # }
     ];
   };
 }
