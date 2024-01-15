@@ -64,7 +64,7 @@ An x86_64 workstation.
 * 1 TB M.2 NVMe - Mushkin
 * 2x 1 TB SATA SSDs - Mushkin
 * 2 TB SATA HDD - WD
-* GIGABYTE NVIDIA GEFORCE RTX ...
+* XFX Speedster SWFT 309 Radeon RX 6700 10GB GDDR6 HDMI 3xDP, AMD RDNA 2
 
 ## Preparation
 
