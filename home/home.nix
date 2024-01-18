@@ -155,6 +155,7 @@ in
       cosign
       cosmic-edit
       cosmic-files
+      cosmic-randr
       cosmic-term
       devbox
       discord
