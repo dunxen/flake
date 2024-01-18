@@ -6,7 +6,7 @@
 * https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/profiles/hardened.nix
 * https://tails.boum.org/contribute/design/kernel_hardening/
 */
-{ pkgs, lib, ... }:
+{ lib, ... }:
 
 {
   config = {
@@ -53,7 +53,15 @@
     services.fail2ban.enable = true;
 
     # I quite often want http servers...
-    networking.firewall.allowedTCPPorts = [ 80 8333 ];
-    networking.firewall.allowedUDPPorts = [ 80 8333 ];
+    networking.firewall.allowedTCPPorts = [
+      80
+      8333 # Bitcoin
+      38693 # SimpleX Desktop Local Connection
+    ];
+    networking.firewall.allowedUDPPorts = [
+      80
+      8333 # Bitcoin
+      38693 # SimpleX Desktop Local Connection
+    ];
   };
 }

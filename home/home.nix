@@ -238,6 +238,7 @@ in
       scilab-bin
       serial-studio
       signal-desktop
+      simplex-chat-desktop
       slurp
       spacedrive
       sparrow
