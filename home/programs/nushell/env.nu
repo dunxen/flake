@@ -7,7 +7,7 @@ def create_right_prompt [] {
     let time_segment = ([
         (ansi reset)
         (ansi magenta)
-        (date now | date format '%Y/%m/%d %r')
+        (date now | format date '%Y/%m/%d %r')
     ] | str join | str replace --all "([/:])" $"(ansi green)${1}(ansi magenta)" |
         str replace --all "([AP]M)" $"(ansi magenta_underline)${1}")
 
@@ -23,9 +23,9 @@ def create_right_prompt [] {
 def create_prompt_indicator [] {
     (ansi reset)
     if ($env.LAST_EXIT_CODE != 0) {
-        ([ (ansi rb) "🗲  " ] | str join)
+        ([ (ansi rb) " ₿: " ] | str join)
     } else {
-        ([ (ansi blue) "₿ " ] | str join)
+        ([ (ansi blue) " ₿: " ] | str join)
     }
 }
 

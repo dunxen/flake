@@ -12,7 +12,7 @@
     ./hypr
     ./nushell
     ./ssh
-    ./starship
+    # ./starship
     ./swayidle
   ];
 }
