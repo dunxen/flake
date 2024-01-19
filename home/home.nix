@@ -262,6 +262,7 @@ in
       vulkan-tools
       wasmtime
       wally-cli
+      wezterm
       wget
       wl-clipboard
       wofi
