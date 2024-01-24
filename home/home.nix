@@ -183,8 +183,7 @@ in
       glxinfo
       gmsh
       gnome.nautilus
-      ## currently broken
-      # gnuradio
+      gnuradio
       go
       godot_4
       grim
