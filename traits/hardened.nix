@@ -55,12 +55,10 @@
     # I quite often want http servers...
     networking.firewall.allowedTCPPorts = [
       80
-      8333 # Bitcoin
       38693 # SimpleX Desktop Local Connection
     ];
     networking.firewall.allowedUDPPorts = [
       80
-      8333 # Bitcoin
       38693 # SimpleX Desktop Local Connection
     ];
   };
