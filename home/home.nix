@@ -141,6 +141,7 @@ in
       asn
       asnmap
       bat
+      bcachefs-tools
       beeper
       bgpdump
       bind
