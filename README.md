@@ -1,6 +1,6 @@
 # dunxen's Nix Flake ❄️
 
-This is a flake heavily borrowed from and inspired by [](https://github.com/Hoverbear-Consulting/flake).
+This is a flake heavily borrowed from and inspired by [hoverbear's flake](https://github.com/Hoverbear-Consulting/flake).
 
 # Packages
 
@@ -108,7 +108,7 @@ sudo nixos-install --flake git+ssh://git.dunxen.dev/flake#brute --impure
 
 ## Neon
 
-An x86_84 laptop.
+An x86_64 laptop.
 
 * [WootBook Metal 15-PF5NU1G-4600H][machines-wootbook-15]
   * 500 GB M.2 NVMe - Mushkin
