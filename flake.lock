@@ -88,11 +88,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1706576105,
-        "narHash": "sha256-IeitgeChhkXJ1tkMgWu11sVAIAzqQ64AsqOqfZ61bzM=",
+        "lastModified": 1706742960,
+        "narHash": "sha256-4jWcOSWIGhrPRy0eoPfNa1f7b5pNrwD4WZjUe6Prphc=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "c4e32e8f820ce3de6e364e2259939347082929d7",
+        "rev": "96530c971590fa8cf6df448b39b5afd7a2451e01",
         "type": "github"
       },
       "original": {
@@ -175,11 +175,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1706565513,
-        "narHash": "sha256-eiiHgBdpluVFjjWaunP1GFEDYnCLq54CeCD7h1JP7jY=",
+        "lastModified": 1706750333,
+        "narHash": "sha256-wTwzj5W7zyCC7v0jIko4FBWa+E+n0Pe3QZbcEI7IK8Q=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "cf4492174d0ee27bd3c73a5fa57fe3a26aa064be",
+        "rev": "dbac78bb3c06717f1f83984da3035e28f39d49a5",
         "type": "github"
       },
       "original": {
@@ -219,11 +219,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1706571425,
-        "narHash": "sha256-VwVUPb5vuy4GGUx1XMhDMaKk9n8Gs5xUTG9CItoHL04=",
+        "lastModified": 1706756971,
+        "narHash": "sha256-WSfAvQ2Irevu4UXajirSx/Aiiv5nWVhgx1E/c48c3as=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "3ff59e7e1d859daa503b88ef125d087bc100abfe",
+        "rev": "15316aaa311ce27982d4df3c9514f042290853a3",
         "type": "github"
       },
       "original": {
@@ -363,16 +363,18 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1706371002,
-        "narHash": "sha256-dwuorKimqSYgyu8Cw6ncKhyQjUDOyuXoxDTVmAXq88s=",
-        "rev": "c002c6aa977ad22c60398daaa9be52f2203d0006",
-        "revCount": 576949,
-        "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.1.576949%2Brev-c002c6aa977ad22c60398daaa9be52f2203d0006/018d559d-9a3d-7239-b0a8-ac30145ac7f6/source.tar.gz"
+        "lastModified": 1706550542,
+        "narHash": "sha256-UcsnCG6wx++23yeER4Hg18CXWbgNpqNXcHIo5/1Y+hc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "97b17f32362e475016f942bbdfda4a4a72a8a652",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://flakehub.com/f/NixOS/nixpkgs/0.1.0.tar.gz"
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "root": {
