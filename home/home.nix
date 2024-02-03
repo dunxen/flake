@@ -108,8 +108,8 @@ in
     };
 
     theme = {
-      name = "Tokyonight-Dark-B-LB";
-      package = pkgs.tokyo-night-gtk;
+      name = "Dracula";
+      package = pkgs.dracula-theme;
     };
 
     cursorTheme = {
