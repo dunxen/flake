@@ -226,7 +226,7 @@ in
       obs-studio-plugins.obs-move-transition
       oculante
       ookla-speedtest
-      # paraview
+      paraview
       pavucontrol
       protonmail-bridge
       protonvpn-cli
@@ -235,7 +235,7 @@ in
       riff
       ripgrep
       rustup
-      # sage
+      sage
       scilab-bin
       serial-studio
       signal-desktop
