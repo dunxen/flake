@@ -226,6 +226,7 @@ in
       obs-studio-plugins.obs-move-transition
       oculante
       ookla-speedtest
+      openrocket
       paraview
       pavucontrol
       protonmail-bridge
