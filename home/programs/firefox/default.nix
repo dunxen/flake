@@ -16,7 +16,7 @@
         /*** [SECTION 0100]: STARTUP ***/
         "browser.startup.page" = 3;
         "browser.startup.homepage" = "https://kagi.com/";
-        "browser.newtabpage.enabled" = false;
+        "browser.newtabpage.enabled" = true;
         "browser.newtabpage.activity-stream.showSponsored" = false; # [FF58+] Pocket > Sponsored Stories
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false; # [FF83+] Sponsored shortcuts
         "browser.newtabpage.activity-stream.default.sites" = "";
