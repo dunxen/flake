@@ -239,6 +239,8 @@ in
       sage
       scilab-bin
       serial-studio
+      semgrep
+      semgrep-core
       signal-desktop
       simplex-chat-desktop
       slurp
