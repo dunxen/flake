@@ -158,6 +158,7 @@ in
       cosmic-files
       cosmic-randr
       cosmic-term
+      cura
       devbox
       discord
       dnsx
@@ -178,6 +179,7 @@ in
       gcc12
       gh
       gimp
+      git-absorb
       git-crypt
       git-nomad # Synchronise work-in-progress git branches in a light weight fashion
       gitoxide
