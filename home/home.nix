@@ -174,6 +174,7 @@ in
       fd
       firecracker
       firectl
+      flashprint
       flyctl
       freecad
       gcc12
