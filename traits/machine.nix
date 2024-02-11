@@ -39,12 +39,12 @@
     # boot.initrd.luks.fido2Support = true;
     boot.initrd.luks.mitigateDMAAttacks = true;
 
-    environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
+    # environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
     environment.systemPackages = with pkgs; [
       i2c-tools
       libimobiledevice
       ifuse
-      qemu
+      # qemu
     ];
 
     users.mutableUsers = false;
@@ -137,17 +137,17 @@
     hardware.xpadneo.enable = true; # For Xbox One Controller
     hardware.keyboard.zsa.enable = true;
 
-    virtualisation.libvirtd.enable = true;
-    virtualisation.libvirtd.onBoot = "ignore";
-    virtualisation.libvirtd.qemu.package = pkgs.qemu_full;
-    virtualisation.libvirtd.qemu.ovmf.enable = true;
-    virtualisation.libvirtd.qemu.ovmf.packages = if pkgs.stdenv.isx86_64 then [ pkgs.OVMFFull.fd ] else [ pkgs.OVMF.fd ];
-    virtualisation.libvirtd.qemu.swtpm.enable = true;
-    virtualisation.libvirtd.qemu.swtpm.package = pkgs.swtpm;
-    virtualisation.libvirtd.qemu.runAsRoot = false;
-    virtualisation.virtualbox.host.enable = true;
-    virtualisation.spiceUSBRedirection.enable = true; # Note that this allows users arbitrary access to USB devices. 
-    virtualisation.podman.enable = true;
+    # virtualisation.libvirtd.enable = true;
+    # virtualisation.libvirtd.onBoot = "ignore";
+    # virtualisation.libvirtd.qemu.package = pkgs.qemu_full;
+    # virtualisation.libvirtd.qemu.ovmf.enable = true;
+    # virtualisation.libvirtd.qemu.ovmf.packages = if pkgs.stdenv.isx86_64 then [ pkgs.OVMFFull.fd ] else [ pkgs.OVMF.fd ];
+    # virtualisation.libvirtd.qemu.swtpm.enable = true;
+    # virtualisation.libvirtd.qemu.swtpm.package = pkgs.swtpm;
+    # virtualisation.libvirtd.qemu.runAsRoot = false;
+    # virtualisation.virtualbox.host.enable = true;
+    # virtualisation.spiceUSBRedirection.enable = true; # Note that this allows users arbitrary access to USB devices. 
+    # virtualisation.podman.enable = true;
 
     # For iOS devices. Currently broken
     # services.usbmuxd.enable = true;
