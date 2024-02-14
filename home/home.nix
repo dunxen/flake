@@ -188,6 +188,7 @@ in
       glxinfo
       gmsh
       gnome.nautilus
+      gnuplot
       gnuradio
       go
       godot_4
