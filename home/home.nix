@@ -268,12 +268,14 @@ in
       vivaldi-ffmpeg-codecs
       vlc
       vulkan-tools
+      wabt
       wasmtime
       wally-cli
       wezterm
       wget
       wl-clipboard
       wofi
+      wrangler
       zellij
       zola
     ];
