@@ -147,6 +147,7 @@ in
       bind
       blender-hip
       blueman
+      brave
       bun
       bundix
       calculix
@@ -265,8 +266,6 @@ in
       unzip
       usbutils
       vagrant
-      vivaldi
-      vivaldi-ffmpeg-codecs
       vlc
       vulkan-tools
       wabt
