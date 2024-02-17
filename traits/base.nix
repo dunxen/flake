@@ -20,37 +20,37 @@
 
     environment.systemPackages = with pkgs; [
       # Shell utilities
-      patchelf
-      direnv
-      nix-direnv
-      git
-      jq
-      fzf
-      ripgrep
-      lsof
-      htop
-      bat
-      grex
-      broot
-      bottom
-      fd
-      sd
-      fio
-      hyperfine
-      tokei
       bandwhich
+      bat
+      bottom
+      broot
+      direnv
+      fd
+      fio
+      fio
+      fzf
+      git
+      gptfdisk
+      graphviz
+      grex
+      htop
+      hyperfine
+      jq
+      killall
+      # libhugetlbfs # This has a build failure.
       lsd
+      lsof
+      nix-direnv
       ntfs3g
       # nvme-cli
       # nvmet-cli
-      # libhugetlbfs # This has a build failure.
-      killall
-      gptfdisk
-      fio
-      smartmontools
+      patchelf
+      ripgrep
       rnix-lsp
-      graphviz
+      sd
       simple-http-server
+      smartmontools
+      tokei
     ];
     environment.shellAliases = { };
     environment.variables = {
