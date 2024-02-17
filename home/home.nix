@@ -199,6 +199,7 @@ in
       heaptrack
       htop
       hydra-check
+      hyprshot
       imhex
       inkscape
       jetbrains.rust-rover
