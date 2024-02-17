@@ -142,6 +142,10 @@
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, S, togglesplit, # dwindle
 
+    bind = , PRINT, exec, hyprshot -m output
+    bind = $mainMod, PRINT, exec, hyprshot -m window
+    bind = $mainMod SHIFT, PRINT, exec, hyprshot -m region
+
     bind = $mainMod, T, exec, grim -g "$(slurp)" - | wl-copy
     bind = $mainMod SHIFT, T, exec, grim -g "$(slurp)"
 
