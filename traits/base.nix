@@ -18,6 +18,8 @@
       ];
     };
 
+    documentation.dev.enable = true;
+
     environment.systemPackages = with pkgs; [
       # Shell utilities
       bandwhich
@@ -40,6 +42,8 @@
       # libhugetlbfs # This has a build failure.
       lsd
       lsof
+      man-pages
+      man-pages-posix
       nix-direnv
       ntfs3g
       # nvme-cli
