@@ -224,10 +224,10 @@ in
       obsidian
       obs-studio
       obs-studio-plugins.obs-gstreamer
-      obs-studio-plugins.obs-vkcapture
-      obs-studio-plugins.obs-pipewire-audio-capture
-      obs-studio-plugins.obs-multi-rtmp
       obs-studio-plugins.obs-move-transition
+      obs-studio-plugins.obs-multi-rtmp
+      obs-studio-plugins.obs-pipewire-audio-capture
+      obs-studio-plugins.obs-vkcapture
       oculante
       ookla-speedtest
       openrocket
@@ -242,9 +242,9 @@ in
       rustup
       sage
       scilab-bin
-      serial-studio
       semgrep
       semgrep-core
+      serial-studio
       signal-desktop
       simplex-chat-desktop
       slurp
@@ -254,8 +254,8 @@ in
       steam
       subfinder
       tailscale
-      termius
       telegram-desktop
+      termius
       thunderbird
       typst
       typst-fmt
@@ -269,8 +269,8 @@ in
       vlc
       vulkan-tools
       wabt
-      wasmtime
       wally-cli
+      wasmtime
       wezterm
       wget
       wl-clipboard
