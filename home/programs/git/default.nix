@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ self, pkgs, ... }:
 let
   ssh_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs8y3pGOgEefYi6juRp+RECFq/uzYu7o3Qc6Wo0RD90 git@dunxen.dev";
 in
@@ -14,24 +14,25 @@ in
     aliases = {
       a = "add";
       b = "branch";
-      c = "commit";
       ca = "commit --amend";
+      c = "commit";
       cm = "commit -m";
       co = "checkout";
       d = "diff";
       dm = "diff --color-moved=plain";
       ds = "diff --staged";
-      p = "push";
-      pf = "push --force-with-lease";
-      pl = "pull";
-      l = "log";
-      r = "rebase";
-      s = "status --short";
-      showm = "show --color-moved=plain";
-      ss = "status";
       forgor = "commit --amend --no-edit";
       graph = "log --all --decorate --graph --oneline";
+      l = "log";
       oops = "checkout --";
+      pf = "push --force-with-lease";
+      pl = "pull";
+      p = "push";
+      r = "rebase";
+      showm = "show --color-moved=plain";
+      ss = "status";
+      s = "status --short";
+      staash = "stash --all";
     };
     ignores = [ "*~" "*.swp" "*result*" ".direnv" "node_modules" ];
     lfs.enable = true;
