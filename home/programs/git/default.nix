@@ -1,4 +1,4 @@
-{ self, pkgs, ... }:
+{ pkgs, ... }:
 let
   ssh_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs8y3pGOgEefYi6juRp+RECFq/uzYu7o3Qc6Wo0RD90 git@dunxen.dev";
 in
@@ -22,6 +22,7 @@ in
       dm = "diff --color-moved=plain";
       ds = "diff --staged";
       forgor = "commit --amend --no-edit";
+      fpush = "push --force-with-lease";
       graph = "log --all --decorate --graph --oneline";
       l = "log";
       oops = "checkout --";
@@ -37,6 +38,7 @@ in
     ignores = [ "*~" "*.swp" "*result*" ".direnv" "node_modules" ];
     lfs.enable = true;
     extraConfig = {
+      branch.sort = "-committerdate";
       pull.rebase = true;
       init.defaultBranch = "main";
       diff.colormoved = "zebra";
@@ -56,6 +58,7 @@ in
       gpg.format = "ssh";
       gpg.ssh.program = ''${pkgs._1password-gui}/share/1password/op-ssh-sign'';
       gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
+      rerere.enabled = true;
     };
   };
 }
