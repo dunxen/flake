@@ -5,7 +5,7 @@
     sessionVariables = {
       EDITOR = "hx";
       BROWSER = "firefox";
-      TERMINAL = "alacritty";
+      TERMINAL = "wezterm";
       CLUTTER_BACKEND = "wayland";
       WLR_RENDERER = "vulkan";
 
