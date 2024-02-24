@@ -267,6 +267,7 @@ in
       usbutils
       vagrant
       vlc
+      vscode
       vulkan-tools
       wabt
       wally-cli
