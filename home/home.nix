@@ -273,7 +273,6 @@ in
       wabt
       wally-cli
       wasmtime
-      wezterm
       wget
       wl-clipboard
       wofi

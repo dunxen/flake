@@ -14,5 +14,6 @@
     ./ssh
     ./starship
     ./swayidle
+    ./wezterm
   ];
 }
