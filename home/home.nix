@@ -145,8 +145,7 @@ in
       beeper
       bgpdump
       bind
-      # broken now 😔
-      # blender-hip
+      blender-hip
       blueman
       brave
       bun
