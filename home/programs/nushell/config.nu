@@ -1,6 +1,6 @@
 # Nushell Config File
 #
-# version = "0.86.1"
+# version = "0.89.0"
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
@@ -42,6 +42,7 @@ let dark_theme = {
     shape_directory: cyan
     shape_external: cyan
     shape_externalarg: green_bold
+    shape_external_resolved: light_yellow_bold
     shape_filepath: cyan
     shape_flag: blue_bold
     shape_float: purple_bold
@@ -50,6 +51,7 @@ let dark_theme = {
     shape_globpattern: cyan_bold
     shape_int: purple_bold
     shape_internalcall: cyan_bold
+    shape_keyword: cyan_bold
     shape_list: cyan_bold
     shape_literal: blue
     shape_match_pattern: green
@@ -105,6 +107,7 @@ let light_theme = {
     shape_directory: cyan
     shape_external: cyan
     shape_externalarg: green_bold
+    shape_external_resolved: light_purple_bold
     shape_filepath: cyan
     shape_flag: blue_bold
     shape_float: purple_bold
@@ -113,6 +116,7 @@ let light_theme = {
     shape_globpattern: cyan_bold
     shape_int: purple_bold
     shape_internalcall: cyan_bold
+    shape_keyword: cyan_bold
     shape_list: cyan_bold
     shape_literal: blue
     shape_match_pattern: green
@@ -132,28 +136,10 @@ let light_theme = {
     shape_vardecl: purple
 }
 
-# For completions
+# External completer example
 let carapace_completer = {|spans|
-    carapace $spans.0 nushell $spans | from json
+    carapace $spans.0 nushell ...$spans | from json
 }
-
-# OP Shell Plugins
-
-$env.OP_PLUGIN_ALIASES_SOURCED = 1
-alias gh = op plugin run -- gh
-
-def --env set_mods_api_keys [] {
-    $env.OPENAI_API_KEY = $"(op read 'op://Personal/g4xdmnzzep2752cbixesdzgpki/credential')"
-}
-
-# Bitcoin dev
-alias bitcoind = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoind
-alias bitcoin-cli = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin-cli
-alias bitcoin-tx = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin-tx
-alias bitcoin-wallet = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoind-wallet
-alias bitcoin-util = /home/dunxen/repos/github.com/bitcoin/bitcoin/src/bitcoin-util
-alias cider = appimage-run /home/dunxen/AppImages/Cider-2.2.0.AppImage
-alias flakebox-init = nix flake init -t github:rustshop/flakebox
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
@@ -224,7 +210,7 @@ $env.config = {
         external: {
             enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up may be very slow
             max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
-            completer: $carapace_completer # check 'carapace_completer' above as an example
+            completer: null # check 'carapace_completer' above as an example
         }
     }
 
@@ -249,7 +235,8 @@ $env.config = {
     edit_mode: emacs # emacs, vi
     shell_integration: false # enables terminal shell integration. Off by default, as some terminals have issues with this.
     render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
-    use_kitty_protocol: false # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this
+    use_kitty_protocol: false # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
+    highlight_resolved_externals: false # true enables highlighting of external commands in the repl resolved by which.
 
     hooks: {
         pre_prompt: [{ null }] # run before the prompt is shown
