@@ -271,6 +271,7 @@ in
       vulkan-tools
       wabt
       wally-cli
+      warp-terminal
       wasmtime
       wget
       wl-clipboard
