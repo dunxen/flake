@@ -160,6 +160,7 @@ in
       cosmic-randr
       cosmic-term
       cura
+      deno
       devbox
       discord
       dnsx
@@ -268,6 +269,7 @@ in
       vagrant
       vlc
       vscode
+      vscode-langservers-extracted
       vulkan-tools
       wabt
       wally-cli

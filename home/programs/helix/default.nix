@@ -10,6 +10,10 @@
         nil = {
           command = "nil";
         };
+        deno = {
+          command = "deno";
+          args = [ "lsp" ];
+        };
       };
       language = [
         {
@@ -35,6 +39,26 @@
         {
           name = "nix";
           language-servers = [ "nil" ];
+        }
+        {
+          name = "jsx";
+          language-servers = [ "deno" ];
+          auto-format = true;
+        }
+        {
+          name = "tsx";
+          language-servers = [ "deno" ];
+          auto-format = true;
+        }
+        {
+          name = "javascript";
+          language-servers = [ "deno" ];
+          auto-format = true;
+        }
+        {
+          name = "typescript";
+          language-servers = [ "deno" ];
+          auto-format = true;
         }
       ];
     };
