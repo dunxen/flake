@@ -14,7 +14,7 @@
   # start swayidle as part of hyprland, not sway
   systemd.user.services.swayidle.Install.WantedBy = lib.mkForce [ "hyprland-session.target" ];
 
-  #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
+  # test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
@@ -24,8 +24,8 @@
     monitor=,highres,auto,1
 
     # Fix slow startup
-    exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-    exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP 
+    exec-once = systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+    exec-once = dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP 
 
     # Autostart
 
