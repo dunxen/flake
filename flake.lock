@@ -175,11 +175,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1709650834,
-        "narHash": "sha256-bMvguV+1TuKksZB29JUbSn+RyhU8t0Z4cvfYuyZy8K8=",
+        "lastModified": 1709691059,
+        "narHash": "sha256-2SczibSvTJ/fKV8PgKv43hnS7+7oQlQ4t5Pzc5WdjOo=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "3f98891e7952a748f814e6741f4375c9b7aa0983",
+        "rev": "b93fae9c8b955e11f427979134e3494294e8e2e0",
         "type": "github"
       },
       "original": {
@@ -195,11 +195,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1709578243,
-        "narHash": "sha256-hF96D+c2PBmAFhymMw3z8hou++lqKtZ7IzpFbYeL1/Y=",
+        "lastModified": 1709722441,
+        "narHash": "sha256-OdkGhZ+OrOEZWsLyGLNVWS0sQF0adPXCkkwhy8vlEuo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "23ff9821bcaec12981e32049e8687f25f11e5ef3",
+        "rev": "1d717f581b7b001b2a1293277a1d3386fca5b87e",
         "type": "github"
       },
       "original": {
@@ -220,11 +220,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1709646938,
-        "narHash": "sha256-1QAy6sTtuEkl8WMUR4rim2/SsTekxj0jXrrqJVPs0OM=",
+        "lastModified": 1709720053,
+        "narHash": "sha256-hR0RSeqFOXCggqbGhkFZT3ZAbGc2cAoeeyXU3V5J4hU=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "bdfa8ab856b889f92240684680cb3fdbdc41fb3d",
+        "rev": "d6f1b151b2fe85ffbb131cbdd05acefc6a357e81",
         "type": "github"
       },
       "original": {
