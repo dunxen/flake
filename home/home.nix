@@ -237,6 +237,7 @@ in
       openrocket
       paraview
       pavucontrol
+      postman
       protonmail-bridge
       protonvpn-cli
       protonvpn-gui
