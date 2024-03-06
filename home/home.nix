@@ -217,6 +217,7 @@ in
       llvm
       lume
       mars-mips
+      melt
       mods
       neofetch
       nickel
