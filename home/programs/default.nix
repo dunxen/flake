@@ -15,5 +15,6 @@
     ./starship
     ./swayidle
     ./wezterm
+    ./zellij
   ];
 }

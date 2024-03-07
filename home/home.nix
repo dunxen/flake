@@ -281,7 +281,6 @@ in
       wl-clipboard
       wofi
       wrangler
-      zellij
       zola
     ];
 
