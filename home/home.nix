@@ -252,6 +252,7 @@ in
       serial-studio
       signal-desktop
       simplex-chat-desktop
+      slack
       slurp
       spacedrive
       sparrow
