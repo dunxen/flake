@@ -50,7 +50,7 @@
       # nvmet-cli
       patchelf
       ripgrep
-      rnix-lsp
+      # rnix-lsp
       sd
       simple-http-server
       smartmontools
