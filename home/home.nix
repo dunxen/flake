@@ -276,7 +276,8 @@ in
       vulkan-tools
       wabt
       wally-cli
-      warp-terminal
+      # Disable until there is nushell support
+      # warp-terminal
       wasmtime
       wget
       wl-clipboard
