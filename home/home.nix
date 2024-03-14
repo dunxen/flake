@@ -147,6 +147,7 @@ in
       bind
       blender-hip
       blueman
+      bottom
       brave
       bun
       bundix
