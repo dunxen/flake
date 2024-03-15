@@ -153,6 +153,7 @@ in
       bundix
       calculix
       carapace
+      cloudflared
       comma
       cool-retro-term
       cosign
