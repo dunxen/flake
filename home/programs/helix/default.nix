@@ -10,10 +10,6 @@
         nil = {
           command = "nil";
         };
-        deno = {
-          command = "deno";
-          args = [ "lsp" ];
-        };
       };
       language = [
         {
@@ -41,24 +37,53 @@
           language-servers = [ "nil" ];
         }
         {
+          name = "html";
+          language-servers = [
+            "vscode-html-language-server"
+            "tailwindcss-ls"
+          ];
+          formatter = { command = "prettier"; };
+        }
+        {
+          name = "css";
+          language-servers = [
+            "vscode-css-language-server"
+            "tailwindcss-ls"
+          ];
+          formatter = { command = "prettier"; };
+        }
+        {
           name = "jsx";
-          language-servers = [ "deno" ];
+          language-servers = [ "typescript-language-server" "tailwindcss-ls" ];
           auto-format = true;
+          formatter = { command = "prettier"; };
         }
         {
           name = "tsx";
-          language-servers = [ "deno" ];
+          language-servers = [ "typescript-language-server" "tailwindcss-ls" ];
           auto-format = true;
+          formatter = { command = "prettier"; };
         }
         {
           name = "javascript";
-          language-servers = [ "deno" ];
+          language-servers = [ "typescript-language-server" ];
           auto-format = true;
+          formatter = { command = "prettier"; };
         }
         {
           name = "typescript";
-          language-servers = [ "deno" ];
+          language-servers = [ "typescript-language-server" ];
           auto-format = true;
+          formatter = { command = "prettier"; };
+        }
+        {
+          name = "svelte";
+          auto-format = true;
+          language-servers = [
+            "tailwindcss-ls"
+            "svelteserver"
+            "eslint-ls"
+          ];
         }
       ];
     };

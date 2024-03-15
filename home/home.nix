@@ -227,6 +227,8 @@ in
       nixos-generators
       nixpkgs-review
       nls # Nickel Language Server
+      nodePackages.prettier
+      nodePackages.svelte-language-server
       obsidian
       obs-studio
       obs-studio-plugins.obs-gstreamer
@@ -262,6 +264,7 @@ in
       steam
       subfinder
       tailscale
+      tailwindcss-language-server
       telegram-desktop
       termius
       thunderbird
