@@ -85,6 +85,10 @@
             "eslint-ls"
           ];
         }
+        {
+          name = "json";
+          auto-format = false;
+        }
       ];
     };
     settings = {
