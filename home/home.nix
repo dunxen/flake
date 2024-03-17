@@ -199,7 +199,8 @@ in
       grim
       guix
       gum
-      haskellPackages.epub-tools
+      # broken
+      # haskellPackages.epub-tools
       heaptrack
       htop
       hydra-check
