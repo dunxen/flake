@@ -83,11 +83,9 @@ window#waybar.hidden {
 }
 
 #battery {
-	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
 	background: @surface0;
@@ -114,15 +112,12 @@ window#waybar.hidden {
 }
 
 #backlight {
-	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #F8BD96;
+	background: @surface0;
 }
 #clock {
 	margin-left: 8px;
