@@ -1,6 +1,10 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray"],
+	"modules-left": [
+		"custom/launcher",
+		"custom/media",
+		"tray",
+	],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
 	"pulseaudio": {
@@ -65,7 +69,7 @@
 		"spacing": 10
 	},
     "clock": {
-        "format": "{: %H:%M  󰃭 %Y-%m-%d}"
+        "format": "{:%H:%M - %Y-%m-%d}"
     },
     "cpu": {
         "interval": 15,
