@@ -216,12 +216,14 @@ in
       ledger
       ledger-live-desktop
       liana
+      lld
       lldb
       llvm
       lume
       mars-mips
       melt
       mods
+      mold
       neofetch
       nickel
       nil # A nix language server
