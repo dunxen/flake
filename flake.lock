@@ -88,11 +88,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1710803799,
-        "narHash": "sha256-uvvH8F2W1iIi+1nZeESTfoCKUxacRzbsr1NPmmzM1jE=",
+        "lastModified": 1710857712,
+        "narHash": "sha256-mmmOCtbCs8EYJH4fQBE4x4IXcvj8BJqZBZ4u7fCadKY=",
         "owner": "nix-community",
         "repo": "flake-firefox-nightly",
-        "rev": "b8b3c31a8d9249faea05bee3c2f4f3e454a52bb8",
+        "rev": "3ff871efc4fdf944315a6e34b78c36bbd1ec46d8",
         "type": "github"
       },
       "original": {
@@ -175,11 +175,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1710830825,
-        "narHash": "sha256-kGxZ8pcECayEgrk3g+2AG7TXlAZvwt7uFmYDSc8oiLU=",
+        "lastModified": 1710857330,
+        "narHash": "sha256-FMIOWrVC+r9f6KMAQ+0rP1EX9QkatiBnbisvcpqINlc=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "3d4889ce9a24f485cf0816b69b8e1f579eee0bdd",
+        "rev": "1d1806c85af37bfb2c8e972bd6e07df08fab61dc",
         "type": "github"
       },
       "original": {
