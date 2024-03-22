@@ -12,17 +12,17 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    firefox = {
-      url = "github:nix-community/flake-firefox-nightly";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # firefox = {
+    #   url = "github:nix-community/flake-firefox-nightly";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     helix-master = {
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, fh, hyprland, firefox, helix-master }:
+  outputs = { self, nixpkgs, home-manager, fh, hyprland, /* firefox, */ helix-master }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -106,7 +106,7 @@
               {
                 environment.systemPackages = [
                   fh.packages.x86_64-linux.default
-                  firefox.packages.x86_64-linux.firefox-nightly-bin
+                  # firefox.packages.x86_64-linux.firefox-nightly-bin
                   helix-master.packages.x86_64-linux.default
                 ];
               }

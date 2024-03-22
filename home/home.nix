@@ -252,7 +252,8 @@ in
       # riff # discontinued 😔
       ripgrep
       rustup
-      sage
+      # broken again
+      # sage
       scilab-bin
       semgrep
       semgrep-core
