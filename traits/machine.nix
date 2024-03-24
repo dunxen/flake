@@ -117,7 +117,10 @@
       pulse.enable = true;
     };
 
-    services.tailscale.enable = true;
+    services.tailscale = {
+      enable = true;
+      extraUpFlags = [ "--operator dunxen"];
+    };
     services.tor.enable = true;
     services.flatpak.enable = true;
 
