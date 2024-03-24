@@ -121,6 +121,15 @@
       enable = true;
       extraUpFlags = [ "--operator dunxen"];
     };
+    systemd.user.services.tailreceive = {
+      enable = true;
+      description = "File Receiver Service for Taildrop";
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "/etc/profiles/per-user/dunxen/bin/tailscale file get --verbose --conflict=overwrite --loop /home/dunxen/taildrops";
+      };
+      wantedBy = [ "default.target" ];
+    };
     services.tor.enable = true;
     services.flatpak.enable = true;
 
