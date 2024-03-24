@@ -241,7 +241,9 @@ in
       obs-studio-plugins.obs-vkcapture
       oculante
       ookla-speedtest
+      opendrop
       openrocket
+      owl
       paraview
       pavucontrol
       postman
@@ -288,6 +290,7 @@ in
       # Disable until there is nushell support
       # warp-terminal
       wasmtime
+      wgcf
       wget
       wl-clipboard
       wofi
