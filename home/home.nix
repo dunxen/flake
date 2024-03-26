@@ -232,6 +232,7 @@ in
       nls # Nickel Language Server
       nodePackages.prettier
       nodePackages.svelte-language-server
+      nodePackages.typescript-language-server
       obsidian
       obs-studio
       obs-studio-plugins.obs-gstreamer
