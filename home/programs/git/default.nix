@@ -59,6 +59,7 @@ in
       gpg.ssh.program = ''${pkgs._1password-gui}/share/1password/op-ssh-sign'';
       gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
       rerere.enabled = true;
+      maintenance.repo = "/home/dunxen/repos/github.com/dunxen/rust-lightning";
     };
   };
 }
