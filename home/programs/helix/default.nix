@@ -84,6 +84,7 @@
             "svelteserver"
             "eslint-ls"
           ];
+          roots = ["package.json"];
         }
         {
           name = "json";
