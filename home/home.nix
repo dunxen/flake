@@ -248,7 +248,7 @@ in
       paraview
       pavucontrol
       postman
-      protonmail-bridge
+      protonmail-desktop
       protonvpn-cli
       protonvpn-gui
       rars
