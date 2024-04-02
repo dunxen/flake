@@ -3,26 +3,36 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.9.tar.gz";
+
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     # firefox = {
     #   url = "github:nix-community/flake-firefox-nightly";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+
     helix-master = {
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, fh, hyprland, /* firefox, */ helix-master }:
+  outputs = { self, nixpkgs, nixos-cosmic, home-manager, fh, hyprland, /* firefox, */ helix-master }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
@@ -110,6 +120,13 @@
                   helix-master.packages.x86_64-linux.default
                 ];
               }
+              {
+                nix.settings = {
+                  substituters = ["https://cosmic.cachix.org/"];
+                  trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+                };
+              }
+              nixos-cosmic.nixosModules.default
               traits.overlay
               traits.base
               services.openssh
