@@ -168,6 +168,7 @@ in
       dnsx
       docker
       dogdns
+      dua
       earthly
       element-desktop
       elmerfem
