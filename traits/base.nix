@@ -90,6 +90,9 @@
       experimental-features = nix-command flakes
     '';
 
+    # Nix config
+    nix.optimise.automatic = true;
+
     nixpkgs.config.allowUnfree = true;
     nixpkgs.config.permittedInsecurePackages = [
       "electron-25.9.0"
