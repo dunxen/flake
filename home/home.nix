@@ -246,7 +246,7 @@ in
       opendrop
       openrocket
       owl
-      paraview
+      # paraview
       pavucontrol
       postman
       protonmail-desktop
