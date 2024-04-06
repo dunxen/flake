@@ -298,6 +298,7 @@ in
       wofi
       wrangler
       zola
+      zoom-us
     ];
 
   programs.home-manager.enable = true;
