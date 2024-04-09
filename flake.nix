@@ -14,6 +14,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # macOS Package Management
+    darwin = {
+      url = "github:lnl7/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.9.tar.gz";
 
     hyprland = {
@@ -32,9 +38,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-cosmic, home-manager, fh, hyprland, /* firefox, */ helix-master }:
+  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, fh, hyprland, /* firefox, */ helix-master }:
     let
       supportedSystems = [ "x86_64-linux" ];
+      vars = {
+        user = "dunxen";
+        location = "$HOME/flake";
+        terminal = "wezterm";
+        editor = "hx";
+      };
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystems (system: f system);
     in
     {
@@ -96,6 +108,13 @@
             };
           }
         );
+
+      darwinConfigurations = (
+        import ./darwin {
+          inherit (nixpkgs) lib;
+          inherit inputs nixpkgs home-manager darwin helix-master vars;
+        }
+      );
 
       nixosConfigurations =
         let
