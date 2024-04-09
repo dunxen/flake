@@ -9,23 +9,18 @@
 #           └─ default.nix
 #
 
-{ pkgs, vars, helix-master, ... }:
+{ pkgs, vars, ... }:
 
 {
-  imports = (import ./modules);
-
   users.users.${vars.user} = {
     home = "/Users/${vars.user}";
     shell = pkgs.zsh;
   };
 
   networking = {
-    computerName = "MacBook";
-    hostName = "MacBook";
+    computerName = "carbon";
+    hostName = "carbon";
   };
-
-  skhd.enable = false;
-  yabai.enable = false;
 
   fonts = {
     fontDir.enable = true;
@@ -46,14 +41,10 @@
       EDITOR = "${vars.editor}";
       VISUAL = "${vars.editor}";
     };
-    systemPackages = with pkgs; [
+    systemPackages = [
       # Terminal
-      git
-      ranger
-      helix-master.packages.aarch64-darwin.default
-
-      # Remote
-      moonlight-qt
+      pkgs.git
+      pkgs.ranger
     ];
   };
 
@@ -73,11 +64,17 @@
       cleanup = "zap";
     };
     brews = [
-      # "wireguard-tools"
+      "atuin"
+      "llvm"
+      "starship"
+      "nushell"
+      "helix"
+      "gh"
     ];
     casks = [
-      "jellyfin-media-player"
-      "plex-media-player"
+      "1password-cli"
+      "warp"
+      "wezterm"
     ];
   };
 
@@ -127,7 +124,7 @@
     programs = {
       zsh = {
         enable = true;
-        enableAutosuggestions = true;
+        autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
         history.size = 10000;
         oh-my-zsh = {

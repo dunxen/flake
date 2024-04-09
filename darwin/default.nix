@@ -22,8 +22,6 @@ in
     specialArgs = { inherit inputs pkgs vars; };
     modules = [
       ./carbon.nix
-      ../modules/editors/nvim.nix
-
       home-manager.darwinModules.home-manager
       {
         home-manager.useGlobalPkgs = true;

@@ -112,7 +112,7 @@
       darwinConfigurations = (
         import ./darwin {
           inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager darwin helix-master vars;
+          inherit inputs nixpkgs home-manager darwin vars;
         }
       );
 
