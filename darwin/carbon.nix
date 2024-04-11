@@ -70,6 +70,7 @@
       "nushell"
       "helix"
       "gh"
+      "hyperfine"
     ];
     casks = [
       "1password-cli"

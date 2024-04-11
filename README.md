@@ -106,7 +106,17 @@ sudo bootctl install --esp-path=/mnt/efi
 sudo nixos-install --flake git+ssh://git.dunxen.dev/flake#brute --impure
 ```
 
-## Neon
+## Carbon
+
+A MacBook Pro
+
+* M3 Pro 14 inch Space Black
+
+```shell
+darwin-rebuild switch --flake ~/flake#carbon
+```
+
+## Neon (deprecated)
 
 An x86_64 laptop.
 
