@@ -44,9 +44,11 @@
     systemPackages = [
       # Terminal
       pkgs.delta
+      pkgs.direnv
       pkgs.git
       pkgs.git-nomad
       pkgs.ranger
+      pkgs.rustup
     ];
   };
 
