@@ -112,9 +112,44 @@ A MacBook Pro
 
 * M3 Pro 14 inch Space Black
 
+### Nix-Darwin Installation Guide
+
+The Apple computer must have the nix package manager installed. We use the Determinate Nix Installer.
+
+In the terminal run command:
+
 ```shell
-darwin-rebuild switch --flake ~/flake#carbon
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
+
+#### Installation
+##### Initial
+- Get git
+- Clone repository
+- First build of the flake on Darwin
+  - This is done because the darwin command is not yet available
+
+```shell
+  $ nix-env -iA nixpkgs.git
+  $ git clone https://github.com/dunxen/flake ~/flake
+  $ cd ~/flake
+  $ nix build .#darwinConfigurations.carbon.system
+  $ ./result/sw/bin/darwin-rebuild switch --flake .#carbon
+```
+
+##### Rebuild
+Since darwin is now added to the PATH, you can build it from anywhere in the system. In this example it is rebuilt from inside the flake directory:
+- `$ darwin-rebuild switch --flake ~/flake#carbon`
+This will rebuild the configuration and automatically activate it.
+
+#### Finalization
+*Mostly optional or already correct by default*
+1. Change default shell for Terminal or iTerm.
+   - `Terminal/iTerm > Preferences > General > Shells open with: Command > /bin/zsh`
+2. Disable Secure Keyboard Entry. Needed for Skhd.
+   - `Terminal/iTerm > Secure Keyboard Entry`
+3. Install XCode to get complete development environment.
+   - `$ xcode-select --install`
 
 ## Neon (deprecated)
 
