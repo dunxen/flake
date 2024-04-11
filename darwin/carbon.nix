@@ -43,7 +43,9 @@
     };
     systemPackages = [
       # Terminal
+      pkgs.delta
       pkgs.git
+      pkgs.git-nomad
       pkgs.ranger
     ];
   };
