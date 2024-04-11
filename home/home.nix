@@ -289,8 +289,7 @@ in
       vulkan-tools
       wabt
       wally-cli
-      # Disable until there is nushell support
-      # warp-terminal
+      warp-terminal
       wasmtime
       wgcf
       wget
@@ -298,7 +297,6 @@ in
       wofi
       wrangler
       zola
-      zoom-us
     ];
 
   programs.home-manager.enable = true;
