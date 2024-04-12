@@ -145,7 +145,7 @@
                   trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
                 };
               }
-              # nixos-cosmic.nixosModules.default
+              nixos-cosmic.nixosModules.default
               traits.overlay
               traits.base
               services.openssh
