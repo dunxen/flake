@@ -234,8 +234,7 @@ in
       nodePackages.prettier
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
-      # electron28 issue https://nixpk.gs/pr-tracker.html?pr=302544
-      # obsidian
+      obsidian
       obs-studio
       obs-studio-plugins.obs-gstreamer
       obs-studio-plugins.obs-move-transition
