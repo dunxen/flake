@@ -214,11 +214,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1712877538,
-        "narHash": "sha256-FK4Rhq9mEf8wpS3/K/ueB5Sql2XOeCQX/SzCe/QySNk=",
+        "lastModified": 1712947921,
+        "narHash": "sha256-tDnNWtr4y22Qoyneg0TKcIncaeZ/5v1V90gPrLIQd3A=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "b1a94302897ae559c877471f7d365651bcd24ad4",
+        "rev": "dd6fdf49d9deebfe792ab5cd0332432249922fa9",
         "type": "github"
       },
       "original": {
@@ -304,11 +304,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712928520,
-        "narHash": "sha256-TJgRz0kqL5Ue1KrFXp48Uvya2GkNKR3jNCHv3HHyObw=",
+        "lastModified": 1712949301,
+        "narHash": "sha256-xPgHkekYxS55W/2WH35y0ufnx098RjmjJifHRyfGeMc=",
         "owner": "lilyinstarlight",
         "repo": "nixos-cosmic",
-        "rev": "788c2757fafb9108f7171848589e889d20060528",
+        "rev": "9aff094a15f037db88d896ca7a6b6e4e275a5d47",
         "type": "github"
       },
       "original": {
@@ -432,20 +432,18 @@
     "wlroots": {
       "flake": false,
       "locked": {
-        "host": "gitlab.freedesktop.org",
-        "lastModified": 1709983277,
-        "narHash": "sha256-wXWIJLd4F2JZeMaihWVDW/yYXCLEC8OpeNJZg9a9ly8=",
-        "owner": "wlroots",
-        "repo": "wlroots",
-        "rev": "50eae512d9cecbf0b3b1898bb1f0b40fa05fe19b",
-        "type": "gitlab"
+        "lastModified": 1712935342,
+        "narHash": "sha256-zzIbTFNFd/as42jyGx23fil2uBDYYv+8GA5JmRq5y9c=",
+        "owner": "hyprwm",
+        "repo": "wlroots-hyprland",
+        "rev": "62eeffbe233d199f520a5755c344e85f8eab7940",
+        "type": "github"
       },
       "original": {
-        "host": "gitlab.freedesktop.org",
-        "owner": "wlroots",
-        "repo": "wlroots",
-        "rev": "50eae512d9cecbf0b3b1898bb1f0b40fa05fe19b",
-        "type": "gitlab"
+        "owner": "hyprwm",
+        "repo": "wlroots-hyprland",
+        "rev": "62eeffbe233d199f520a5755c344e85f8eab7940",
+        "type": "github"
       }
     },
     "xdph": {
