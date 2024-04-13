@@ -119,7 +119,7 @@
 
     services.tailscale = {
       enable = true;
-      extraUpFlags = [ "--operator dunxen"];
+      extraUpFlags = [ "--operator dunxen" ];
     };
     systemd.user.services.tailreceive = {
       enable = true;

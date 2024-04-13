@@ -36,9 +36,14 @@
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    atuin-main = {
+      url = "github:atuinsh/atuin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, fh, hyprland, /* firefox, */ helix-master }:
+  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, fh, hyprland, /* firefox, */ helix-master, atuin-main }:
     let
       supportedSystems = [ "x86_64-linux" ];
       vars = {
@@ -141,7 +146,7 @@
               }
               {
                 nix.settings = {
-                  substituters = ["https://cosmic.cachix.org/"];
+                  substituters = [ "https://cosmic.cachix.org/" ];
                   trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
                 };
               }
@@ -166,6 +171,7 @@
               inherit helix-master;
               inherit system;
               inherit self;
+              inherit atuin-main;
             };
             modules = x86_64Base.modules ++ [
               hyprland.nixosModules.default

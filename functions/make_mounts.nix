@@ -96,4 +96,9 @@
     device = efiDevice;
     fsType = "vfat";
   };
+  "/tmpdata" = {
+    device = "none";
+    fsType = "tmpfs";
+    options = [ "size=8G" "mode=777" ];
+  };
 }
