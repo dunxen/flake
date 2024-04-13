@@ -190,35 +190,9 @@
               users.dunxen
             ];
           };
-          neon = nixpkgs.lib.nixosSystem rec {
-            inherit (x86_64Base) system;
-            specialArgs = {
-              inherit hyprland;
-              inherit helix-master;
-              inherit system;
-              inherit self;
-            };
-            modules = x86_64Base.modules ++ [
-              hyprland.nixosModules.default
-              home-manager.nixosModules.home-manager
-              {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.extraSpecialArgs = specialArgs;
-              }
-              platforms.neon
-              traits.machine
-              traits.workstation
-              traits.headed
-              traits.hardened
-              traits.gaming
-              users.dunxen
-            ];
-          };
         };
 
       nixosModules = {
-        platforms.neon = ./platforms/neon.nix;
         platforms.brute = ./platforms/brute.nix;
         platforms.iso = "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix";
         traits.overlay = { nixpkgs.overlays = [ self.overlays.default ]; };
