@@ -136,6 +136,7 @@ in
       lume = pkgs.callPackage ../packages/lume { };
     in
     [
+      action-validator
       age
       appimage-run
       asn
@@ -145,14 +146,44 @@ in
       beeper
       bgpdump
       bind
+      biscuit-cli
       blender-hip
       blueman
       bottom
+      bpftop
       brave
+      buck2
       bun
       bundix
+      bunyan-rs
       calculix
       carapace
+      cargo-audit
+      cargo-binstall
+      cargo-component
+      # cargo-create-tauri-app
+      cargo-crev
+      cargo-criterion
+      cargo-dist
+      cargo-espflash
+      cargo-expand
+      # cargo-flw
+      cargo-fuzz
+      cargo-generate
+      # cargo-hfuzz
+      # cargo-honggfuzz
+      cargo-mommy
+      cargo-mutants
+      cargo-nextest
+      cargo-outdated
+      # cargo-px
+      cargo-release
+      cargo-show-asm
+      cargo-shuttle
+      cargo-tauri
+      cargo-udeps
+      cargo-watch
+      cargo-wizard
       cloudflared
       comma
       cool-retro-term
@@ -162,6 +193,7 @@ in
       cosmic-randr
       cosmic-term
       cura
+      delta
       deno
       devbox
       discord
@@ -186,6 +218,7 @@ in
       gh
       gimp
       git-absorb
+      git-cliff
       git-crypt
       git-nomad # Synchronise work-in-progress git branches in a light weight fashion
       gitoxide
@@ -197,10 +230,11 @@ in
       gnuradio
       go
       godot_4
+      gping
       grim
       guix
       gum
-      # broken
+      halloy
       # haskellPackages.epub-tools
       heaptrack
       htop
@@ -209,6 +243,7 @@ in
       imhex
       inkscape
       jetbrains.rust-rover
+      jql
       julia
       keybase-gui
       keymapp
@@ -216,11 +251,13 @@ in
       kubernetes-helm
       ledger
       ledger-live-desktop
+      lemmeknow
       liana
       lld
       lldb
       llvm
       lume
+      macchina
       mars-mips
       melt
       mods
@@ -245,6 +282,8 @@ in
       ookla-speedtest
       opendrop
       openrocket
+      oranda
+      ouch
       owl
       # paraview
       pavucontrol
@@ -253,11 +292,9 @@ in
       protonvpn-cli
       protonvpn-gui
       rars
-      # riff # discontinued 😔
       ripgrep
       rustup
-      # broken again
-      # sage
+      sage
       scilab-bin
       semgrep
       semgrep-core
@@ -271,11 +308,16 @@ in
       stack
       steam
       subfinder
+      szip
       tailscale
       tailwindcss-language-server
+      tealdeer
       telegram-desktop
+      tenki
       termius
       thunderbird
+      tokio-console
+      trunk
       typst
       typst-fmt
       typst-lsp
@@ -291,8 +333,10 @@ in
       wally-cli
       warp-terminal
       wasmtime
+      wasm-tools
       wgcf
       wget
+      wit-bindgen
       wl-clipboard
       wofi
       wrangler
