@@ -20,8 +20,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.9.tar.gz";
-
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -43,7 +41,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, fh, hyprland, /* firefox, */ helix-master, atuin-main }:
+  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, hyprland, /* firefox, */ helix-master, atuin-main }:
     let
       supportedSystems = [ "x86_64-linux" ];
       vars = {
@@ -139,7 +137,6 @@
               ({ config = { nix.registry.nixpkgs.flake = nixpkgs; }; })
               {
                 environment.systemPackages = [
-                  fh.packages.x86_64-linux.default
                   # firefox.packages.x86_64-linux.firefox-nightly-bin
                   helix-master.packages.x86_64-linux.default
                 ];
