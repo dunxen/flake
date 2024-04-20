@@ -294,7 +294,7 @@ in
       rars
       ripgrep
       rustup
-      sage
+      # sage
       scilab-bin
       semgrep
       semgrep-core
