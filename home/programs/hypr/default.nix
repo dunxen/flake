@@ -36,7 +36,7 @@
 
     source = /home/dunxen/.config/hypr/colors
     exec = pkill waybar & sleep 0.5 && waybar --style '${self}/home/programs/hypr/waybar/style.css' --config '${self}/home/programs/hypr/waybar/config'
-    exec-once = swww init & sleep 0.5
+    exec = pkill swww-daemon & sleep 0.5 && swww-daemon & sleep 0.5
     exec = pkill satpaper & sleep 0.5 && satpaper --satellite meteosat10 --resolution-x 3840 --resolution-y 2160 --disk-size 92 --target-path /home/dunxen/Pictures/satpaper --wallpaper-command 'swww img ~/Pictures/satpaper/satpaper_latest.png ##'
 
     # Input config
