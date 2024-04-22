@@ -340,6 +340,7 @@ in
       wl-clipboard
       wofi
       wrangler
+      zed-editor
       zola
     ];
 
