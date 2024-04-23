@@ -25,7 +25,7 @@
             tab-width = 4;
             unit = "\t";
           };
-          language-servers = ["rust-analyzer"];
+          language-servers = [ "rust-analyzer" ];
         }
         {
           name = "nickel";
