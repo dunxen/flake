@@ -10,6 +10,13 @@
         nil = {
           command = "nil";
         };
+        rust-analyzer = {
+          config = {
+            check = {
+              command = "clippy";
+            };
+          };
+        };
       };
       language = [
         {
@@ -18,6 +25,7 @@
             tab-width = 4;
             unit = "\t";
           };
+          language-servers = ["rust-analyzer"];
         }
         {
           name = "nickel";
