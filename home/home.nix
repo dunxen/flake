@@ -30,8 +30,8 @@ in
     use_tls = true
     channels = [
       "#halloy",
-      "#bitcoin-core-dev"
-      "#bitcoin-core-pr-reviews"
+      "#bitcoin-core-dev",
+      "#bitcoin-core-pr-reviews",
       "#lightning-dev"
     ]
   '';
