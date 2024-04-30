@@ -14,6 +14,28 @@ in
   home.homeDirectory = "/home/dunxen";
   home.file.".ssh/allowed_signers".text = "dunxen ${ssh_key}";
 
+  # Halloy config
+  home.file.".config/halloy/config.toml".text = ''
+    # Halloy config template.
+    #
+    # For a complete list of available options,
+    # please visit https://halloy.squidowl.org/configuration/index.html
+
+    theme = "ferra"
+
+    [servers.liberachat]
+    nickname = "dunxen"
+    server = "irc.libera.chat"
+    port = 6697
+    use_tls = true
+    channels = [
+      "#halloy",
+      "#bitcoin-core-dev"
+      "#bitcoin-core-pr-reviews"
+      "#lightning-dev"
+    ]
+  '';
+
   programs.jujutsu = {
     enable = true;
     settings = {
