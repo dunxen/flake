@@ -20,15 +20,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprland = {
-    #   url = "github:hyprwm/Hyprland";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    # firefox = {
-    #   url = "github:nix-community/flake-firefox-nightly";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    firefox = {
+      url = "github:nix-community/flake-firefox-nightly";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     helix-master = {
       url = "github:helix-editor/helix";
@@ -41,7 +41,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, /* hyprland, */ /* firefox, */ helix-master, atuin-main }:
+  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, hyprland, firefox, helix-master, atuin-main }:
     let
       supportedSystems = [ "x86_64-linux" ];
       vars = {
@@ -123,22 +123,13 @@
       nixosConfigurations =
         let
           # Shared config between both the liveimage and real system
-          aarch64Base = {
-            system = "aarch64-linux";
-            modules = with self.nixosModules; [
-              ({ config = { nix.registry.nixpkgs.flake = nixpkgs; }; })
-              home-manager.nixosModules.home-manager
-              traits.overlay
-              traits.base
-            ];
-          };
           x86_64Base = {
             system = "x86_64-linux";
             modules = with self.nixosModules; [
               ({ config = { nix.registry.nixpkgs.flake = nixpkgs; }; })
               {
                 environment.systemPackages = [
-                  # firefox.packages.x86_64-linux.firefox-nightly-bin
+                  firefox.packages.x86_64-linux.firefox-nightly-bin
                   helix-master.packages.x86_64-linux.default
                 ];
               }
@@ -165,14 +156,14 @@
           brute = nixpkgs.lib.nixosSystem rec {
             inherit (x86_64Base) system;
             specialArgs = {
-              # inherit hyprland;
+              inherit hyprland;
               inherit helix-master;
               inherit system;
               inherit self;
               inherit atuin-main;
             };
             modules = x86_64Base.modules ++ [
-              # hyprland.nixosModules.default
+              hyprland.nixosModules.default
               home-manager.nixosModules.home-manager
               {
                 home-manager.useGlobalPkgs = true;
