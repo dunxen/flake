@@ -1,7 +1,7 @@
 /*
   A trait for headed boxxen
 */
-{ pkgs, hyprland, ... }:
+{ /* pkgs, hyprland,*/ ... }:
 
 {
   config = {
@@ -12,9 +12,9 @@
     services.desktopManager.cosmic.enable = true;
     services.displayManager.cosmic-greeter.enable = true;
 
-    programs.hyprland = {
-      enable = true;
-      package = hyprland.packages.${pkgs.system}.hyprland;
-    };
+    # programs.hyprland = {
+    #   enable = true;
+    #   package = hyprland.packages.${pkgs.system}.hyprland;
+    # };
   };
 }

@@ -20,10 +20,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # hyprland = {
+    #   url = "github:hyprwm/Hyprland";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     firefox = {
       url = "github:nix-community/flake-firefox-nightly";
@@ -41,7 +41,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, hyprland, firefox, helix-master, atuin-main }:
+  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, /* hyprland,*/ firefox, helix-master, atuin-main }:
     let
       supportedSystems = [ "x86_64-linux" ];
       vars = {
@@ -156,14 +156,14 @@
           brute = nixpkgs.lib.nixosSystem rec {
             inherit (x86_64Base) system;
             specialArgs = {
-              inherit hyprland;
+              # inherit hyprland;
               inherit helix-master;
               inherit system;
               inherit self;
               inherit atuin-main;
             };
             modules = x86_64Base.modules ++ [
-              hyprland.nixosModules.default
+              # hyprland.nixosModules.default
               home-manager.nixosModules.home-manager
               {
                 home-manager.useGlobalPkgs = true;

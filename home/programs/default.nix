@@ -7,13 +7,13 @@
     ./firefox
     ./git
     ./gpg
-    ./gtklock
+    # ./gtklock
     ./helix
-    ./hypr
+    # ./hypr
     ./nushell
     ./ssh
     ./starship
-    ./swayidle
+    # ./swayidle
     ./wezterm
     ./zellij
   ];
