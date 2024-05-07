@@ -2,10 +2,10 @@
 
 appimageTools.wrapType2 rec {
   name = "lume";
-  version = "2.0.1";
+  version = "3.0.2";
   src = fetchurl {
     url = "https://github.com/luminous-devs/lume/releases/download/v${version}/lume_${version}_amd64.AppImage";
-    hash = "sha256-B+LudNgs8xOjoJldb/kuaj/dYDXbD3FIWDEnv+WvFNM=";
+    hash = "sha256-UsN169qqPMG1YzhE2ZbrQmDvLIA/6g1hKI/r1y380Mk=";
   };
 
   extraPkgs = pkgs: with pkgs; [ libthai ];
