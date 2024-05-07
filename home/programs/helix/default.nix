@@ -15,6 +15,9 @@
             check = {
               command = "clippy";
             };
+            rustfmt = {
+              extraArgs = [ "+nightly" ];
+            };
           };
         };
       };
