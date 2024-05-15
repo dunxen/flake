@@ -160,6 +160,7 @@ in
     [
       action-validator
       age
+      anki
       appimage-run
       asn
       asnmap
