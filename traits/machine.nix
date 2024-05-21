@@ -130,6 +130,14 @@
       };
       wantedBy = [ "default.target" ];
     };
+    systemd.user.services.atuindaemon = {
+      enable = true;
+      description = "Start and run the atuin daemon";
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "/etc/profiles/per-user/dunxen/bin/atuin daemon";
+      };
+    };
     services.tor.enable = true;
     services.flatpak.enable = true;
 
