@@ -283,7 +283,7 @@ in
       macchina
       mars-mips
       melt
-      mods
+      # mods
       mold
       neofetch
       nickel
