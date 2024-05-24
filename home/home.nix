@@ -365,6 +365,7 @@ in
       wrangler
       zed-editor
       zola
+      zoxide
     ];
 
   programs.home-manager.enable = true;
