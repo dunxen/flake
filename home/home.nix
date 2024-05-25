@@ -279,6 +279,7 @@ in
       lld
       lldb
       llvm
+      lttng-tools
       lume
       macchina
       mars-mips
@@ -291,6 +292,7 @@ in
       nixos-generators
       nixpkgs-review
       nls # Nickel Language Server
+      nmap
       nodePackages.prettier
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
