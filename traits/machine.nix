@@ -137,6 +137,7 @@
         Type = "simple";
         ExecStart = "/etc/profiles/per-user/dunxen/bin/atuin daemon";
       };
+      wantedBy = [ "default.target" ];
     };
     services.tor.enable = true;
     services.flatpak.enable = true;
