@@ -173,6 +173,7 @@ in
       blender-hip
       blueman
       bottom
+      bpftools
       bpftop
       brave
       buck2
