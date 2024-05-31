@@ -297,6 +297,7 @@ in
       nodePackages.prettier
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
+      ntfy-sh
       obsidian
       obs-studio
       obs-studio-plugins.obs-gstreamer
