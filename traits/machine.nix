@@ -130,13 +130,16 @@
       };
       wantedBy = [ "default.target" ];
     };
-    systemd.user.services.atuindaemon = {
+    systemd.user.services.atuind = {
       enable = true;
-      description = "Start and run the atuin daemon";
+
+      environment = {
+        ATUIN_LOG = "info";
+      };
       serviceConfig = {
-        Type = "simple";
         ExecStart = "/etc/profiles/per-user/dunxen/bin/atuin daemon";
       };
+      after = [ "network.target" ];
       wantedBy = [ "default.target" ];
     };
     services.tor.enable = true;
