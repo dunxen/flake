@@ -873,5 +873,4 @@ alias bitcoin-cli = ~/repos/github.com/bitcoin/bitcoin/src/bitcoin-cli
 alias bcli = bitcoin-cli
 
 # OP Plugins
-alias gh = op plugin run gh
 
