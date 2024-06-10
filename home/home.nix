@@ -371,6 +371,7 @@ in
       wrangler
       zed-editor
       zig
+      zls
       zola
       zoxide
     ];
