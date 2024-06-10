@@ -246,6 +246,7 @@ in
       git-crypt
       git-nomad # Synchronise work-in-progress git branches in a light weight fashion
       gitoxide
+      gleam
       glow
       glxinfo
       gmsh
@@ -273,6 +274,7 @@ in
       keymapp
       kicad
       kubernetes-helm
+      lean4
       ledger
       ledger-live-desktop
       lemmeknow
@@ -368,6 +370,7 @@ in
       wofi
       wrangler
       zed-editor
+      zig
       zola
       zoxide
     ];
