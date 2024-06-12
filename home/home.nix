@@ -300,7 +300,7 @@ in
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
       ntfy-sh
-      # obsidian
+      obsidian
       obs-studio
       obs-studio-plugins.obs-gstreamer
       obs-studio-plugins.obs-move-transition
