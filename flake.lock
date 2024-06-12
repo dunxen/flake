@@ -9,11 +9,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1718116221,
-        "narHash": "sha256-gXLTBKYq5gkY293VU/x7aQe8HaUeG5JbXVE20lxl/Jk=",
+        "lastModified": 1718207138,
+        "narHash": "sha256-Fauqxm5KDfUWZZ3xFUXww+yRFODYGtbVSIXxRjFBOvs=",
         "owner": "atuinsh",
         "repo": "atuin",
-        "rev": "3f7d550e9843ca9a0beb8733c96ecf7aa3592fb8",
+        "rev": "9fa223eaaf0eda4e5f76621dc6d457417afb8b54",
         "type": "github"
       },
       "original": {
@@ -142,11 +142,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1718151613,
-        "narHash": "sha256-1jWQBp8kdrSm72MdzDoEMMlf4QyYIivt8I9F9pFaOq0=",
+        "lastModified": 1718203487,
+        "narHash": "sha256-tRvCDZznmubeXaZCYoHo4FlIcfbXaPOIjnwyA/a7i3g=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "9123d3fbb843d778d19569dfee48555584014ee8",
+        "rev": "62655e97f18a78190a87102586dbdc5ac9cbd732",
         "type": "github"
       },
       "original": {
