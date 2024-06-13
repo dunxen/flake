@@ -14,7 +14,7 @@
         extraPortals = [
           pkgs.xdg-desktop-portal-gtk
         ];
-        wlr.enable = true;
+        # wlr.enable = true;
         config.common.default = "*";
       };
     };
