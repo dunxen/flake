@@ -2,7 +2,7 @@
 
 choice=$(printf "Lock\nLogout\nSuspend\nReboot\nShutdown" | wofi --dmemu)
 if [[ $choice == "Lock" ]];then
-    gtklock
+    hyprlock
 elif [[ $choice == "Logout" ]];then
     pkill -KILL -u "$USER"
 elif [[ $choice == "Suspend" ]];then

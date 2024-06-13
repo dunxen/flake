@@ -19,7 +19,7 @@ in
       }
       {
         event = "lock";
-        command = "${pkgs.gtklock}/bin/gtklock -d";
+        command = "${pkgs.hyprlock}/bin/hyprlock";
       }
     ];
     timeouts = [

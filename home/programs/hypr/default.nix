@@ -132,7 +132,7 @@
     bind = $mainMod, RETURN, exec, alacritty
     bind = $mainMod, B, exec, firefox
     bind = $mainMod, Q, killactive,
-    bind = $mainMod SHIFT, L, exec, gtklock -i
+    bind = $mainMod SHIFT, L, exec, hyprlock
     bind = $mainMod SHIFT, E, exit,
     bind = $mainMod SHIFT, N,exec,sleep 1 && hyprctl dispatch dpms off
     bind = $mainMod, F, exec, cosmic-files

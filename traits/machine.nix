@@ -147,8 +147,8 @@
 
     security.rtkit.enable = true;
     security.polkit.enable = true;
-    # Allow gtklock to unlock the computer for us
-    security.pam.services.gtklock = {
+    # Allow hyprlock to unlock the computer for us
+    security.pam.services.hyprlock = {
       text = "auth include login";
     };
 

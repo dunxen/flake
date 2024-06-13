@@ -7,9 +7,9 @@
     ./firefox
     ./git
     ./gpg
-    ./gtklock
     ./helix
     ./hypr
+    ./hyprlock
     ./nushell
     ./ssh
     ./starship
