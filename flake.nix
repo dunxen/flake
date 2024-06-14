@@ -4,10 +4,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    nixos-cosmic = {
-      url = "github:lilyinstarlight/nixos-cosmic";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixos-cosmic = {
+    #   url = "github:lilyinstarlight/nixos-cosmic";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -42,7 +42,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, nixos-cosmic, home-manager, hyprland, /*firefox, */helix-master, atuin-main }:
+  outputs = inputs @ { self, nixpkgs, darwin, /*nixos-cosmic, */home-manager, hyprland, /*firefox, */helix-master, atuin-main }:
     let
       supportedSystems = [ "x86_64-linux" ];
       vars = {
@@ -140,7 +140,7 @@
                   trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
                 };
               }
-              nixos-cosmic.nixosModules.default
+              # nixos-cosmic.nixosModules.default
               traits.overlay
               traits.base
               services.openssh
