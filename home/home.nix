@@ -8,6 +8,7 @@ in
 {
   imports = [
     ./programs
+    ./services
   ];
 
   home.username = "dunxen";

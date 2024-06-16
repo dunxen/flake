@@ -8,6 +8,8 @@
     hardware.opengl.enable = true;
     hardware.opengl.extraPackages = with pkgs; [ amdvlk ];
 
+    hardware.brillo.enable = true;
+
     xdg = {
       portal = {
         enable = true;

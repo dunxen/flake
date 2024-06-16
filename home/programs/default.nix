@@ -13,7 +13,6 @@
     ./nushell
     ./ssh
     ./starship
-    ./swayidle
     ./wezterm
     ./zellij
   ];
