@@ -1,6 +1,8 @@
-{ ...}: let
+{ ... }:
+let
   font_family = "Inter";
-in {
+in
+{
   programs.hyprlock = {
     enable = true;
 
