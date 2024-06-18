@@ -40,8 +40,7 @@ in
         # }
         {
           timeout = timeout - 10;
-          on-timeout = "hyprctl dispatch dpms off";
-          on-resume = "hyprctl dispatch dpms on";
+          on-timeout = "${pkgs.systemd}/bin/loginctl lock-session";
         }
         {
           inherit timeout;
