@@ -25,7 +25,6 @@ in
     settings = {
       general = {
         lock_cmd = "pidof hyprlock || ${lib.getExe config.programs.hyprlock.package}";
-        before_sleep_cmd = "${pkgs.systemd}/bin/loginctl lock-session";
         after_sleep_cmd = "hyprctl dispatch dpms on";
       };
 
