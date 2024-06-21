@@ -130,18 +130,19 @@
       };
       wantedBy = [ "default.target" ];
     };
-    systemd.user.services.atuind = {
-      enable = true;
+    # seems to have issues
+    # systemd.user.services.atuind = {
+    #   enable = true;
 
-      environment = {
-        ATUIN_LOG = "info";
-      };
-      serviceConfig = {
-        ExecStart = "/etc/profiles/per-user/dunxen/bin/atuin daemon";
-      };
-      after = [ "network.target" ];
-      wantedBy = [ "default.target" ];
-    };
+    #   environment = {
+    #     ATUIN_LOG = "info";
+    #   };
+    #   serviceConfig = {
+    #     ExecStart = "/etc/profiles/per-user/dunxen/bin/atuin daemon";
+    #   };
+    #   after = [ "network.target" ];
+    #   wantedBy = [ "default.target" ];
+    # };
     services.tor.enable = true;
     services.flatpak.enable = true;
 

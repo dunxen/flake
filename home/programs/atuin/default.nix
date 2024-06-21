@@ -4,9 +4,10 @@
     package = atuin-main.packages."${system}".default;
     enableNushellIntegration = true;
     settings = {
-      daemon = {
-        enabled = true;
-      };
+      # seems to be broken
+      # daemon = {
+      #   enabled = true;
+      # };
     };
   };
 }
