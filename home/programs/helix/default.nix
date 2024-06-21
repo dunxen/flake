@@ -25,7 +25,7 @@
             tab-width = 4;
             unit = "\t";
           };
-          formatter = { command = "rustfmt +nightly"; };
+          formatter = { command = "rustfmt"; };
           auto-format = true;
           language-servers = [ "rust-analyzer" ];
         }
