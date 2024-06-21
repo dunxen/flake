@@ -15,9 +15,6 @@
             check = {
               command = "clippy";
             };
-            rustfmt = {
-              extraArgs = [ "+nightly" ];
-            };
           };
         };
       };
@@ -28,6 +25,8 @@
             tab-width = 4;
             unit = "\t";
           };
+          formatter = { command = "rustfmt +nightly"; };
+          auto-format = true;
           language-servers = [ "rust-analyzer" ];
         }
         {
