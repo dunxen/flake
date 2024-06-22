@@ -273,7 +273,7 @@ in
       julia
       keybase-gui
       keymapp
-      kicad
+      # kicad
       kubernetes-helm
       lean4
       ledger
@@ -281,7 +281,7 @@ in
       lemmeknow
       liana
       lld
-      lldb
+      lldb_18
       llvm
       lttng-tools
       lume

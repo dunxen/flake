@@ -5,8 +5,8 @@
 
 {
   config = {
-    hardware.opengl.enable = true;
-    hardware.opengl.extraPackages = with pkgs; [ amdvlk ];
+    hardware.graphics.enable = true;
+    hardware.graphics.extraPackages = with pkgs; [ amdvlk ];
 
     hardware.brillo.enable = true;
 
