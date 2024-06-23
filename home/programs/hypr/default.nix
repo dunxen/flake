@@ -114,6 +114,7 @@
 
     windowrule=float,org.kde.polkit-kde-authentication-agent-1
     windowrule=float,^(alacritty)$
+    windowrule=float,^(katakanakart)$
     windowrule=float,^(pavucontrol)$
     windowrule=center,^(alacritty)$
     windowrule=float,^(blueman-manager)$
