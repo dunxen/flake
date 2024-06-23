@@ -26,10 +26,10 @@
       submodules = true;
     };
 
-    # firefox = {
-    #   url = "github:nix-community/flake-firefox-nightly";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    firefox = {
+      url = "github:nix-community/flake-firefox-nightly";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     helix-master = {
       url = "github:helix-editor/helix";
@@ -42,7 +42,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, /*nixos-cosmic, */home-manager, hyprland, /*firefox, */helix-master, atuin-main }:
+  outputs = inputs @ { self, nixpkgs, darwin, /*nixos-cosmic, */home-manager, hyprland, firefox, helix-master, atuin-main }:
     let
       supportedSystems = [ "x86_64-linux" ];
       vars = {
@@ -130,7 +130,7 @@
               ({ config = { nix.registry.nixpkgs.flake = nixpkgs; }; })
               {
                 environment.systemPackages = [
-                  # firefox.packages.x86_64-linux.firefox-nightly-bin
+                  firefox.packages.x86_64-linux.firefox-nightly-bin
                   helix-master.packages.x86_64-linux.default
                 ];
               }
