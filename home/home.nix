@@ -242,6 +242,7 @@ in
       gcc12
       gh
       gimp
+      gitbutler
       git-absorb
       git-cliff
       git-crypt
