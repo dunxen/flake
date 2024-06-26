@@ -17,6 +17,9 @@
             };
           };
         };
+        wgsl-analyzer = {
+          command = "wgsl_analyzer";
+        };
       };
       language = [
         {
@@ -28,6 +31,10 @@
           formatter = { command = "rustfmt"; };
           auto-format = true;
           language-servers = [ "rust-analyzer" ];
+        }
+        {
+          name = "wgsl";
+          language-servers = [ "wgsl-analyzer" ];
         }
         {
           name = "nickel";
