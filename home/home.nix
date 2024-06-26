@@ -347,6 +347,7 @@ in
       tenki
       termius
       thunderbird
+      tiled
       tokio-console
       trunk
       typst
