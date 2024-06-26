@@ -276,6 +276,7 @@ in
       keymapp
       # kicad
       kubernetes-helm
+      ldtk
       lean4
       ledger
       ledger-live-desktop
