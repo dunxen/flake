@@ -359,7 +359,6 @@ in
       usbutils
       vagrant
       vlc
-      vscode
       vscode-langservers-extracted
       vulkan-tools
       wabt
