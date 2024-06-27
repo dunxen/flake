@@ -176,7 +176,6 @@ in
       bottom
       bpftools
       bpftop
-      brave
       buck2
       bun
       bundix
