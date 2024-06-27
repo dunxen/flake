@@ -893,6 +893,7 @@ $env.config = {
 alias bitcoind = ~/repos/github.com/bitcoin/bitcoin/src/bitcoind
 alias bitcoin-cli = ~/repos/github.com/bitcoin/bitcoin/src/bitcoin-cli
 alias bcli = bitcoin-cli
+alias chromium-webgpu = chromium --enable-unsafe-webgpu --enable-features=Vulkan,UseSkiaRenderer
 
 # OP Plugins
 

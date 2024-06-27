@@ -354,6 +354,7 @@ in
       typst
       typst-fmt
       typst-lsp
+      ungoogled-chromium
       unixtools.xxd
       unzip
       usbutils
