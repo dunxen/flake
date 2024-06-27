@@ -34,7 +34,6 @@
     #   winetricks
     #   mono
     # ];
-    # hardware.opengl.driSupport32Bit = true;
 
     # environment.variables = {
     #   WINEDEBUG = "-all";

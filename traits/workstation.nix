@@ -6,7 +6,7 @@
 {
   config = {
     hardware.graphics.enable = true;
-    hardware.graphics.extraPackages = with pkgs; [ amdvlk ];
+    hardware.graphics.extraPackages = with pkgs; [ amdvlk rocmPackages.clr.icd ];
 
     hardware.brillo.enable = true;
 

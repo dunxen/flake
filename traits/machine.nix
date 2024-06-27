@@ -194,6 +194,7 @@
       "L /var/lib/NetworkManager/seen-bssids - - - - /persist/var/lib/NetworkManager/seen-bssids"
       "L /var/lib/NetworkManager/timestamps - - - - /persist/var/lib/NetworkManager/timestamps"
       "L /etc/secrets - - - - /persist/secrets"
+      "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
       #"L /var/lib/bluetooth - - - - /persist/var/lib/bluetooth"
     ];
     # boot.initrd.postDeviceCommands = pkgs.lib.mkBefore ''
