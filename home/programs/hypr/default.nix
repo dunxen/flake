@@ -143,9 +143,6 @@
     bind = $mainMod, PRINT, exec, hyprshot -m window
     bind = $mainMod SHIFT, PRINT, exec, hyprshot -m region
 
-    bind = $mainMod, T, exec, grim -g "$(slurp)" - | wl-copy
-    bind = $mainMod SHIFT, T, exec, grim -g "$(slurp)"
-
     # Functional keybinds
     bind =,XF86AudioMicMute,exec,pamixer --default-source -t
     bind =,XF86MonBrightnessUp, exec, brillo -q -u 300000 -A 5

@@ -242,8 +242,8 @@ in
       gcc12
       gh
       gimp
-      gitbutler
       git-absorb
+      gitbutler
       git-cliff
       git-crypt
       git-nomad # Synchronise work-in-progress git branches in a light weight fashion
@@ -262,7 +262,6 @@ in
       guix
       gum
       halloy
-      # haskellPackages.epub-tools
       heaptrack
       htop
       hydra-check
@@ -274,7 +273,7 @@ in
       julia
       keybase-gui
       keymapp
-      # kicad
+      kicad
       kubernetes-helm
       ldtk
       lean4
@@ -316,8 +315,6 @@ in
       openrocket
       oranda
       ouch
-      owl
-      # paraview
       pavucontrol
       postman
       protonmail-desktop
@@ -326,21 +323,17 @@ in
       rars
       ripgrep
       rustup
-      # sage
       scilab-bin
-      semgrep
-      semgrep-core
       serial-studio
       signal-desktop
       simplex-chat-desktop
       slack
-      slurp
       spacedrive
       sparrow
       stack
-      steam
-      subfinder
-      szip
+      steam # Digital distribution platform
+      subfinder # Subdomain discovery tool
+      szip # Compression library that can be used with the hdf5 library
       tailscale
       tailwindcss-language-server
       tealdeer
@@ -374,10 +367,6 @@ in
       wofi
       wrangler
       zed-editor
-      zig
-      zls
-      zola
-      zoxide
     ];
 
   programs.home-manager.enable = true;
