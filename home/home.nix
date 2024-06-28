@@ -165,6 +165,7 @@ in
       appimage-run
       asn
       asnmap
+      aseprite
       bat
       bcachefs-tools
       beeper
