@@ -269,7 +269,6 @@ in
       hyprshot
       imhex
       inkscape
-      jetbrains.rust-rover
       jql
       julia
       keybase-gui
@@ -366,7 +365,8 @@ in
       wit-bindgen
       wl-clipboard
       wofi
-      wrangler
+      # broken again :(
+      # wrangler
       zed-editor
     ];
 
