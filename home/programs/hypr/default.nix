@@ -1,4 +1,4 @@
-{ pkgs, lib, self, ... }:
+{ pkgs, self, ... }:
 
 {
   imports = [
@@ -100,7 +100,7 @@
     }
 
     master {
-        new_is_master = yes
+        new_status = master
     }
 
     gestures {
