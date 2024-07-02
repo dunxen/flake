@@ -328,6 +328,7 @@ in
       signal-desktop
       simplex-chat-desktop
       slack
+      soft-serve
       spacedrive
       sparrow
       stack
